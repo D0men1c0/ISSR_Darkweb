@@ -14,6 +14,9 @@ from tensorflow.keras.layers import Embedding, Input, Dense, Flatten
 from tensorflow.keras.models import Model
 from sklearn.preprocessing import LabelEncoder
 from tqdm import tqdm
+import langid
+import time
+from deep_translator import GoogleTranslator
 
 def get_dummies(df, feature):
     """
@@ -100,6 +103,7 @@ def encode_date_cyclically(df, feature):
     :param feature: The feature to be encoded.
     :return: The dataframe with the date feature encoded cyclically.
     """
+    df[feature] = pd.to_datetime(df[feature], format='%Y-%m')
     df[feature + '_month_sin'] = np.sin(2 * np.pi * df[feature].dt.month / 12)
     df[feature + '_month_cos'] = np.cos(2 * np.pi * df[feature].dt.month / 12)
     df[feature + '_year_sin'] = np.sin(2 * np.pi * df[feature].dt.year)
@@ -117,4 +121,40 @@ def preprocess_url(df, feature):
     df[feature] = df[feature].str.replace('https://', '')
     df[feature] = df[feature].str.replace('www.', '')
     df[feature] = df[feature].str.split('.').str[0]
+    return df
+
+def detect_languages(df, feature):
+    languages = []
+    for text in tqdm(df[feature], desc='Detecting languages'):
+        language, _ = langid.classify(text)
+        languages.append(language)
+    df['language'] = languages
+    return df
+
+def translate_english_texts(texts, lang):
+    translated_texts = []
+    try:
+        translated_texts = GoogleTranslator(source=lang, target='en').translate_batch(texts)
+    except Exception as e:
+        print(f"Si è verificato un errore durante la traduzione: {e}")
+        print("Riprova tra 5 secondi...")
+        time.sleep(5)  # Attendi 5 secondi prima di riprovare
+        translated_texts = translate_english_texts(texts, lang)  # Riprova la traduzione
+    return translated_texts
+
+def translate_texts_in_dataframe(df, text_feature, lang_feature):
+    """
+    This function is used to translate non-English texts in the dataframe to English.
+    :param df: The dataframe containing the texts.
+    :param text_feature: The feature containing the texts.
+    :param lang_feature: The feature containing the languages of the texts.
+    :return: The dataframe with the translated texts.
+    """
+    non_english_df = df[df[lang_feature] != 'en']
+    texts_to_translate = non_english_df[text_feature].tolist()
+    languages = non_english_df[lang_feature].tolist()
+    translated_texts = translate_english_texts(texts_to_translate, languages)
+    non_english_df[text_feature] = translated_texts
+    df.update(non_english_df)
+    
     return df
