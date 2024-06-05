@@ -16,6 +16,7 @@ from sklearn.preprocessing import LabelEncoder
 from tqdm import tqdm
 import langid
 import time
+import math
 from deep_translator import GoogleTranslator
 
 def get_dummies(df, feature):
@@ -131,30 +132,35 @@ def detect_languages(df, feature):
     df['language'] = languages
     return df
 
-def translate_english_texts(texts, lang):
-    translated_texts = []
-    try:
-        translated_texts = GoogleTranslator(source=lang, target='en').translate_batch(texts)
-    except Exception as e:
-        print(f"Si è verificato un errore durante la traduzione: {e}")
-        print("Riprova tra 5 secondi...")
-        time.sleep(5)  # Attendi 5 secondi prima di riprovare
-        translated_texts = translate_english_texts(texts, lang)  # Riprova la traduzione
-    return translated_texts
-
-def translate_texts_in_dataframe(df, text_feature, lang_feature):
+def translate_texts_in_dataframe(df, text_feature, lang_feature, batch_size=1000, output_file=r'C:\Users\dommy\OneDrive\Documenti\GSoC - Final\GSoC\CleanedCSV\threads_preprocessed_translated.csv'):
     """
-    This function is used to translate non-English texts in the dataframe to English.
+    This function is used to translate the texts in the dataframe to English.
     :param df: The dataframe containing the texts.
     :param text_feature: The feature containing the texts.
     :param lang_feature: The feature containing the languages of the texts.
+    :param batch_size: The batch size for translation.
+    :param output_file: The output file to save the translated dataframe.
     :return: The dataframe with the translated texts.
     """
     non_english_df = df[df[lang_feature] != 'en']
-    texts_to_translate = non_english_df[text_feature].tolist()
-    languages = non_english_df[lang_feature].tolist()
-    translated_texts = translate_english_texts(texts_to_translate, languages)
-    non_english_df[text_feature] = translated_texts
-    df.update(non_english_df)
-    
+    num_batches = math.ceil(len(non_english_df) / batch_size)
+    with tqdm(total=len(non_english_df), desc="Translating texts") as pbar:
+        for i in range(num_batches):
+            batch_start = i * batch_size
+            batch_end = min((i + 1) * batch_size, len(non_english_df))
+            batch_df = non_english_df.iloc[batch_start:batch_end]
+            batch_texts = batch_df[text_feature].tolist()
+            batch_languages = batch_df[lang_feature].tolist()
+            try:
+                translated_batch = GoogleTranslator(source=batch_languages, target='en').translate_batch(batch_texts)
+            except:
+                try:
+                    translated_batch = GoogleTranslator(source='auto', target='en').translate_batch(batch_texts)
+                except:
+                    return df
+            df.loc[batch_df.index, text_feature] = translated_batch
+            df.loc[batch_df.index, lang_feature] = 'en'
+            pbar.update(len(batch_df))
+            time.sleep(0.1)
+            df.to_csv(output_file, index=False)
     return df
