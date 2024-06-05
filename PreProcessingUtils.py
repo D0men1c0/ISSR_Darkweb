@@ -97,6 +97,10 @@ def encode_date_numerically(df, feature):
     df[feature] = df[feature].map(lambda x: 10000*x.year + 100*x.month + x.day)
     return df
 
+def encode_date_categoric(df, feature):
+    df[feature] = pd.to_datetime(df['db_created_on'], format='%Y-%m-%d %H:%M:%S.%f').dt.strftime('%Y-%m-%d')
+    return df
+
 def encode_date_cyclically(df, feature):
     """
     This function is used to encode the date feature cyclically.
