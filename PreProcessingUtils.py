@@ -69,7 +69,7 @@ def discretize(df, feature, bins):
     :param bins: The number of bins to discretize the feature.
     :return: The dataframe with the discretized feature.
     """
-    df[feature] = pd.cut(df[feature], bins, labels=False)
+    df[f"{feature}_discretize"] = pd.cut(df[feature], bins, labels=False)
     return df
 
 def remove_outliers(df, feature):
