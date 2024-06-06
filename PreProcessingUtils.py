@@ -13,6 +13,7 @@ import tensorflow as tf
 from tensorflow.keras.layers import Embedding, Input, Dense, Flatten
 from tensorflow.keras.models import Model
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import MinMaxScaler
 from tqdm import tqdm
 import langid
 import time
@@ -97,8 +98,33 @@ def encode_date_numerically(df, feature):
     df[feature] = df[feature].map(lambda x: 10000*x.year + 100*x.month + x.day)
     return df
 
-def encode_date_categoric(df, feature):
-    df[feature] = pd.to_datetime(df['db_created_on'], format='%Y-%m-%d %H:%M:%S.%f').dt.strftime('%Y-%m-%d')
+def convert_date(df, feature):
+    """
+    This function is used to convert the date feature to a specific format.
+    :param df: The dataframe containing the feature.
+    :param feature: The feature to be converted.
+    :return: The dataframe with the date feature converted to a specific format.
+    """
+    try:
+        df[feature] = pd.to_datetime(df[feature], format='%Y-%m-%d %H:%M:%S.%f').dt.strftime('%Y-%m-%d')
+    except:
+        df[feature] = pd.to_datetime(df[feature], format='%Y-%m-%d %H:%M:%S').dt.strftime('%Y-%m-%d')
+    return df
+
+def extract_date_features(df, feature, fill='1900-01-01'):
+    """
+    This function is used to extract the date features from the date feature.
+    :param df: The dataframe containing the feature.
+    :param feature: The feature to extract the date features.
+    :param fill: The value to fill the missing values in the feature.
+    :return: The dataframe with the date features extracted from the date feature.
+    """
+    df[feature] = df[feature].fillna(fill)
+    df[feature + '_year'] = (pd.to_datetime(df[feature]).dt.year).astype(str)
+    df[feature + '_month'] = (pd.to_datetime(df[feature]).dt.month).astype(str)
+    df[feature + '_day'] = (pd.to_datetime(df[feature]).dt.day).astype(str)
+    df[feature + '_dayofweek'] = (pd.to_datetime(df[feature]).dt.dayofweek).astype(str)
+    df[feature + '_is_weekend'] = pd.to_datetime(df[feature]).dt.dayofweek.isin([5, 6]).astype(int)
     return df
 
 def encode_date_cyclically(df, feature):
@@ -127,6 +153,19 @@ def preprocess_url(df, feature):
     df[feature] = df[feature].str.replace('www.', '')
     df[feature] = df[feature].str.split('.').str[0]
     return df
+
+def minmax_scale_column(df, column_name):
+    """
+    This function is used to min-max scale the column.
+    :param df: The dataframe containing the column.
+    :param column_name: The column to be min-max scaled.
+    :return: The dataframe with the min-max scaled column.
+    """
+    scaler = MinMaxScaler()
+    df[column_name] = scaler.fit_transform(df[[column_name]])
+    
+    return df
+
 
 def detect_languages(df, feature):
     languages = []
