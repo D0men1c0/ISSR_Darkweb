@@ -111,6 +111,17 @@ def convert_date(df, feature):
         df[feature] = pd.to_datetime(df[feature], format='%Y-%m-%d %H:%M:%S').dt.strftime('%Y-%m-%d')
     return df
 
+def convert_millisecond_date(date_str):
+    """
+    This function is used to convert the date in milliseconds to a specific format.
+    :param date_str: The date in milliseconds.
+    :return: The date in a specific format.
+    """
+    try:
+        return pd.to_datetime(date_str, format='%Y-%m-%d %H:%M:%S.%f')
+    except ValueError:
+        return pd.to_datetime(date_str, format='%Y-%m-%d %H:%M:%S')
+
 def extract_date_features(df, feature, fill='1900-01-01'):
     """
     This function is used to extract the date features from the date feature.
