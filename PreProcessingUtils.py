@@ -131,11 +131,12 @@ def extract_date_features(df, feature, fill='1900-01-01'):
     :return: The dataframe with the date features extracted from the date feature.
     """
     df[feature] = df[feature].fillna(fill)
-    df[feature + '_year'] = (pd.to_datetime(df[feature]).dt.year).astype(str)
-    df[feature + '_month'] = (pd.to_datetime(df[feature]).dt.month).astype(str)
-    df[feature + '_day'] = (pd.to_datetime(df[feature]).dt.day).astype(str)
-    df[feature + '_dayofweek'] = (pd.to_datetime(df[feature]).dt.dayofweek).astype(str)
+    df[feature + '_year'] = (pd.to_datetime(df[feature]).dt.year).astype(int)
+    df[feature + '_month'] = (pd.to_datetime(df[feature]).dt.month).astype(int)
+    df[feature + '_day'] = (pd.to_datetime(df[feature]).dt.day).astype(int)
+    df[feature + '_dayofweek'] = (pd.to_datetime(df[feature]).dt.dayofweek).astype(int)
     df[feature + '_is_weekend'] = pd.to_datetime(df[feature]).dt.dayofweek.isin([5, 6]).astype(int)
+    df[feature] = pd.to_datetime(df[feature])
     return df
 
 def encode_date_cyclically(df, feature):
