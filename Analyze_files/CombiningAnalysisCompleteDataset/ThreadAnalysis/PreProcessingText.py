@@ -264,6 +264,7 @@ class TextClustering:
         """
         corpus = self.data_filtered[self.text_column].tolist()
         corpus = [x.lower() for x in corpus]
+        corpus = list(set(corpus))
         return corpus
 
     def encode_corpus(self, model, batch_size, to_tensor):
