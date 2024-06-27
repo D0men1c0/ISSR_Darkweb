@@ -224,31 +224,31 @@ def extract_top_keywords_tfidf(df, num_keywords=3):
     return df
 
 
-def assign_labels_to_topics(bert_model, zeroshot_topic_list, num_topics):
+def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list, num_topics, threshold=0.5):
     """
     Assign labels to topics using zero-shot classification.
+    :param classifier: the zero-shot classifier
     :param bert_model: the BERTopic model
     :param zeroshot_topic_list: the list of topics for zero-shot classification
     :param num_topics: the number of topics
+    :param threshold: the score threshold for including labels
     :return: the dictionary of assigned labels for each topic
-    """
-    classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
-    
+    """    
     topic_labels = {}
 
-    for topic_idx in range(num_topics):
-        # Get the topic as a sequence of words
+    for topic_idx in tqdm(range(num_topics), desc="Assigning labels to topics"):
+        # Get the topic as a sequence of words (extracting only the words from tuples)
         topic_sequence = bert_model.get_topic(topic_idx)
-        sequence_to_classify = " ".join(topic_sequence)
+        sequence_to_classify = " ".join([word for word, _ in topic_sequence])
         
         # Perform zero-shot classification
         res = classifier(sequence_to_classify, zeroshot_topic_list)
         
-        # Get the label with the highest score
-        best_label = max(zip(res['labels'], res['scores']), key=lambda x: x[1])[0]
+        # Get labels with scores above the threshold
+        filtered_labels = [label for label, score in zip(res['labels'], res['scores']) if score >= threshold]
         
-        # Add the assigned label to the dictionary
-        topic_labels[topic_idx] = best_label
+        topic_name = bert_model.generate_topic_labels()[topic_idx+1]
+        topic_labels[topic_name] = filtered_labels
     
     return topic_labels
 
