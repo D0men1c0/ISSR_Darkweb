@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import PCA, FactorAnalysis, KernelPCA
+from transformers import pipeline
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
@@ -221,6 +222,35 @@ def extract_top_keywords_tfidf(df, num_keywords=3):
             df.at[index, f'top_keyword_{i+1}'] = top_keywords[i]
 
     return df
+
+
+def assign_labels_to_topics(bert_model, zeroshot_topic_list, num_topics):
+    """
+    Assign labels to topics using zero-shot classification.
+    :param bert_model: the BERTopic model
+    :param zeroshot_topic_list: the list of topics for zero-shot classification
+    :param num_topics: the number of topics
+    :return: the dictionary of assigned labels for each topic
+    """
+    classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+    
+    topic_labels = {}
+
+    for topic_idx in range(num_topics):
+        # Get the topic as a sequence of words
+        topic_sequence = bert_model.get_topic(topic_idx)
+        sequence_to_classify = " ".join(topic_sequence)
+        
+        # Perform zero-shot classification
+        res = classifier(sequence_to_classify, zeroshot_topic_list)
+        
+        # Get the label with the highest score
+        best_label = max(zip(res['labels'], res['scores']), key=lambda x: x[1])[0]
+        
+        # Add the assigned label to the dictionary
+        topic_labels[topic_idx] = best_label
+    
+    return topic_labels
 
 
 class TextClustering:
