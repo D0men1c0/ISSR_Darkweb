@@ -236,7 +236,7 @@ def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list, num_top
     """    
     topic_labels = {}
     
-    topic_labels[bert_model.generate_topic_labels()[0]] = 'outliers'
+    topic_labels[-1] = 'outliers'
 
     for topic_idx in tqdm(range(num_topics), desc="Assigning labels to topics"):
         # Get the topic as a sequence of words
@@ -248,16 +248,14 @@ def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list, num_top
         
         # Get labels with scores above the threshold
         filtered_labels = [label for label, score in zip(res['labels'], res['scores']) if score >= threshold]
-        
-        topic_name = bert_model.generate_topic_labels()[topic_idx + 1].split('_')[1].replace('-', ' ')
 
         # Determine topic name
         if not filtered_labels:
-            filtered_labels = topic_name
+            filtered_labels = "-".join(set(bert_model.generate_topic_labels()[topic_idx + 1].split('_')[1:])).replace('-', ' - ')
         else:
             filtered_labels = " - ".join(filtered_labels)
         
-        topic_labels[bert_model.generate_topic_labels()[topic_idx + 1]] = filtered_labels
+        topic_labels[topic_idx] = filtered_labels
 
     return topic_labels
 
