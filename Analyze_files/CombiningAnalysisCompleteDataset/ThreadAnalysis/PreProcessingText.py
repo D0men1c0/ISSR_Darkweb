@@ -28,12 +28,11 @@ nltk.download('wordnet')
 
 def preprocess_title(title):
     """
-    Preprocesses the title of a news article by tokenizing, lowercasing, and removing stopwords
-    :param title: the title of a news article
-    :return: the preprocessed title
+    Preprocesses text using tokenization, stopword removal, and lemmatization.
+    :param title: the text to preprocess
+    :return: the preprocessed text
     """
     tokens = word_tokenize(title)
-    # Lowercase all tokens
     tokens = [token for token in tokens]
     # Remove tokens that are not alphabetic
     tokens = [token for token in tokens if token not in stopwords.words('english')]
