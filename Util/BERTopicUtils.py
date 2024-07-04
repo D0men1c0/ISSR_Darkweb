@@ -74,7 +74,7 @@ def save_assigned_labels(dict_labels, output_file):
     """
     pd.DataFrame(list(dict_labels.items()), columns=['Topic', 'Labels']).to_csv(output_file, index=False)
 
-def return_dataset(corpus, created_on, embeddings, new_topics, probs, topic_model, X):
+def return_dataset(corpus, created_on, embeddings, new_topics, probs, topic_model, umap_embeddings, save_umap_embeddings=True):
     """
     Filter and merge the data based on the identified indices.
     :param corpus: The original corpus.
@@ -83,7 +83,8 @@ def return_dataset(corpus, created_on, embeddings, new_topics, probs, topic_mode
     :param new_topics: The new topics.
     :param probs: The probabilities of the topics.
     :param topic_model: The BERTopic model.
-    :param X: The UMAP embeddings.
+    :param umap_embeddings: The UMAP embeddings.
+    :param save_umap_embeddings: Whether to save the UMAP embeddings.
     :return: The filtered and merged DataFrame.
     """
     # Identify indices where the topic is not equal to -1
@@ -108,8 +109,13 @@ def return_dataset(corpus, created_on, embeddings, new_topics, probs, topic_mode
     # Merge the results DataFrame with the topic information from the topic model
     results_final = pd.merge(results, topic_model.get_topic_info(), on='Topic')
 
-    # Add UMAP embeddings to the DataFrame
-    results_final['UMAP_embedding'] = list(X)
+    # Add umaap embeddings to the DataFrame
+    if save_umap_embeddings:
+        indices = [index for index, topic in enumerate(new_topics) if topic != -1]
+        X=umap_embeddings[np.array(indices)]
+
+        # Add UMAP embeddings to the DataFrame
+        results_final['UMAP_embedding'] = list(X)
 
     return results_final
 
