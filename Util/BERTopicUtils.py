@@ -164,7 +164,7 @@ def calculate_silhouette_davies(umap_embeddings, topics):
     print(f"Silhouette Score: {silhouette_scores}")
     print(f"Davies-Bouldin Score: {davies_bouldin_scores}")
 
-    return silhouette_scores, davies_bouldin_scores
+    return silhouette_scores, davies_bouldin_scores, X
 
 def evaluate_topic_coherence(topic_words, corpus, topn=10, coherence_type='c_v'):
     """
