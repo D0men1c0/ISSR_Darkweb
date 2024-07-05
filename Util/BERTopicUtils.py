@@ -3,6 +3,7 @@ import numpy as np
 from tqdm import tqdm
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 from gensim.models.coherencemodel import CoherenceModel
+from bertopic import BERTopic
 from gensim import corpora
 from itertools import combinations
 import numpy
@@ -21,7 +22,7 @@ def load_data_filtered(input_file: str, name_column: str) -> pd.DataFrame:
 
     return df
 
-def print_topics(topic_model, topics: list) -> None:
+def print_topics(topic_model: BERTopic, topics: list) -> None:
     """
     Print the topics and their words.
     :param topic_model: the BERTopic model
@@ -31,7 +32,7 @@ def print_topics(topic_model, topics: list) -> None:
         print(f"Topic {topic_id}:")
         print(topic_model.get_topic(topic_id))
 
-def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list: list, num_topics: int, 
+def assign_labels_to_topics(classifier, bert_model: BERTopic, zeroshot_topic_list: list, num_topics: int, 
                             threshold: float = 0.5) -> dict:
     """
     Assign labels to topics using zero-shot classification.
@@ -76,7 +77,7 @@ def save_assigned_labels(dict_labels: dict, output_file: str) -> None:
     pd.DataFrame(list(dict_labels.items()), columns=['Topic', 'Labels']).to_csv(output_file, index=False)
 
 def return_dataset(corpus: list, created_on: list, embeddings: numpy.ndarray, new_topics: list, 
-                   probs: numpy.ndarray, topic_model, umap_embeddings: numpy.ndarray, 
+                   probs: numpy.ndarray, topic_model: BERTopic, umap_embeddings: numpy.ndarray, 
                    save_umap_embeddings: bool = True) -> pd.DataFrame:
     """
     Filter and merge the data based on the identified indices.
@@ -203,7 +204,7 @@ def evaluate_topic_coherence(topic_words: dict, corpus: list, topn: int = 10, co
     
     return coherence_score
 
-def predict_topic(topic_model, sentence: list, num_classes: int = 5, custom_labels: bool = False) -> pd.DataFrame:
+def predict_topic(topic_model: BERTopic, sentence: list, num_classes: int = 5, custom_labels: bool = False) -> pd.DataFrame:
     """
     Predict the topic of a sentence using the BERTopic model.
     :param topic_model: The BERTopic model.
