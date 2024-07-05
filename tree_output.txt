@@ -1,0 +1,35 @@
+├───Analyze_files
+│   ├───CombiningAnalysisCompleteDataset
+│   │   ├───ContentAnalysis
+│   │   │   ├───DatasetsContentBERTopic
+│   │   │   ├───ModelsContent
+│   │   │   │   └───topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors
+│   │   │   ├───PreProcessFiles
+│   │   │   └───ZeroShotClassificationResultsContent
+│   │   │       └───all-MiniLM-L6-v2_190_20n_8dim
+│   │   └───ThreadAnalysis
+│   │       ├───GridSearch
+│   │       ├───Modelling
+│   │       ├───Models
+│   │       │   ├───topic_model_all-MiniLM-L6-v2_150_20n_safetensors
+│   │       │   ├───topic_model_all-MiniLM-L6-v2_200_safetensors
+│   │       │   └───topic_model_all-MiniLM-L6-v2_400_safetensors
+│   │       ├───OtherFilesPreviousApproach
+│   │       ├───ResultsBERTopic
+│   │       ├───ResultsCluster
+│   │       └───ZeroShotClassificationResults
+│   │           ├───all-MiniLM-L6-v2_150_20n
+│   │           ├───all-MiniLM-L6-v2_200
+│   │           └───all-MiniLM-L6-v2_400
+│   └───SingleDatasetsAnalysis
+├───Datasets
+│   ├───CleanedData
+│   ├───FeatureEngineeringData
+│   │   ├───Boards
+│   │   ├───Members
+│   │   └───Threads
+│   ├───IntentCrime
+│   └───RawData
+├───Img
+├───ShowResultsHTML
+└───Util
