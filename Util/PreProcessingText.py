@@ -12,12 +12,13 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import normalize
 from sklearn.metrics import silhouette_score
 from gensim.models import LdaModel
+from gensim.corpora import Dictionary
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
 
-def preprocess_title(title):
+def preprocess_title(title: str) -> str:
     """
     Preprocesses text using tokenization, stopword removal, and lemmatization.
     :param title: the text to preprocess
@@ -34,7 +35,7 @@ def preprocess_title(title):
     tokens = [lemmatizer.lemmatize(token.lower()) for token in tokens]
     return ' '.join(tokens)
 
-def preprocess_content(content):
+def preprocess_content(content: str) -> str:
     """
     Preprocesses the content of a news article by tokenizing, lowercasing, and removing stopwords
     :param content: the content of a news article
@@ -47,7 +48,7 @@ def preprocess_content(content):
     tokens = [token for token in tokens if token not in stopwords.words('english')]
     return ' '.join(tokens)
 
-def clean_sentences(text):
+def clean_sentences(text: str) -> str:
     """
     Cleans a sentence by removing URLs, HTML tags, multiple spaces, punctuation, non-alphanumeric characters,
     leading and trailing spaces, and remaining underscores. 
@@ -136,7 +137,7 @@ def clean_sentences(text):
         return ''
     return text
 
-def remove_single_characters(text):
+def remove_single_characters(text: str) -> str:
     """
     Removes single characters from a text.
     :param text: the text to remove single characters from
@@ -144,7 +145,8 @@ def remove_single_characters(text):
     """
     return re.sub(r'\b\w\b\s*', '', text)
 
-def zero_shot_process_threads(df, pipe, list_intents, output_file, label='name_thread'):
+def zero_shot_process_threads(df: pd.DataFrame, pipe, list_intents: list, output_file: str, 
+                              label: str = 'name_thread') -> pd.DataFrame:
     """
     Process the threads in the DataFrame using the zero-shot classification pipeline.
     :param df: DataFrame containing the threads to process
@@ -199,7 +201,7 @@ def zero_shot_process_threads(df, pipe, list_intents, output_file, label='name_t
 
     return df
 
-def extract_top_keywords_tfidf(df, num_keywords=3):
+def extract_top_keywords_tfidf(df: pd.DataFrame, num_keywords: int = 3) -> pd.DataFrame:
     """
     Extract the top keywords from the threads using TF-IDF.
     :param df: DataFrame containing the threads to process
@@ -228,7 +230,7 @@ def extract_top_keywords_tfidf(df, num_keywords=3):
 
     return df
 
-def compute_silhouette_score(lda_model, corpus):
+def compute_silhouette_score(lda_model: LdaModel, corpus: list) -> float:
     '''
     Compute the silhouette score for a given LDA model and corpus
     :param lda_model: the LDA model
@@ -245,7 +247,7 @@ def compute_silhouette_score(lda_model, corpus):
     score = silhouette_score(topic_matrix, np.argmax(topic_matrix, axis=1))
     return score
 
-def save_best_score_to_csv(best_params, best_score, output_file):
+def save_best_score_to_csv(best_params: dict, best_score: float, output_file: str) -> None:
     '''
     Save the best parameters and score to a CSV file
     :param best_params: the best parameters
@@ -256,7 +258,7 @@ def save_best_score_to_csv(best_params, best_score, output_file):
     results_df.to_csv(output_file, mode='a', header=not pd.io.common.file_exists(output_file), index=False)
     print(f"New best score saved to {output_file}")
 
-def grid_search_lda(corpus, dictionary, param_grid, output_file):
+def grid_search_lda(corpus: dict, dictionary: Dictionary, param_grid: dict, output_file: str) -> tuple:
     '''
     Perform a grid search over the specified parameters for LDA
     :param corpus: the corpus

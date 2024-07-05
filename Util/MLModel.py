@@ -8,7 +8,7 @@ import lightgbm as lgb
 import warnings
 warnings.filterwarnings('ignore')
 
-def plot_loss(eval_result: dict, title: str = ""):
+def plot_loss(eval_result: dict, title: str = "") -> None:
     """
     Plot the training and validation loss
     :param eval_result: The evaluation results
@@ -23,7 +23,7 @@ def plot_loss(eval_result: dict, title: str = ""):
     plt.title(f'Training and Validation Loss {title}')
     plt.legend();
 
-def k_fold(X: pd.DataFrame, y: pd.Series, params: dict, n_splits: int = 5):
+def k_fold(X: pd.DataFrame, y: pd.Series, params: dict, n_splits: int = 5) -> dict:
     """
     Perform k-fold cross-validation on the training set.
     :param X: the training features
@@ -73,7 +73,7 @@ def k_fold(X: pd.DataFrame, y: pd.Series, params: dict, n_splits: int = 5):
 
     return class_accuracies
 
-def summarize_k_fold(class_accuracies: dict):
+def summarize_k_fold(class_accuracies: dict) -> pd.DataFrame:
     """
     Summarize the results of the k-fold cross-validation
     :param class_accuracies: the results of the k-fold cross-validation
@@ -84,7 +84,7 @@ def summarize_k_fold(class_accuracies: dict):
     class_accuracies['std'] = class_accuracies.std(axis=1)
     return class_accuracies
 
-def save_model(output_file: str, bst: lgb.Booster):
+def save_model(output_file: str, bst: lgb.Booster) -> None:
     """
     Save the trained model to a file.
     :param output_file: the output file

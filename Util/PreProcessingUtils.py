@@ -10,7 +10,7 @@ import time
 import math
 from deep_translator import GoogleTranslator
 
-def get_dummies(df, feature):
+def get_dummies(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to convert the categorical feature into one-hot encoding.
     :param df: The dataframe containing the feature.
@@ -19,7 +19,7 @@ def get_dummies(df, feature):
     """
     return pd.get_dummies(df, columns=[feature])
 
-def standardize(df, feature):
+def standardize(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to standardize the feature.
     :param df: The dataframe containing the feature.
@@ -30,7 +30,7 @@ def standardize(df, feature):
     df[feature] = scaler.fit_transform(df[[feature]])
     return df
 
-def normalize(df, feature):
+def normalize(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to normalize the feature.
     :param df: The dataframe containing the feature.
@@ -40,7 +40,7 @@ def normalize(df, feature):
     df[feature] = (df[feature] - df[feature].min()) / (df[feature].max() - df[feature].min())
     return df
 
-def binarize(df, feature, threshold):
+def binarize(df: pd.DataFrame, feature: str, threshold: float) -> pd.DataFrame:
     """
     This function is used to binarize the feature.
     :param df: The dataframe containing the feature.
@@ -51,7 +51,7 @@ def binarize(df, feature, threshold):
     df[feature] = np.where(df[feature] > threshold, 1, 0)
     return df
 
-def discretize(df, feature, bins):
+def discretize(df: pd.DataFrame, feature: str, bins: int) -> pd.DataFrame:
     """
     This function is used to discretize the feature.
     :param df: The dataframe containing the feature.
@@ -62,7 +62,7 @@ def discretize(df, feature, bins):
     df[f"{feature}_discretize"] = pd.cut(df[feature], bins, labels=False)
     return df
 
-def remove_outliers(df, feature):
+def remove_outliers(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to remove the outliers from the feature.
     :param df: The dataframe containing the feature.
@@ -77,7 +77,7 @@ def remove_outliers(df, feature):
     df = df[(df[feature] > lower_bound) & (df[feature] < upper_bound)]
     return df
 
-def encode_date_numerically(df, feature):
+def encode_date_numerically(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to encode the date feature numerically.
     :param df: The dataframe containing the feature.
@@ -88,7 +88,7 @@ def encode_date_numerically(df, feature):
     df[feature] = df[feature].map(lambda x: 10000*x.year + 100*x.month + x.day)
     return df
 
-def convert_date(df, feature):
+def convert_date(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to convert the date feature to a specific format.
     :param df: The dataframe containing the feature.
@@ -101,7 +101,7 @@ def convert_date(df, feature):
         df[feature] = pd.to_datetime(df[feature], format='%Y-%m-%d %H:%M:%S').dt.strftime('%Y-%m-%d')
     return df
 
-def convert_millisecond_date(date_str):
+def convert_millisecond_date(date_str: str) -> pd.Timestamp:
     """
     This function is used to convert the date in milliseconds to a specific format.
     :param date_str: The date in milliseconds.
@@ -112,7 +112,7 @@ def convert_millisecond_date(date_str):
     except ValueError:
         return pd.to_datetime(date_str, format='%Y-%m-%d %H:%M:%S')
 
-def extract_date_features(df, feature, fill='1900-01-01'):
+def extract_date_features(df: pd.DataFrame, feature: str, fill: str = '1900-01-01') -> pd.DataFrame:
     """
     This function is used to extract the date features from the date feature.
     :param df: The dataframe containing the feature.
@@ -129,7 +129,7 @@ def extract_date_features(df, feature, fill='1900-01-01'):
     df[feature] = pd.to_datetime(df[feature])
     return df
 
-def encode_date_cyclically(df, feature):
+def encode_date_cyclically(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to encode the date feature cyclically.
     :param df: The dataframe containing the feature.
@@ -143,7 +143,7 @@ def encode_date_cyclically(df, feature):
     df[feature + '_year_cos'] = np.cos(2 * np.pi * df[feature].dt.year)
     return df
 
-def preprocess_url(df, feature):
+def preprocess_url(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to preprocess the URL feature.
     :param df: The dataframe containing the feature.
@@ -156,7 +156,7 @@ def preprocess_url(df, feature):
     df[feature] = df[feature].str.split('.').str[0]
     return df
 
-def minmax_scale_column(df, column_name):
+def minmax_scale_column(df: pd.DataFrame, column_name: str) -> pd.DataFrame:
     """
     This function is used to min-max scale the column.
     :param df: The dataframe containing the column.
@@ -168,7 +168,7 @@ def minmax_scale_column(df, column_name):
     
     return df
 
-def detect_languages(df, feature):
+def detect_languages(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     """
     This function is used to detect the languages of the texts in the dataframe.
     :param df: The dataframe containing the texts.
@@ -182,7 +182,8 @@ def detect_languages(df, feature):
     df['language'] = languages
     return df
 
-def translate_texts_in_dataframe(df, text_feature, lang_feature, batch_size=1000, output_file=r'C:\Users\dommy\OneDrive\Documenti\GSoC - Final\GSoC\CleanedCSV\threads_preprocessed_translated.csv'):
+def translate_texts_in_dataframe(df: pd.DataFrame, text_feature: str, lang_feature: str, batch_size: int = 1000, 
+                                 output_file: str = r'C:\Users\dommy\OneDrive\Documenti\GSoC - Final\GSoC\Datasets\CleanedData\threads_preprocessed_translated.csv') -> pd.DataFrame:
     """
     This function is used to translate the texts in the dataframe to English.
     :param df: The dataframe containing the texts.

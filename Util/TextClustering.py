@@ -18,7 +18,7 @@ class TextClustering:
     """
     Class for clustering text data using SentenceTransformer and UMAP or t-SNE.
     """
-    def __init__(self, data_filtered, text_column):
+    def __init__(self, data_filtered: pd.DataFrame, text_column: str) -> None:
         """
         Initialize the TextClustering class.
         :param data_filtered: the filtered data
@@ -32,7 +32,7 @@ class TextClustering:
         self.directory_embedding_previous = None
         self.logger = self.initialize_logger()
 
-    def initialize_logger(self):
+    def initialize_logger(self) -> logging.Logger:
         """
         Initialize the logger for the class.
         """
@@ -48,7 +48,7 @@ class TextClustering:
         
         return logger
 
-    def load_corpus(self):
+    def load_corpus(self) -> list:
         """
         Load and preprocess the corpus.
         :return: the preprocessed corpus
@@ -58,7 +58,7 @@ class TextClustering:
         corpus = list(set(corpus))
         return corpus
 
-    def encode_corpus(self, model, batch_size, to_tensor):
+    def encode_corpus(self, model: SentenceTransformer, batch_size: int, to_tensor: bool) -> np.ndarray:
         """
         Compute embeddings for the sentences.
         :param model: the SentenceTransformer model to use
@@ -69,7 +69,7 @@ class TextClustering:
         self.corpus_embeddings = model.encode(self.corpus, batch_size=batch_size, convert_to_tensor=to_tensor, show_progress_bar=True)
         return self.corpus_embeddings
 
-    def normalize_embeddings(self, embeddings):
+    def normalize_embeddings(self, embeddings: np.ndarray) -> np.ndarray:
         """
         Normalize embeddings to unit length.
         :param embeddings: the embeddings to normalize
@@ -77,7 +77,7 @@ class TextClustering:
         """
         return embeddings / np.linalg.norm(embeddings, axis=1, keepdims=True)
 
-    def reduce_dimensionality(self, n_neighbors=15, n_components=10):
+    def reduce_dimensionality(self, n_neighbors: int = 15, n_components: int = 10) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with UMAP.
         :param n_neighbors: the number of neighbors to consider
@@ -88,7 +88,7 @@ class TextClustering:
         reducer = umap.UMAP(n_neighbors=n_neighbors, n_components=n_components, metric='cosine')
         return reducer.fit_transform(self.corpus_embeddings)
 
-    def reduce_dimensionality_UMAP(self, batch_size, n_neighbors=15, n_components=10):
+    def reduce_dimensionality_UMAP(self, batch_size: int, n_neighbors: int = 15, n_components: int = 10) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with UMAP.
         :param n_neighbors: the number of neighbors to consider
@@ -121,7 +121,7 @@ class TextClustering:
         reduced_embeddings = np.vstack(all_reduced_embeddings)
         return reduced_embeddings
 
-    def reduce_dimensionality_tsne(self, n_components=2, perplexity=30, n_iter=1000):
+    def reduce_dimensionality_tsne(self, n_components: int = 2, perplexity: int = 30, n_iter: int = 1000) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with t-SNE.
         :param n_components: the number of components to reduce to
@@ -134,7 +134,7 @@ class TextClustering:
         reduced_embeddings = tsne.fit_transform(self.corpus_embeddings)
         return reduced_embeddings.astype(np.float32)
 
-    def reduce_dimensionality_Opentsne(self, n_components=2, perplexity=30, n_iter=1000):
+    def reduce_dimensionality_Opentsne(self, n_components: int = 2, perplexity: int = 30, n_iter: int = 1000) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with t-SNE using openTSNE.
         :param n_components: the number of components to reduce to
@@ -156,7 +156,7 @@ class TextClustering:
         reduced_embeddings = tsne.fit(embeddings_np)
         return np.array(reduced_embeddings, dtype=np.float32)
 
-    def determine_optimal_components(self, threshold=0.9):
+    def determine_optimal_components(self, threshold: float = 0.9) -> int:
         """
         Determine the optimal number of components for PCA based on explained variance threshold.
         :param threshold: the cumulative explained variance threshold to reach
@@ -185,7 +185,7 @@ class TextClustering:
 
         return optimal_components
 
-    def reduce_dimensionality_PCA(self, n_components):
+    def reduce_dimensionality_PCA(self, n_components: int) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with PCA.
         :param n_components: the number of components to reduce to
@@ -196,7 +196,7 @@ class TextClustering:
         reduced_embeddings = pca.fit_transform(self.corpus_embeddings)
         return reduced_embeddings
 
-    def reduce_dimensionality_KPCA(self, n_components, kernel='rbf', gamma=0.1):
+    def reduce_dimensionality_KPCA(self, n_components: int, kernel: str = 'rbf', gamma: float = 0.1) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with Kernel PCA.
         :param n_components: the number of components to reduce to
@@ -211,7 +211,8 @@ class TextClustering:
         
         return reduced_embeddings
 
-    def reduce_dimensionalityPCA_UMAP(self, n_neighbors=15, n_components=10, pca_components=50):
+    def reduce_dimensionalityPCA_UMAP(self, n_neighbors: int = 15, n_components: int = 10, 
+                                      pca_components: int = 50) -> np.ndarray:
         """
         Reduce dimensionality of embeddings with UMAP, optionally using PCA for preliminary reduction.
         :param n_neighbors: the number of neighbors to consider
@@ -227,7 +228,7 @@ class TextClustering:
         reducer = umap.UMAP(n_neighbors=n_neighbors, n_components=n_components, metric='cosine')
         return reducer.fit_transform(reduced_data)
 
-    def perform_community_detection(self, min_community_size=10, threshold=0.7):
+    def perform_community_detection(self, min_community_size: int = 10, threshold: float = 0.7) -> dict:
         """
         Perform clustering with community_detection.
         :param min_community_size: the minimum size of a community
@@ -238,7 +239,8 @@ class TextClustering:
         clusters = util.community_detection(self.corpus_embeddings, min_community_size=min_community_size, threshold=threshold)
         return clusters
 
-    def perform_agglomerative_clustering(self, cluster_embeddings, n_clusters, metric, linkage):
+    def perform_agglomerative_clustering(self, cluster_embeddings: np.ndarray, n_clusters: int, 
+                                         metric: str = 'cosine', linkage: str = 'average') -> tuple:
         """
         Perform Agglomerative Clustering on embeddings.
         :param cluster_embeddings: the embeddings of the clusters
@@ -256,7 +258,9 @@ class TextClustering:
             clusters[cluster_id].append(sentence_id)
         return clusters, cluster_assignment
 
-    def perform_agglomerative_clustering_in_batches_prev(self, cluster_embeddings, batch_size, n_clusters, metric, linkage):
+    def perform_agglomerative_clustering_in_batches_prev(self, cluster_embeddings: np.ndarray, batch_size: int, 
+                                                         n_clusters: int, metric: str = 'cosine', 
+                                                         linkage: str = 'average') -> tuple:
         """
         Perform Agglomerative Clustering on embeddings in batches.
         :param cluster_embeddings: the embeddings of the clusters
@@ -293,7 +297,8 @@ class TextClustering:
 
         return clusters, final_cluster_assignment
     
-    def perform_agglomerative_clustering_in_batches(self, cluster_embeddings, batch_size, n_clusters, metric, linkage):
+    def perform_agglomerative_clustering_in_batches(self, cluster_embeddings: np.ndarray, batch_size: int, 
+                                                    n_clusters: int, metric: str, linkage: str) -> tuple:
         """
         Perform Agglomerative Clustering on embeddings in batches.
         :param cluster_embeddings: the embeddings of the clusters
@@ -339,7 +344,7 @@ class TextClustering:
 
         return merged_clusters, final_cluster_assignment
 
-    def k_means(self, cluster_embeddings, batch_size, n_clusters=10):
+    def k_means(self, cluster_embeddings: np.ndarray, batch_size: int, n_clusters: int = 10) -> tuple:
         """
         Perform MiniBatchKMeans clustering on embeddings in batches.
         :param cluster_embeddings: the embeddings of the clusters
@@ -362,7 +367,7 @@ class TextClustering:
 
         return clusters, cluster_assignment
 
-    def plot_elbow_method(self, cluster_embeddings, batch_size, max_k=25):
+    def plot_elbow_method(self, cluster_embeddings: np.ndarray, batch_size: int, max_k: int = 25) -> None:
         """
         Plot the elbow method for determining the optimal number of clusters.
         :param cluster_embeddings: the embeddings of the clusters
@@ -385,7 +390,8 @@ class TextClustering:
         plt.title('Elbow Method For Optimal k')
         plt.show()
 
-    def perform_hdbscan_clustering_batches(self, cluster_embeddings, min_cluster_size, min_samples, batch_size):
+    def perform_hdbscan_clustering_batches(self, cluster_embeddings: np.ndarray, min_cluster_size: float, 
+                                           min_samples: int, batch_size: int) -> tuple:
         """
         Perform HDBSCAN on embeddings in batches.
         :param cluster_embeddings: the embeddings of the clusters
@@ -435,7 +441,8 @@ class TextClustering:
 
         return merged_clusters, final_cluster_assignment
 
-    def perform_hdbscan_clustering(self, cluster_embeddings, min_cluster_size, min_samples):
+    def perform_hdbscan_clustering(self, cluster_embeddings: np.ndarray, min_cluster_size: float, 
+                                   min_samples: int) -> tuple:
         """
         Perform HDBSCAN clustering on embeddings.
         :param cluster_embeddings: the embeddings of the clusters
@@ -457,7 +464,7 @@ class TextClustering:
             clusters[cluster_id].append(sentence_id)
         return clusters, cluster_assignment
         
-    def plot_clusters(self, embeddings_2d, cluster_labels):
+    def plot_clusters(self, embeddings_2d: np.ndarray, cluster_labels: np.ndarray) -> None:
         """
         Visualize clusters in 2D as dots.
         :param embeddings_2d: the 2D embeddings
@@ -483,7 +490,7 @@ class TextClustering:
         plt.legend()
         plt.show()
 
-    def show_name_clusters(self, cluster, kw_model):
+    def show_name_clusters(self, cluster: list, kw_model) -> tuple:
         """
         Show the names of the clusters.
         :param cluster: the cluster to show the names of
@@ -502,7 +509,7 @@ class TextClustering:
         self.logger.info(f"1-2-gram topics: {n_2_topics_}")
         return n_1_topics_, n_2_topics_, used
 
-    def summarize(self, clusters, n_words, name_model):
+    def summarize(self, clusters: dict, n_words: int, name_model: str) -> pd.DataFrame:
         """
         Summarize the clusters with top and bottom words and include cluster size percentage.
         :param clusters: the clusters to summarize
@@ -546,7 +553,7 @@ class TextClustering:
 
         return pd.DataFrame(results).T
     
-    def evaluate_clusters(self, filtered_embeddings, filtered_labels):
+    def evaluate_clusters(self, filtered_embeddings: np.ndarray, filtered_labels: np.ndarray) -> None:
         """
         Evaluate the clusters using Silhouette Score and Davies-Bouldin Index.
         :param filtered_embeddings: the filtered embeddings
@@ -559,7 +566,8 @@ class TextClustering:
         db_score = davies_bouldin_score(filtered_embeddings, filtered_labels)
         self.logger.info(f"Davies-Bouldin Index: {db_score}")
 
-    def save_embeddings(self, directory, cluster_assignment, non_outlier_indices, filtered_embeddings):
+    def save_embeddings(self, directory: str, cluster_assignment: np.ndarray, non_outlier_indices: np.ndarray, 
+                        filtered_embeddings: np.ndarray) -> None:
         """
         Save the embeddings with indices.
         :param cluster_assignment: the cluster assignment
@@ -572,7 +580,7 @@ class TextClustering:
         }
         np.save(directory, embeddings_with_indices)
 
-    def load_embeddings(self, to_frame=False):
+    def load_embeddings(self, to_frame: bool = False) -> pd.DataFrame:
         """
         Load the embeddings with indices.
         :param to_frame: whether to convert to a DataFrame
@@ -586,11 +594,12 @@ class TextClustering:
             return embeddings_with_indices['embeddings'], embeddings_with_indices['indices'], embeddings_with_indices_previous['embeddings'], embeddings_with_indices_previous['indices']
 
 
-    def main(self, name_model, to_tensor=True, reduce_previous=False, save_embeddings=False, 
-             directory_embeddings=None, batch_size=32, batch_cluster_size=33370, exec_reduction=True, 
-             reduction='tSNE', n_neighbors=15, n_components_umap=10, n_words=20, n_components=2, perplexity=30, 
-             n_iter=1000, n_clusters=6, hdbscan=False, hdbscan_batches=True, agglomerative_batches=True, 
-             k_means=False, elbow=False, min_cluster_size=0.02, min_samples=None, threshold=0.8):
+    def main(self, name_model: str, to_tensor: bool = True, reduce_previous: bool = False, save_embeddings: bool = False, 
+             directory_embeddings: str = None, batch_size: int = 32, batch_cluster_size: int = 33370, 
+             exec_reduction: bool = True, reduction: str = 'tSNE', n_neighbors: int = 15, n_components_umap: int = 10, 
+             n_words: int = 20, n_components: int = 2, perplexity: int = 30, n_iter: int = 1000, n_clusters: int = 6, 
+             hdbscan: bool = False, hdbscan_batches: bool = True, agglomerative_batches: bool = True, k_means: bool = False, 
+             elbow: bool = False, min_cluster_size: float = 0.02, min_samples: int = None, threshold: float = 0.8) -> tuple:
         """
         Main function to cluster text data.
         :param name_model: the name of the SentenceTransformer model to use

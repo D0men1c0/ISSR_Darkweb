@@ -5,9 +5,9 @@ from sklearn.metrics import silhouette_score, davies_bouldin_score
 from gensim.models.coherencemodel import CoherenceModel
 from gensim import corpora
 from itertools import combinations
+import numpy
 
-
-def load_data_filtered(input_file, name_column):
+def load_data_filtered(input_file: str, name_column: str) -> pd.DataFrame:
     """
     Load the filtered data from the input file.
     :param input_file: the input file containing the filtered data
@@ -21,7 +21,7 @@ def load_data_filtered(input_file, name_column):
 
     return df
 
-def print_topics(topic_model, topics):
+def print_topics(topic_model, topics: list) -> None:
     """
     Print the topics and their words.
     :param topic_model: the BERTopic model
@@ -31,7 +31,8 @@ def print_topics(topic_model, topics):
         print(f"Topic {topic_id}:")
         print(topic_model.get_topic(topic_id))
 
-def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list, num_topics, threshold=0.5):
+def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list: list, num_topics: int, 
+                            threshold: float = 0.5) -> dict:
     """
     Assign labels to topics using zero-shot classification.
     :param classifier: the zero-shot classifier
@@ -66,7 +67,7 @@ def assign_labels_to_topics(classifier, bert_model, zeroshot_topic_list, num_top
 
     return topic_labels
 
-def save_assigned_labels(dict_labels, output_file):
+def save_assigned_labels(dict_labels: dict, output_file: str) -> None:
     """
     Save the assigned labels to a CSV file.
     :param dict_labels: the dictionary of assigned labels
@@ -74,7 +75,9 @@ def save_assigned_labels(dict_labels, output_file):
     """
     pd.DataFrame(list(dict_labels.items()), columns=['Topic', 'Labels']).to_csv(output_file, index=False)
 
-def return_dataset(corpus, created_on, embeddings, new_topics, probs, topic_model, umap_embeddings, save_umap_embeddings=True):
+def return_dataset(corpus: list, created_on: list, embeddings: numpy.ndarray, new_topics: list, 
+                   probs: numpy.ndarray, topic_model, umap_embeddings: numpy.ndarray, 
+                   save_umap_embeddings: bool = True) -> pd.DataFrame:
     """
     Filter and merge the data based on the identified indices.
     :param corpus: The original corpus.
@@ -119,7 +122,7 @@ def return_dataset(corpus, created_on, embeddings, new_topics, probs, topic_mode
 
     return results_final
 
-def calculate_dos(topic_words, top_n=10):
+def calculate_dos(topic_words: dict, top_n: int = 10) -> float:
     """
     Calculate the average overlap score for all pairs of topics.
     :param topic_words: The topic words.
@@ -138,7 +141,7 @@ def calculate_dos(topic_words, top_n=10):
     print(f"Distinta Overlap Score: {dos_score}")
     return dos_score
 
-def calculate_silhouette_davies(umap_embeddings, topics):
+def calculate_silhouette_davies(umap_embeddings: numpy.ndarray, topics: list) -> tuple:
     """
     Evaluates topic clustering quality using silhouette and Davies-Bouldin scores.
     :param umap_embeddings: The UMAP embeddings of the data.
@@ -166,7 +169,7 @@ def calculate_silhouette_davies(umap_embeddings, topics):
 
     return silhouette_scores, davies_bouldin_scores, X
 
-def evaluate_topic_coherence(topic_words, corpus, topn=10, coherence_type='c_v'):
+def evaluate_topic_coherence(topic_words: dict, corpus: list, topn: int = 10, coherence_type: str = 'c_v') -> float:
     """
     Evaluates topic coherence using the CoherenceModel from gensim.
     :param topic_words: A list of topics with their corresponding words.
@@ -200,7 +203,7 @@ def evaluate_topic_coherence(topic_words, corpus, topn=10, coherence_type='c_v')
     
     return coherence_score
 
-def predict_topic(topic_model, sentence, num_classes=5, custom_labels=False):
+def predict_topic(topic_model, sentence: list, num_classes: int = 5, custom_labels: bool = False) -> pd.DataFrame:
     """
     Predict the topic of a sentence using the BERTopic model.
     :param topic_model: The BERTopic model.
