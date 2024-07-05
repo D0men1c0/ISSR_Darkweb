@@ -182,8 +182,7 @@ def detect_languages(df: pd.DataFrame, feature: str) -> pd.DataFrame:
     df['language'] = languages
     return df
 
-def translate_texts_in_dataframe(df: pd.DataFrame, text_feature: str, lang_feature: str, batch_size: int = 1000, 
-                                 output_file: str = r'C:\Users\dommy\OneDrive\Documenti\GSoC - Final\GSoC\Datasets\CleanedData\threads_preprocessed_translated.csv') -> pd.DataFrame:
+def translate_texts_in_dataframe(df: pd.DataFrame, output_file: str, text_feature: str, lang_feature: str, batch_size: int = 1000) -> pd.DataFrame:
     """
     This function is used to translate the texts in the dataframe to English.
     :param df: The dataframe containing the texts.
