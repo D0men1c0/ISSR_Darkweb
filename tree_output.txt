@@ -14,7 +14,7 @@ C:.
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_200_safetensors
 │   │       │   └───topic_model_all-MiniLM-L6-v2_400_safetensors
 │   │       ├───OtherFilesPreviousApproach
-│   │       ├───ResultsBERTopic
+│   │       ├───DatasetsThreadBERTopic
 │   │       ├───ResultsCluster
 │   │       ├───ResultsGridSearchBERTopic
 │   │       └───ZeroShotClassificationResults
