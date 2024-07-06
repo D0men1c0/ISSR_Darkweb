@@ -136,14 +136,81 @@ Utility scripts and auxiliary functions used throughout the project to process d
 The CrimeBB dataset was used, specifically the "dread-2023-06-21" data scraped from Dread, updated on 2023-06-21 (for more details see the Citations section).<br> 
 Dread is a popular forum on the Dark Web where users exchange opinions and reviews on various topics, including drug sales, seller reviews, password and bitcoin transactions, as well as passports and fake IDs.
 
-For more details, here is a table structure:
+For more details, here is a tables structure:
 
-<img src="structure_tables.png" alt="structure_tables" width="500" height="600"/>
+### boards
 
-The following tables were analyzed to extract the topics:
-- **Post:** Contains 290k records.
-- **Thread:** Contains 75k records.
+| Attribute | Type    | Description                                      |
+|-----------|---------|--------------------------------------------------|
+| id        | integer | Unique identifier of the board on the forum      |
+| site.id   | integer | ID of the forum to which the board belongs       |
+| name      | text    | Name of the board                                |
+| url       | text    | URL of the board                                 |
 
+### members
+
+| Attribute         | Type      | Description                                                 |
+|-------------------|-----------|-------------------------------------------------------------|
+| id                | integer   | Unique identifier of the member in the site                 |
+| username          | text      | Pseudonym of the member                                     |
+| site.id           | integer   | ID of the forum to which the member belongs                 |
+| profile.url       | text      | URL of the profile page of this member                      |
+| homepage.url      | text      | URL of a personal webpage of the member                     |
+| avatar.url        | text      | URL to the avatar image                                     |
+| registration_date | timestamp | Date when the member was registered                         |
+| age               | integer   | Age reported by the member (at the time of crawl)           |
+| signature         | text      | Signature of the member                                     |
+| location          | text      | Location of the member                                      |
+| location_time     | timestamp | Local time for the member                                   |
+| time_spent        | numeric   | Total time in hours spent online                            |
+| last_visit        | timestamp | Date when the member last visited the site                  |
+| total_posts       | integer   | Number of posts (as shown in the profile page)              |
+| first_post_on     | timestamp | Date of the first post of the member                        |
+| last_post_on      | timestamp | Date of the last post of the member                         |
+| reputation        | integer   | Reputation of member                                        |
+| prestige          | integer   | Prestige of the member (or similar measure)                 |
+| other_info        | text      | Additional information if any                               |
+| db.created_on     | timestamp | Time when profile was first scraped                         |
+| db.updated_on     | timestamp | Time when profile was last scraped (updated)                |
+
+### threads
+
+| Attribute      | Type      | Description                                          |
+|----------------|-----------|------------------------------------------------------|
+| id             | integer   | Unique identifier of the thread in the site          |
+| site.id        | integer   | ID of the forum to which the thread belongs          |
+| board.id       | integer   | ID of the board to which this thread belongs         |
+| creator        | text      | Pseudonym of the member initiating this thread       |
+| creator.id     | integer   | ID of the member initiating this thread              |
+| label          | text      | Label of this thread                                 |
+| name           | text      | Name given to the thread by the initiator            |
+| url            | text      | Base URL of this thread                              |
+| created_on     | timestamp | Time when the thread is created                      |
+| last_post_on   | timestamp | Time of last post of the thread                      |
+| db.created_on  | timestamp | Time when thread was first scraped                   |
+| db.updated_on  | timestamp | Time when thread was last scraped (updated)          |
+
+### posts
+
+| Attribute            | Type      | Description                                          |
+|----------------------|-----------|------------------------------------------------------|
+| id                   | integer   | Unique identifier of post in the site                |
+| site.id              | integer   | ID of the forum to which this post belongs           |
+| board.id             | integer   | ID of the board to which this post belongs           |
+| thread_id            | integer   | ID of the thread to which this post belongs          |
+| creator              | text      | Pseudonym of the member initiating this post         |
+| creator.id           | integer   | ID of the member initiating this post                |
+| reputation           | integer   | Reputation of creator taken from the left-hand side  |
+| content              | text      | Content of the post                                  |
+| quoted_post.ids      | list      | List of quoted posts (either ID or full content)     |
+| codes                | list      | List of any code included in the post                |
+| is.initial_post      | boolean   | Is the initial post of a thread                      |
+| created_on           | timestamp | Time when the post is created                        |
+| updated_on           | timestamp | Time when the post is last updated                   |
+| db.created_on        | timestamp | Time when post was first scraped                     |
+| db.updated_on        | timestamp | Time when post was last scraped (updated)            |
+
+Subsequently, these tables were all preprocessed by extracting only the important data, see section `SingleDatasetsAnalysis`.
 
 ## Summary of Work Done
 
@@ -198,7 +265,7 @@ cd ../ThreadAnalysis/Models
 
 By default, the top 5 labels are set, but just set the `num_classes` parameter with the number of topics desired.
 
-### Results
+### Example Results
 <div>
 <table border="1" class="dataframe">
   <thead>
