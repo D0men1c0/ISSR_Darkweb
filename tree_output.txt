@@ -9,12 +9,12 @@ C:.
 │   │   │   └───ZeroShotClassificationResultsContent
 │   │   │       └───all-MiniLM-L6-v2_190_20n_8dim
 │   │   └───ThreadAnalysis
+│   │       ├───DatasetsThreadBERTopic
 │   │       ├───Models
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_150_20n_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_200_safetensors
 │   │       │   └───topic_model_all-MiniLM-L6-v2_400_safetensors
 │   │       ├───OtherFilesPreviousApproach
-│   │       ├───DatasetsThreadBERTopic
 │   │       ├───ResultsCluster
 │   │       ├───ResultsGridSearchBERTopic
 │   │       └───ZeroShotClassificationResults
@@ -33,8 +33,12 @@ C:.
 ├───Img
 │   ├───Content
 │   └───Thread
+├───MergedModelBERT
 ├───MLModelsBERT
 │   └───Thread
 │       └───SavedModels
+├───ShowModelsBaselineBERT
+│   ├───Content
+│   └───Thread
 ├───ShowResultsHTML
 └───Util
