@@ -71,6 +71,65 @@ The structure of the repository is as follows:
 └───Util
 ```
 
+The roles of the different folders are detailed below:
+
+1. `Analyze_files`
+Contains files and scripts for data analysis.
+
+    1. `CombiningAnalysisCompleteDataset`
+    Folder containing the analysis of tables (boards, threads, members, posts) merged into one
+
+        1. `ContentAnalysis`
+        Focuses on analysing the content of table posts using BERT models to extract topics.
+
+            - `DatasetsContentBERTopic`: Contains datasets with the original content field with information extracted from BERT.
+            - `ModelsContent`: Holds the specific BERTopic models for content analysis.
+            - `PreProcessFiles`: Contains the pre-processing files of the content field.
+            - `ZeroShotClassificationResultsContent`: Stores the results of the zero shot classification on custom topic names.
+
+        2. `ThreadAnalysis`
+        Focuses on analysing the content of table thread using BERT models to extract topics.
+
+            - `DatasetsThreadBERTopic`: Same role as the content, focusing instead on the thread 
+            - `OtherFilesPreviousApproach`: Contains files from previous approaches.
+            - `ResultsCluster`: Dataset on cluster analysis of a previous approach.
+            - `ResultsGridSearchBERTopic`: Contains the results of the grid search of BERTopic.
+            - `ZeroShotClassificationResults`: Same role as the content, focusing instead on the thread.
+
+    2. `SingleDatasetsAnalysis`
+    Contains analyses for separate individual tables (boards, discussions, members, messages).
+
+2. `Datasets`
+Stores tables datasets used in the project.
+
+    - `CleanedData`: Contains cleaned data ready for analysis.
+    - `FeatureEngineeringData`: Contains data prepared for feature engineering.
+    - `IntentCrime`: Specific dataset related to crime intent used for Zero-shot classification.
+    - `RawData`: Contains raw, unprocessed data tables.
+
+3. `Img`
+    Stores images used for topic representation graphics found with BERTopic.
+
+    - `Content`: Images related to content analysis.
+    - `Thread`: Images related to thread analysis.
+
+4. `MergedModelBERT`
+Contains script merged BERT models.
+
+5. `MLModelsBERT`
+    Contains Machine Learning scripts and models used to validate datasets obtained from BERT approaches on content and threads.
+
+6. `ShowModelsBaselineBERT`
+    Displays baseline BERT models.
+
+    - `Content`: Content-related models.
+    - `Thread`: Thread-related models.
+
+7. `ShowResultsHTML`
+Contains HTML files showing results of the analysis.
+
+8. `Util`
+Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.
 
 ## Datasets
 
@@ -200,7 +259,7 @@ By default, the top 5 labels are set, but just set the `num_classes` parameter w
 ## Acknowledgements
 
 
-I would like to extend my heartfelt gratitude to my supervisors Andrea Underhill, Jane Daquin, and the head of the organization Sergei Gleyzer for their unwavering support and guidance during the Google Summer of Code (GSoC) 2024 with HumanAI. Their mentorship provided me with the opportunity to fully express my creativity and push the boundaries of my capabilities.<br> This project was made possible thanks to the Google Summer of Code: [Google Summer of Code 2024](https://summerofcode.withgoogle.com/) and HumanAI: [HumanAI Foundation](https://humanai.foundation/).
+I would like to extend my heartfelt gratitude to my supervisors Jane Daquin, Andrea Underhill and the head of the organization Sergei Gleyzer for their unwavering support and guidance during the Google Summer of Code (GSoC) 2024 with HumanAI. Their mentorship provided me with the opportunity to fully express my creativity and push the boundaries of my capabilities.<br> This project was made possible thanks to the Google Summer of Code: [Google Summer of Code 2024](https://summerofcode.withgoogle.com/) and HumanAI: [HumanAI Foundation](https://humanai.foundation/).
 
 
 ## Citation
