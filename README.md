@@ -219,16 +219,37 @@ Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and 
 
 ## Results
 
-Here are the main results obtained from the analysis:
+These are the results of the cluster analysis produced by BERT on both threads and content.
+For further graphical analysis, I invite to see the html file.
 
-| Metric              | Value   |
-|---------------------|---------|
-| Accuracy            | 92.3%   |
-| Precision           | 91.8%   |
-| Recall              | 90.7%   |
-| F1 Score            | 91.2%   |
+Thread:
 
+| Metric              | Value (68 Topics) | Value (7 Topics) |
+|---------------------|-------------------|------------------|
+| Accuracy            | 0.89              | 0.96             |
+| Precision           | 0.91              | 0.96             |
+| Recall              | 0.84              | 0.95             |
+| F1 Score            | 0.87              | 0.96             |
 
+Content:
+
+| Metric              | Value (68 Topics) | Value (7 Topics) |
+|---------------------|-------------------|------------------|
+| Accuracy            | 0.89              | 0.96             |
+| Precision           | 0.91              | 0.96             |
+| Recall              | 0.84              | 0.95             |
+| F1 Score            | 0.87              | 0.96             |
+
+These are the results obtained by LightGBM using the incorporations and classes obtained by BERT for the thread field in a classification task:
+
+| Metric              | Value (68 Topics) | Value (7 Topics) |
+|---------------------|-------------------|------------------|
+| Accuracy            | 0.89              | 0.96             |
+| Precision           | 0.91              | 0.96             |
+| Recall              | 0.84              | 0.95             |
+| F1 Score            | 0.87              | 0.96             |
+
+## Future work
 
 ## Usage
 
