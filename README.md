@@ -6,19 +6,17 @@ The objective of this project was to analyze the evolution of language among Dar
 
 For more details on the project, you can read the Medium article [here](#).
 
+## Table of Contents
 
-## Installation
-
-To install the project, follow these simple steps:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/D0men1c0/GSoC
-    ```
-2. Install the dependencies using `requirements.txt`:
-    ```bash
-    pip install -r requirements.txt
-    ```
+- [Repository Structure](#repository-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Datasets Used](#datasets-used)
+- [Summary of Work Done](#summary-of-work-done)
+- [Results](#results)
+- [Future work](#future-work)
+- [Acknowledgements](#acknowledgements)
+- [Citation](#citation)
 
 
 ## Repository Structure
@@ -131,128 +129,19 @@ Contains HTML files showing results of the analysis.
 8. `Util`
 Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.
 
-## Datasets
 
-The CrimeBB dataset was used, specifically the "dread-2023-06-21" data scraped from Dread, updated on 2023-06-21 (for more details see the Citations section).<br> 
-Dread is a popular forum on the Dark Web where users exchange opinions and reviews on various topics, including drug sales, seller reviews, password and bitcoin transactions, as well as passports and fake IDs.
+## Installation
 
-For more details, here is a tables structure:
+To install the project, follow these simple steps:
 
-### boards
-
-| Attribute | Type    | Description                                      |
-|-----------|---------|--------------------------------------------------|
-| id        | integer | Unique identifier of the board on the forum      |
-| site.id   | integer | ID of the forum to which the board belongs       |
-| name      | text    | Name of the board                                |
-| url       | text    | URL of the board                                 |
-
-### members
-
-| Attribute         | Type      | Description                                                 |
-|-------------------|-----------|-------------------------------------------------------------|
-| id                | integer   | Unique identifier of the member in the site                 |
-| username          | text      | Pseudonym of the member                                     |
-| site.id           | integer   | ID of the forum to which the member belongs                 |
-| profile.url       | text      | URL of the profile page of this member                      |
-| homepage.url      | text      | URL of a personal webpage of the member                     |
-| avatar.url        | text      | URL to the avatar image                                     |
-| registration_date | timestamp | Date when the member was registered                         |
-| age               | integer   | Age reported by the member (at the time of crawl)           |
-| signature         | text      | Signature of the member                                     |
-| location          | text      | Location of the member                                      |
-| location_time     | timestamp | Local time for the member                                   |
-| time_spent        | numeric   | Total time in hours spent online                            |
-| last_visit        | timestamp | Date when the member last visited the site                  |
-| total_posts       | integer   | Number of posts (as shown in the profile page)              |
-| first_post_on     | timestamp | Date of the first post of the member                        |
-| last_post_on      | timestamp | Date of the last post of the member                         |
-| reputation        | integer   | Reputation of member                                        |
-| prestige          | integer   | Prestige of the member (or similar measure)                 |
-| other_info        | text      | Additional information if any                               |
-| db.created_on     | timestamp | Time when profile was first scraped                         |
-| db.updated_on     | timestamp | Time when profile was last scraped (updated)                |
-
-### threads
-
-| Attribute      | Type      | Description                                          |
-|----------------|-----------|------------------------------------------------------|
-| id             | integer   | Unique identifier of the thread in the site          |
-| site.id        | integer   | ID of the forum to which the thread belongs          |
-| board.id       | integer   | ID of the board to which this thread belongs         |
-| creator        | text      | Pseudonym of the member initiating this thread       |
-| creator.id     | integer   | ID of the member initiating this thread              |
-| label          | text      | Label of this thread                                 |
-| name           | text      | Name given to the thread by the initiator            |
-| url            | text      | Base URL of this thread                              |
-| created_on     | timestamp | Time when the thread is created                      |
-| last_post_on   | timestamp | Time of last post of the thread                      |
-| db.created_on  | timestamp | Time when thread was first scraped                   |
-| db.updated_on  | timestamp | Time when thread was last scraped (updated)          |
-
-### posts
-
-| Attribute            | Type      | Description                                          |
-|----------------------|-----------|------------------------------------------------------|
-| id                   | integer   | Unique identifier of post in the site                |
-| site.id              | integer   | ID of the forum to which this post belongs           |
-| board.id             | integer   | ID of the board to which this post belongs           |
-| thread_id            | integer   | ID of the thread to which this post belongs          |
-| creator              | text      | Pseudonym of the member initiating this post         |
-| creator.id           | integer   | ID of the member initiating this post                |
-| reputation           | integer   | Reputation of creator taken from the left-hand side  |
-| content              | text      | Content of the post                                  |
-| quoted_post.ids      | list      | List of quoted posts (either ID or full content)     |
-| codes                | list      | List of any code included in the post                |
-| is.initial_post      | boolean   | Is the initial post of a thread                      |
-| created_on           | timestamp | Time when the post is created                        |
-| updated_on           | timestamp | Time when the post is last updated                   |
-| db.created_on        | timestamp | Time when post was first scraped                     |
-| db.updated_on        | timestamp | Time when post was last scraped (updated)            |
-
-Subsequently, these tables were all preprocessed by extracting only the important data, see section `SingleDatasetsAnalysis`.
-
-## Summary of Work Done
-
-Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and Machine Learning algorithm. Through analysis, the BERT model was chosen as the most effective model for understanding the context, sentiment, and thematic elements of discussions on the Dread forum.
-
-
-## Results
-
-### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: ShowResultsHTML.
-
-Thread:
-
-| Metric                                  | Value (68 Topics) | Value (7 Topics) |
-|-----------------------------------------|-------------------|------------------|
-| Coherence Score                         | 0.57              | 0.40             |
-| Silhouette Score                        | 0.50              | 0.51             |
-| Davies Bouldin Score                    | 0.87              | 0.76             |
-| Dos Score (diversity overlapped Score)  | 0.06              | 0.20             |
-| % Outliers                              | 0.30              | 0.42             |
-
-Content:
-
-| Metric                                  | Value (121 Topics)|
-|-----------------------------------------|-------------------|
-| Coherence Score                         | 0.69              |
-| Silhouette Score                        | 0.60              |
-| Davies Bouldin Score                    | 0.46              |
-| Dos Score (diversity overlapped Score)  | 0.24              |
-| % Outliers                              | 0.35              |
-
-### These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
-
-Thread:
-
-| Metric              | Value (68 Topics) | Value (7 Topics) |
-|---------------------|-------------------|------------------|
-| Accuracy            | 0.89              | 0.96             |
-| Precision           | 0.91              | 0.96             |
-| Recall              | 0.84              | 0.95             |
-| F1 Score            | 0.87              | 0.96             |
-
-## Future work
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/D0men1c0/GSoC
+    ```
+2. Install the dependencies using `requirements.txt`:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
@@ -348,6 +237,76 @@ Clearly the custom predict_topic function is being used, alternatively one could
   </tbody>
 </table>
 </div>
+
+
+## Datasets Used
+
+The CrimeBB dataset was used, specifically the "dread-2023-06-21" data scraped from Dread, updated on 2023-06-21 (for more details see the Citations section).<br> 
+Dread is a popular forum on the Dark Web where users exchange opinions and reviews on various topics, including drug sales, seller reviews, password and bitcoin transactions, as well as passports and fake IDs.
+
+For more details, here is a tables structure:
+
+<img src="structure_tables.png" alt="structure_tables" width="500" height="600"/>
+
+<br>The following tables were analyzed to extract the topics:
+- **Post:** Contains 290k records.
+- **Thread:** Contains 75k records.
+
+## Summary of Work Done
+
+The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. Initially, each table in the dataset was examined, reducing the number of features and eliminating outliers and duplicates. The focus was specifically on two tables: threads and posts, analyzing the fields `thread` and `content` respectively.
+
+To gain an overview of the topics discussed, the `thread` field was analyzed first. Various approaches such as TF-IDF, LDA, and Zero-shot classification were used, and a class was developed that combined Sentence Transformer with t-SNE, PCA, and k-means. However, these methods did not yield optimal results.<br> Therefore, the BERTopic library was employed, which, thanks to its modularity, enabled the analysis of text by applying different strategies including Sentence BERT, c-TFIDF, KeyBERTInspired, introducing diversity with custom classes, and using UMAP for dimensionality reduction and HDBSCAN for clustering. Subsequently, Zero-shot classification was applied to the topic names.
+
+This comprehensive approach resulted in two baselines:
+
+- One with 7 macro clusters (general topics)
+- Another with 68 clusters (aiming to identify as many relevant topics as possible while avoiding micro clusters)
+
+These results were validated using metrics and distribution graphs provided by BERTopic, which also allowed for the analysis of topic distribution over time.
+
+To further validate the results from an accuracy metrics perspective, a LightGBM model was trained using the embeddings as the input features (X) and the topics identified by BERTopic as the target variable. This was done to validate the BERTopic results in a classification task.
+
+Subsequently, the `content` field in the posts was analyzed to verify if the topics identified matched those in the threads, which they did, resulting in 120 clusters.
+
+
+## Results
+
+### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: ShowResultsHTML.
+
+Thread:
+
+| Metric                                  | Value (68 Topics) | Value (7 Topics) |
+|-----------------------------------------|-------------------|------------------|
+| Coherence Score                         | 0.57              | 0.40             |
+| Silhouette Score                        | 0.50              | 0.51             |
+| Davies Bouldin Score                    | 0.87              | 0.76             |
+| Dos Score (diversity overlapped Score)  | 0.06              | 0.20             |
+| % Outliers                              | 0.30              | 0.42             |
+
+Content:
+
+| Metric                                  | Value (121 Topics)|
+|-----------------------------------------|-------------------|
+| Coherence Score                         | 0.69              |
+| Silhouette Score                        | 0.60              |
+| Davies Bouldin Score                    | 0.46              |
+| Dos Score (diversity overlapped Score)  | 0.24              |
+| % Outliers                              | 0.35              |
+
+### These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
+
+Thread:
+
+| Metric              | Value (68 Topics) | Value (7 Topics) |
+|---------------------|-------------------|------------------|
+| Accuracy            | 0.89              | 0.96             |
+| Precision           | 0.91              | 0.96             |
+| Recall              | 0.84              | 0.95             |
+| F1 Score            | 0.87              | 0.96             |
+
+## Future work
+
 
 ## Acknowledgements
 
