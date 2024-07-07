@@ -307,6 +307,12 @@ Thread:
 
 ## Future work
 
+- Merge Baselines: The next steps involve merging the baselines obtained from the Thread and Content sections into a single model to integrate both representations, with Thread providing general topics and Content extending them.
+- Validation: Validate the results using clustering metrics and machine learning models. Given the data volume, LightGBM may not be sufficient, so exploring neural networks could be beneficial.
+- Topic Refinement: Conduct a final review of the topics, potentially integrating specific expressions that need to be highlighted (e.g., a particular abbreviation for a drug that wasn't identified).
+- Deployment on HuggingFace: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
+- Temporal Validation: If time permits, consider using LSTM to validate the results over time (currently done with BERT), which could provide additional insights.
+- Multimodal Model: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
 
 ## Acknowledgements
 
