@@ -142,7 +142,11 @@ To install the project, follow these simple steps:
     ```bash
     pip install -r requirements.txt
     ```
-
+3. (Optional) Run the `download_files.py` script to download the additional files from Google Drive. This script handles retrieving files and placing them in the appropriate directories within the repository.
+    ```bash
+    python download_files.py
+    ```
+    
 ## Usage
 
 Before executing the code, navigate to the directory where the saved BERTopic models are located:

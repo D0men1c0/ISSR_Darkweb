@@ -1,6 +1,7 @@
 beautifulsoup4==4.12.3
 bertopic==0.16.2
 deep_translator==1.11.4
+gdown==5.2.0
 gensim==4.3.2
 hdbscan==0.8.36
 keybert==0.8.5
