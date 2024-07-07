@@ -272,7 +272,7 @@ Subsequently, the `content` field in the posts was analyzed to verify if the top
 
 ## Results
 
-### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: ShowResultsHTML.
+These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: ShowResultsHTML.
 
 Thread:
 
@@ -294,7 +294,7 @@ Content:
 | Dos Score (diversity overlapped Score)  | 0.24              |
 | % Outliers                              | 0.35              |
 
-### These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
+These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
 
 Thread:
 
