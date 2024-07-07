@@ -272,7 +272,7 @@ Subsequently, the `content` field in the posts was analyzed to verify if the top
 
 ## Results
 
-These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: ShowResultsHTML.
+These are the results of the cluster analysis produced by BERT on both threads and content.<br> For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTM`L.
 
 Thread:
 
