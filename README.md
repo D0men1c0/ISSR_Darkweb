@@ -289,6 +289,8 @@ cd ../ThreadAnalysis/Models
 
 By default, the top 5 labels are set, but just set the `num_classes` parameter with the number of topics desired.
 
+Clearly the custom predict_topic function is being used, alternatively one could directly use BERTopic's fit_transform without importing anything else.
+
 ### Example Results
 <div>
 <table border="1" class="dataframe">
