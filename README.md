@@ -219,7 +219,7 @@ Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and 
 
 ## Results
 
-### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTML`.
+### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: ShowResultsHTML.
 
 Thread:
 
