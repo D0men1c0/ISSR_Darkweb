@@ -142,11 +142,12 @@ To install the project, follow these simple steps:
     ```bash
     pip install -r requirements.txt
     ```
-3. (Optional) Run the `download_files.py` script to download the additional files from Google Drive. This script handles retrieving files and placing them in the appropriate directories within the repository.
+3. (Optional) Run the `download_files.py` script to download the additional files from Google Drive. This script handles retrieving files and placing them in the appropriate directories within the repository.<br>
+Note: being quite heavy files (7 GB in total) choose carefully which models and files to download.
     ```bash
     python download_files.py
     ```
-    
+
 ## Usage
 
 Before executing the code, navigate to the directory where the saved BERTopic models are located:
@@ -182,7 +183,7 @@ cd ../ThreadAnalysis/Models
 
 By default, the top 5 labels are set, but just set the `num_classes` parameter with the number of topics desired.
 
-Clearly the custom predict_topic function is being used, alternatively one could directly use BERTopic's fit_transform without importing anything else.
+Clearly the custom predict_topic function is being used, alternatively, one could use BERTopic's `transform' function directly, without importing anything else.
 
 ### Example Results
 <div>
