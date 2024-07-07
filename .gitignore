@@ -3,3 +3,5 @@ __pycache__/PreProcessingUtils.cpython-312.pyc
 Analyze_files/Completed/__pycache__/PreProcessingText.cpython-312.pyc
 *.pyc
 /Analyze_files/CombiningAnalysisCompleteDataset/ThreadAnalysis/ResultsCluster
+Datasets/RawData/posts.csv
+Datasets/CleanedData/posts_cleaned.csv
