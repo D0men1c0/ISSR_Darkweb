@@ -267,7 +267,7 @@ These results were validated using metrics and distribution graphs provided by B
 
 To further validate the results from an accuracy metrics perspective, a LightGBM model was trained using the embeddings as the input features (X) and the topics identified by BERTopic as the target variable. This was done to validate the BERTopic results in a classification task.
 
-Subsequently, the `content` field in the posts was analyzed to verify if the topics identified matched those in the threads, which they did, resulting in 120 clusters.
+Subsequently, the `content` field in the posts was analyzed to verify if the topics identified matched those in the threads, which they did, resulting in 121 clusters.
 
 
 ## Results
@@ -281,8 +281,8 @@ Thread:
 | Coherence Score                         | 0.57              | 0.40             |
 | Silhouette Score                        | 0.50              | 0.51             |
 | Davies Bouldin Score                    | 0.87              | 0.76             |
-| Dos Score (diversity overlapped Score)  | 0.06              | 0.20             |
-| % Outliers                              | 0.30              | 0.42             |
+| Dos Score (Diversity Overlapped Score)  | 0.06              | 0.20             |
+| Outliers                                | 0.30              | 0.42             |
 
 Content:
 
@@ -291,8 +291,8 @@ Content:
 | Coherence Score                         | 0.69              |
 | Silhouette Score                        | 0.60              |
 | Davies Bouldin Score                    | 0.46              |
-| Dos Score (diversity overlapped Score)  | 0.24              |
-| % Outliers                              | 0.35              |
+| Dos Score (Diversity Overlapped Score)  | 0.24              |
+| Outliers                                | 0.35              |
 
 These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
 
