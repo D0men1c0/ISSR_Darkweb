@@ -219,27 +219,31 @@ Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and 
 
 ## Results
 
-### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis, I invite to see the html file.
+### These are the results of the cluster analysis produced by BERT on both threads and content. For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTML`.
 
 Thread:
 
-| Metric              | Value (68 Topics) | Value (7 Topics) |
-|---------------------|-------------------|------------------|
-| Accuracy            | 0.89              | 0.96             |
-| Precision           | 0.91              | 0.96             |
-| Recall              | 0.84              | 0.95             |
-| F1 Score            | 0.87              | 0.96             |
+| Metric                                  | Value (68 Topics) | Value (7 Topics) |
+|-----------------------------------------|-------------------|------------------|
+| Coherence Score                         | 0.57              | 0.40             |
+| Silhouette Score                        | 0.50              | 0.51             |
+| Davies Bouldin Score                    | 0.87              | 0.76             |
+| Dos Score (diversity overlapped Score)  | 0.06              | 0.20             |
+| % Outliers                              | 0.30              | 0.42             |
 
 Content:
 
-| Metric              | Value (68 Topics) | Value (7 Topics) |
-|---------------------|-------------------|------------------|
-| Accuracy            | 0.89              | 0.96             |
-| Precision           | 0.91              | 0.96             |
-| Recall              | 0.84              | 0.95             |
-| F1 Score            | 0.87              | 0.96             |
+| Metric                                  | Value (121 Topics)|
+|-----------------------------------------|-------------------|
+| Coherence Score                         | 0.69              |
+| Silhouette Score                        | 0.60              |
+| Davies Bouldin Score                    | 0.46              |
+| Dos Score (diversity overlapped Score)  | 0.24              |
+| % Outliers                              | 0.35              |
 
 ### These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
+
+Thread:
 
 | Metric              | Value (68 Topics) | Value (7 Topics) |
 |---------------------|-------------------|------------------|
