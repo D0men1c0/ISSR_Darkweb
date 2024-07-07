@@ -6,3 +6,4 @@ Analyze_files/Completed/__pycache__/PreProcessingText.cpython-312.pyc
 Datasets/RawData/posts.csv
 Datasets/CleanedData/posts_cleaned.csv
 Analyze_files/CombiningAnalysisCompleteDataset/merged_data.csv
+Analyze_files/CombiningAnalysisCompleteDataset/ThreadAnalysis/cleaned_data_name_thread.csv
