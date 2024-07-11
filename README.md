@@ -286,7 +286,7 @@ Thread:
 | Coherence Score                         | 0.57              | 0.40             |
 | Silhouette Score                        | 0.50              | 0.51             |
 | Davies Bouldin Score                    | 0.87              | 0.76             |
-| Dos Score (Diversity Overlapped Score)  | 0.06              | 0.20             |
+| Dos Score (Diversity Overlapped Score)  | 0.06              | 0.80             |
 | Outliers                                | 0.30              | 0.42             |
 
 Content:
