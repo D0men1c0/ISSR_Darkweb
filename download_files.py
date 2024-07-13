@@ -22,7 +22,6 @@ def download_file_from_google_drive(file_id: str, destination: str) -> None:
     gdown.download(url, destination, quiet=False)
 
 
-
 def add_copy_suffix(destination: str) -> str:
     """
     Adds '_copy' before the file extension in the given destination path.
