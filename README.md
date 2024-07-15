@@ -48,6 +48,8 @@ The structure of the repository is as follows:
 │   │   └───ThreadAnalysis
 │   │       ├───DatasetsThreadBERTopic
 │   │       ├───Models
+│   │       │   ├───topic_model_0.50Sil300_safetensors
+│   │       │   ├───topic_model_0.64SilNew_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_150_20n_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_200_safetensors
 │   │       │   └───topic_model_all-MiniLM-L6-v2_400_safetensors
@@ -72,6 +74,8 @@ The structure of the repository is as follows:
 │   └───Thread
 ├───MergedModelBERT
 ├───MLModelsBERT
+│   ├───Content
+│   │   └───SavedModels
 │   └───Thread
 │       └───SavedModels
 ├───ShowModelsBaselineBERT
