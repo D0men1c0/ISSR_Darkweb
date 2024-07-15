@@ -1,23 +1,9 @@
 # Examination of the Evolution of Language Among Dark Web Users
 
-## Project Description
-
-The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and LSTM, to understand the context, sentiment, and thematic elements of forum discussions. After thorough analysis, the BERT model was chosen as the most effective.
-
-For more details on the project, refer to the Medium article [here](#).
-
-## The Utility of Comprehensive Dark Web Language Analysis
-
-This analysis is highly useful because it allows for the examination of large volumes of data to identify the main topics discussed, along with the nuances of associated words. Understanding these elements can provide insights into the nature of criminal activities, the evolution of their language, and the connections between various slang terms and specific illicit activities. This information can be invaluable for law enforcement, cybersecurity professionals, and researchers studying the dynamics of underground online communities.
-
-However, only one forum has been analyzed so far. By combining multiple models with data from different forums over several years, a comprehensive picture of dark web language can be obtained. This is important because there may be other forums discussing topics not covered on Dread, such as red rooms, child pornography, hired killers, cannibalism, etc.
-
-Unlike other approaches based on a few datasets, this method allows for the analysis of a vast number of conversations, greatly enhancing the breadth and depth of insights. In this way, a unique, highly comprehensive model could be developed (requiring multiple datasets), encompassing the most important topics discussed across various forums with a broader timeline. For example, insights could be drawn from forums like SilkRoad, which was very active and where certain words were used and then fell out of use.
-
-Additionally, associating this data with images could lead to more precise identification. The current results are already highly valuable, demonstrating the potential of this approach.
-
 ## Table of Contents
 
+- [Project Description](#project-description)
+- [Utility of Dark Web Language Analysis](#utility-of-dark-web-language-analysis)
 - [Repository Structure](#repository-structure)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -27,6 +13,22 @@ Additionally, associating this data with images could lead to more precise ident
 - [Future work](#future-work)
 - [Acknowledgements](#acknowledgements)
 - [Citation](#citation)
+
+## Project Description
+
+The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and LSTM, to understand the context, sentiment, and thematic elements of forum discussions. After thorough analysis, the BERT model was chosen as the most effective.
+
+For more details on the project, refer to the Medium article [here](#).
+
+## Utility of Dark Web Language Analysis
+
+This analysis is highly useful because it allows for the examination of large volumes of data to identify the main topics discussed, along with the nuances of associated words. Understanding these elements can provide insights into the nature of criminal activities, the evolution of their language, and the connections between various slang terms and specific illicit activities. This information can be invaluable for law enforcement, cybersecurity professionals, and researchers studying the dynamics of underground online communities.
+
+However, only one forum has been analyzed so far. By combining multiple models with data from different forums over several years, a comprehensive picture of dark web language can be obtained. This is important because there may be other forums discussing topics not covered on Dread, such as red rooms, child pornography, hired killers, cannibalism, etc.
+
+Unlike other approaches based on a few datasets, this method allows for the analysis of a vast number of conversations, greatly enhancing the breadth and depth of insights. In this way, a unique, highly comprehensive model could be developed (requiring multiple datasets), encompassing the most important topics discussed across various forums with a broader timeline. For example, insights could be drawn from forums like SilkRoad, which was very active and where certain words were used and then fell out of use.
+
+Additionally, associating this data with images could lead to more precise identification. The current results are already highly valuable, demonstrating the potential of this approach.
 
 
 ## Repository Structure
