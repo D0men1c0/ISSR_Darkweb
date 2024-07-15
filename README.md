@@ -253,7 +253,7 @@ Dread is a popular forum on the Dark Web where users exchange opinions and revie
 
 For more details, here is a tables structure:
 
-<img src="structure_tables.png" alt="structure_tables" width="500" height="600"/>
+<img src="img/structure_tables.png" alt="structure_tables" width="500" height="600"/>
 
 <br>The following tables were analyzed to extract the topics:
 - **Post:** Contains 290k records.
