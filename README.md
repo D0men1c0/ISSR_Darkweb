@@ -18,7 +18,7 @@
 
 The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. Several NLP models were developed and trained, including TF-IDF, LDA, BERT, and LSTM, to understand the context, sentiment, and thematic elements of forum discussions. After thorough analysis, the BERT model was chosen as the most effective.
 
-For more details on the project, refer to the Medium article [here](#).
+For more details on the project, refer to the Medium article [here](https://medium.com/@domenicolacavalla8/examination-of-the-evolution-of-language-among-dark-web-users-67fd3397e0fb).
 
 ## Utility of Dark Web Language Analysis
 
