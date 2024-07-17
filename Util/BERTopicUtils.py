@@ -4,6 +4,7 @@ from tqdm import tqdm
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 from gensim.models.coherencemodel import CoherenceModel
 from bertopic import BERTopic
+from llama_cpp import Llama
 from gensim import corpora
 from itertools import combinations
 import numpy
@@ -234,3 +235,95 @@ def predict_topic(topic_model: BERTopic, sentence: list, num_classes: int = 5, c
     df_finals['Sentence'] = sentence * len(df_finals)
     
     return df_finals
+
+def generate_topic_label(llm, documents: list, keywords: str) -> str:
+    """
+    Generate a label for a topic based on the given documents and keywords using the LLM.
+    :param llm: The LLM model to use for generation.
+    :param documents: List of representative documents for the topic.
+    :param keywords: Keywords describing the topic.
+    :return: The generated label.
+    """
+    # Generate the prompt
+    documents_str = "\n".join([f"- {doc}" for doc in documents])
+
+    # Define the prompt template
+    prompt_template = """ Q:
+    I have a topic that contains the following documents:
+    {documents}
+
+    The topic is described by the following keywords: '{keywords}'.
+
+    Based on the above information, can you give a short label of the topic of at most 5 words?
+    A:
+    """
+
+    prompt = prompt_template.format(documents=documents_str, keywords=keywords)
+    
+    # Generate the label
+    try:
+        response = llm(prompt)
+        return response['choices'][0]['text']
+    except Exception as e:
+        return "Error"
+
+def process_dataset(llm, df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Process the given dataset to generate labels for each topic.
+    :param llm: The LLM model to use for generation.
+    :param df: The dataset to process.
+    :return: A DataFrame containing the topic labels.
+    """
+    # Define the prompt template
+    topic_labels = []
+
+    # Process each row in the dataset
+    for _, row in tqdm(df.iterrows(), desc="Processing dataset", total=len(df)):
+
+        # Generate the topic label
+        topic_id = row['Topic']
+        documents = row['Representative_Docs']
+        keywords = ", ".join(row['Representation'])
+        label = generate_topic_label(llm, documents, keywords)
+
+        # Append the topic label to the list
+        topic_labels.append({
+            'Topic': topic_id,
+            'Label': label
+        })
+
+    topic_label = pd.DataFrame(topic_labels)
+
+    # Remove leading numbers and periods
+    topic_label['Label'] = topic_label['Label'].str.replace(r'\d+\.\s*', '', regex=True)
+    
+    # Remove leading dashes
+    topic_label['Label'] = topic_label['Label'].str.replace(r'^\s*-\s*', '', regex=True)
+
+    # Remove everything after and including colons
+    topic_label['Label'] = topic_label['Label'].str.replace(r':.*', '', regex=True)
+
+    # Remove everything after and including intermediate dashes 
+    topic_label['Label'] = topic_label['Label'].str.replace(r'-.*', '', regex=True)
+
+    # Remove isolated single characters
+    topic_label['Label'] = topic_label['Label'].str.replace(r'\b\w\b', '', regex=True)
+
+    # Replace multiple spaces with a single space
+    topic_label['Label'] = topic_label['Label'].str.replace(r'\s+', ' ', regex=True)
+
+    # Remove leading and trailing spaces
+    topic_label['Label'] = topic_label['Label'].str.strip()
+
+    # Remove double quotes
+    topic_label['Label'] = topic_label['Label'].str.replace(r'"', '')
+
+    # Remove single quotes
+    topic_label['Label'] = topic_label['Label'].str.replace(r"'", '')
+
+    # Remove everything after and including "Explanation" and replace commas with semicolons
+    topic_label['Label'] = topic_label['Label'].str.replace(r'Explanation.*', '', regex=True)
+    topic_label['Label'] = topic_label['Label'].str.replace(r',', ';')
+
+
+    return topic_label
