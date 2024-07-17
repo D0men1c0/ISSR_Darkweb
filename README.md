@@ -40,6 +40,7 @@ The structure of the repository is as follows:
 │   ├───CombiningAnalysisCompleteDataset
 │   │   ├───ContentAnalysis
 │   │   │   ├───DatasetsContentBERTopic
+│   │   │   ├───LLAMA
 │   │   │   ├───ModelsContent
 │   │   │   │   └───topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors
 │   │   │   ├───PreProcessFiles
@@ -47,6 +48,7 @@ The structure of the repository is as follows:
 │   │   │       └───all-MiniLM-L6-v2_190_20n_8dim
 │   │   └───ThreadAnalysis
 │   │       ├───DatasetsThreadBERTopic
+│   │       ├───LLAMA
 │   │       ├───Models
 │   │       │   ├───topic_model_0.50Sil300_safetensors
 │   │       │   ├───topic_model_0.64SilNew_safetensors
@@ -59,7 +61,8 @@ The structure of the repository is as follows:
 │   │       └───ZeroShotClassificationResults
 │   │           ├───all-MiniLM-L6-v2_150_20n
 │   │           ├───all-MiniLM-L6-v2_200
-│   │           └───all-MiniLM-L6-v2_400
+│   │           ├───all-MiniLM-L6-v2_400
+│   │           └───distiluse_7cluster
 │   └───SingleDatasetsAnalysis
 ├───Datasets
 │   ├───CleanedData
@@ -100,6 +103,7 @@ Contains files and scripts for data analysis.
             - `ModelsContent`: Holds the specific BERTopic models for content analysis.
             - `PreProcessFiles`: Contains the pre-processing files of the content field.
             - `ZeroShotClassificationResultsContent`: Stores the results of the zero shot classification on custom topic names.
+            - `LLAMA`: Stores the results of the use of LLAMA2 on custom topic names.
 
         2. `ThreadAnalysis`
         Focuses on analysing the content of table thread using BERT models to extract topics.
@@ -109,6 +113,7 @@ Contains files and scripts for data analysis.
             - `ResultsCluster`: Dataset on cluster analysis of a previous approach.
             - `ResultsGridSearchBERTopic`: Contains the results of the grid search of BERTopic.
             - `ZeroShotClassificationResults`: Same role as the content, focusing instead on the thread.
+            - `LLAMA`: Same role as the content, focusing instead on the thread.
 
     2. `SingleDatasetsAnalysis`
     Contains analyses for separate individual tables (boards, discussions, members, messages).
@@ -131,7 +136,7 @@ Stores tables datasets used in the project.
 Contains script merged BERT models.
 
 5. `MLModelsBERT`
-    Contains Machine Learning scripts and models used to validate datasets obtained from BERT approaches on content and threads.
+    Contains Machine Learning scripts and models used to validate datasets obtained from BERT approaches on content and threads including LightGBM and LSTM.
 
 6. `ShowModelsBaselineBERT`
     Displays baseline BERT models.
