@@ -377,9 +377,9 @@ Thread:
 
 <br>
 
-| ![Loss Train Test 68 Topics](Img/LossLightGBM68.png) | ![Loss Train Test 7 Topics](Img/LossLightGBM7.png) |
+| ![Loss Train Val 68 Topics](Img/LossLightGBM68.png) | ![Loss Train Val 7 Topics](Img/LossLightGBM7.png) |
 |:------------------------------------------------------:|:---------------------------------------------------:|
-| Loss Train Test 68 Topics                             | Loss Train Test 7 Topics                            |
+| Loss Train Val 68 Topics                             | Loss Train Val 7 Topics                            |
 
 <br>Instead, a neural network using two inputs was chosen for `Content`: a timestamp treated as LSTM and another input with embeddings obtained from BERT. In this way it is also possible to make predictions based on time and understand the evolution of the language.
 
@@ -394,9 +394,9 @@ Content:
 
 <br>
 
-| ![Loss Train Test 121 Topics](Img/LSTMLossContent.png) | ![Accuracy Train Test 121 Topics](Img/LSTMAccuracyContent.png) |
+| ![Loss Train Val 121 Topics](Img/LSTMLossContent.png) | ![Accuracy Train Val 121 Topics](Img/LSTMAccuracyContent.png) |
 |:------------------------------------------------------:|:---------------------------------------------------------------:|
-| Loss Train Test 121 Topics                             | Accuracy Train Test 121 Topics                                  |
+| Loss Train Val 121 Topics                             | Accuracy Train Val 121 Topics                                  |
 
 
 ## Future work
