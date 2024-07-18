@@ -297,6 +297,7 @@ Clearly the custom predict_topic function is being used, alternatively, one coul
 </table>
 </div>
 
+Note: In the same `.ipynb` file there are other examples
 
 ## Datasets Used
 
