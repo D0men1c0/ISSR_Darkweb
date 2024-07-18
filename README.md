@@ -153,7 +153,7 @@ Utility scripts and auxiliary functions used throughout the project to process d
 
 ## Installation
 
-To install the project, follow these simple steps. Note that this project uses Python 3.12.
+To install the project, follow these simple steps. Note that this project uses Python `3.12`
 
 1. Clone the repository:
     ```bash
