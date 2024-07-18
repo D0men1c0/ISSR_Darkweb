@@ -377,11 +377,11 @@ Thread:
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="margin: 10px; text-align: center;">
-    <img src="Img/LossLightGBM68.png" alt="Loss Train Test 68 Topics" width="400"/>
+    <img src="Img/LossLightGBM68.png" alt="Loss Train Test 68 Topics" width="300"/>
     <div>Loss Train Test 68 Topics</div>
   </div>
   <div style="margin: 10px; text-align: center;">
-    <img src="Img/LossLightGBM7.png" alt="Loss Train Test 7 Topics" width="400"/>
+    <img src="Img/LossLightGBM7.png" alt="Loss Train Test 7 Topics" width="300"/>
     <div>Loss Train Test 7 Topics</div>
   </div>
 </div>
@@ -400,11 +400,11 @@ Content:
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="margin: 10px; text-align: center;">
-    <img src="Img/LSTMLossContent.png" alt="Loss Train Test 121 Topics" width="400"/>
+    <img src="Img/LSTMLossContent.png" alt="Loss Train Test 121 Topics" width="300"/>
     <div>Loss Train Test 121 Topics</div>
   </div>
   <div style="margin: 10px; text-align: center;">
-    <img src="Img/LSTMAccuracyContent.png" alt="Accuracy Train Test 121 Topics" width="400"/>
+    <img src="Img/LSTMAccuracyContent.png" alt="Accuracy Train Test 121 Topics" width="300"/>
     <div>Accuracy Train Test 121 Topics</div>
   </div>
 </div>
