@@ -6,11 +6,12 @@
 - [Utility of Dark Web Language Analysis](#utility-of-dark-web-language-analysis)
 - [Repository Structure](#repository-structure)
 - [Installation](#installation)
-- [Running on Google Colab](#running-on-google-colab)
+  - [Running on Google Colab](#running-on-google-colab)
 - [Usage](#usage)
 - [Datasets Used](#datasets-used)
 - [Summary of Work Done](#summary-of-work-done)
 - [Results](#results)
+  - [Cluster Validation using LightGBM and LSTM](#cluster-validation-using-lightgbm-and-lstm)
 - [Future work](#future-work)
 - [Acknowledgements](#acknowledgements)
 - [Citation](#citation)
@@ -354,6 +355,15 @@ Content:
 | Dos Score (Diversity Overlapped Score)  | 0.24              |
 | Outliers                                | 0.35              |
 
+
+There are many other graphs present representing topics and their distribution, for reasons of space only the `Content` graph of the top 10 most frequent topics distributed over time will be shown
+
+<div style="text-align: center;">
+  <img src="Img/Content/120TimeSeries.png" alt="Distribution Topic" width="800" height="400"/>
+</div>
+
+### Cluster Validation using LightGBM and LSTM
+
 These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
 
 Thread:
@@ -365,14 +375,50 @@ Thread:
 | Recall              | 0.84              | 0.95             |
 | F1 Score            | 0.87              | 0.96             |
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="margin: 10px; text-align: center;">
+    <img src="Img/LossLightGBM68.png" alt="Loss Train Test 68 Topics" width="500"/>
+    <div>Loss Train Test 68 Topics</div>
+  </div>
+  <div style="margin: 10px; text-align: center;">
+    <img src="Img/LossLightGBM7.png" alt="Loss Train Test 7 Topics" width="500"/>
+    <div>Loss Train Test 7 Topics</div>
+  </div>
+</div>
+
+<br>Instead, a neural network using two inputs was chosen for `Content`: a timestamp treated as LSTM and another input with embeddings obtained from BERT. In this way it is also possible to make predictions based on time and understand the evolution of the language.
+
+Content:
+
+| Metric              | Value (121 Topics)|
+|---------------------|-------------------|
+| Accuracy            | 0.87              |
+| Precision           | 0.87              |
+| Recall              | 0.86              |
+| F1 Score            | 0.86              |
+
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="margin: 10px; text-align: center;">
+    <img src="Img/LSTMLossContent.png" alt="Loss Train Test 121 Topics" width="500"/>
+    <div>Loss Train Test 121 Topics</div>
+  </div>
+  <div style="margin: 10px; text-align: center;">
+    <img src="Img/LSTMAccuracyContent.png" alt="Accuracy Train Test 121 Topics" width="500"/>
+    <div>Accuracy Train Test 121 Topics</div>
+  </div>
+</div>
+
 ## Future work
 
-- Merge Baselines: The next steps involve merging the baselines obtained from the Thread and Content sections into a single model to integrate both representations, with Thread providing general topics and Content extending them.
-- Validation: Validate the results using clustering metrics and machine learning models. Given the data volume, LightGBM may not be sufficient, so exploring neural networks could be beneficial.
-- Topic Refinement: Conduct a final review of the topics, potentially integrating specific expressions that need to be highlighted (e.g., a particular abbreviation for a drug that wasn't identified).
-- Deployment on HuggingFace: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
-- Temporal Validation: If time permits, consider using LSTM to validate the results over time (currently done with BERT), which could provide additional insights.
-- Multimodal Model: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
+- [ ] **Merge Baselines**: The next steps involve merging the baselines obtained from the Thread and Content sections into a single model to integrate both representations, with Thread providing general topics and Content extending them.
+- [X] **Validation**: Validate the results using clustering metrics and machine learning models. Given the data volume, LightGBM may not be sufficient, so exploring neural networks could be beneficial.
+- [ ] **Topic Refinement**: Conduct a final review of the topics, potentially integrating specific expressions that need to be highlighted (e.g., a particular abbreviation for a drug that wasn't identified).
+- [ ] **Integration with LLAMA2**: Incorporate LLAMA2 to better explain and refine the topic labels. LLAMA2 can provide more detailed and contextually relevant labels, enhancing the interpretability of the topics.
+- [ ] **Deployment on HuggingFace**: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
+- [ ] **Temporal Validation**: If time permits, validate the results over time using LSTM (currently done with BERT) to ensure temporal consistency and gain additional insights.
+- [ ] **Multimodal Model**: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
+
 
 ## Acknowledgements
 
