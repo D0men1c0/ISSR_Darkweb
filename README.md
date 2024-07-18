@@ -153,7 +153,7 @@ Utility scripts and auxiliary functions used throughout the project to process d
 
 ## Installation
 
-To install the project, follow these simple steps:
+To install the project, follow these simple steps. Note that this project uses Python 3.12.
 
 1. Clone the repository:
     ```bash
@@ -161,6 +161,14 @@ To install the project, follow these simple steps:
     ```
 2. Install the dependencies using `requirements.txt`:
     ```bash
+    # Ensure you are using Python 3.12
+    python --version
+
+    # Create and activate a virtual environment (optional but recommended)
+    python3.12 -m venv myenv
+    source myenv/bin/activate   # On Windows: myenv\Scripts\activate
+
+    # Install the dependencies using requirements.txt
     pip install -r requirements.txt
     ```
 3. (Optional) Run the `download_files.py` script to download the additional files from Google Drive. This script handles retrieving files and placing them in the appropriate directories within the repository.<br>
