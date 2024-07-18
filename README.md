@@ -375,16 +375,9 @@ Thread:
 | Recall              | 0.84              | 0.95             |
 | F1 Score            | 0.87              | 0.96             |
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div style="margin: 10px; text-align: center;">
-    <img src="Img/LossLightGBM68.png" alt="Loss Train Test 68 Topics" width="250" height="300"/>
-    <div>Loss Train Test 68 Topics</div>
-  </div>
-  <div style="margin: 10px; text-align: center;">
-    <img src="Img/LossLightGBM7.png" alt="Loss Train Test 7 Topics" width="250" height="300"/>
-    <div>Loss Train Test 7 Topics</div>
-  </div>
-</div>
+| ![Loss Train Test 68 Topics](Img/LossLightGBM68.png) | ![Loss Train Test 7 Topics](Img/LossLightGBM7.png) |
+|:------------------------------------------------------:|:---------------------------------------------------:|
+| Loss Train Test 68 Topics                             | Loss Train Test 7 Topics                            |
 
 <br>Instead, a neural network using two inputs was chosen for `Content`: a timestamp treated as LSTM and another input with embeddings obtained from BERT. In this way it is also possible to make predictions based on time and understand the evolution of the language.
 
@@ -398,16 +391,10 @@ Content:
 | F1 Score            | 0.86              |
 
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div style="margin: 10px; text-align: center;">
-    <img src="Img/LSTMLossContent.png" alt="Loss Train Test 121 Topics" width="250" height="300"/>
-    <div>Loss Train Test 121 Topics</div>
-  </div>
-  <div style="margin: 10px; text-align: center;">
-    <img src="Img/LSTMAccuracyContent.png" alt="Accuracy Train Test 121 Topics" width="250" height="300"/>
-    <div>Accuracy Train Test 121 Topics</div>
-  </div>
-</div>
+| ![Loss Train Test 121 Topics](Img/LSTMLossContent.png) | ![Accuracy Train Test 121 Topics](Img/LSTMAccuracyContent.png) |
+|:------------------------------------------------------:|:---------------------------------------------------------------:|
+| Loss Train Test 121 Topics                             | Accuracy Train Test 121 Topics                                  |
+
 
 ## Future work
 
