@@ -375,6 +375,8 @@ Thread:
 | Recall              | 0.84              | 0.95             |
 | F1 Score            | 0.87              | 0.96             |
 
+<br>
+
 | ![Loss Train Test 68 Topics](Img/LossLightGBM68.png) | ![Loss Train Test 7 Topics](Img/LossLightGBM7.png) |
 |:------------------------------------------------------:|:---------------------------------------------------:|
 | Loss Train Test 68 Topics                             | Loss Train Test 7 Topics                            |
@@ -390,6 +392,7 @@ Content:
 | Recall              | 0.86              |
 | F1 Score            | 0.86              |
 
+<br>
 
 | ![Loss Train Test 121 Topics](Img/LSTMLossContent.png) | ![Accuracy Train Test 121 Topics](Img/LSTMAccuracyContent.png) |
 |:------------------------------------------------------:|:---------------------------------------------------------------:|
