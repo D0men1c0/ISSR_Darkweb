@@ -6,6 +6,7 @@
 - [Utility of Dark Web Language Analysis](#utility-of-dark-web-language-analysis)
 - [Repository Structure](#repository-structure)
 - [Installation](#installation)
+- [Running on Google Colab](#running-on-google-colab)
 - [Usage](#usage)
 - [Datasets Used](#datasets-used)
 - [Summary of Work Done](#summary-of-work-done)
@@ -20,7 +21,7 @@ The objective of this project was to analyze the evolution of language among Dar
 
 For more details on the project, refer to the Medium article [here](https://medium.com/@domenicolacavalla8/examination-of-the-evolution-of-language-among-dark-web-users-67fd3397e0fb).
 
-## Utility of Dark Web Language Analysis
+### Utility of Dark Web Language Analysis
 
 This analysis is highly useful because it allows for the examination of large volumes of data to identify the main topics discussed, along with the nuances of associated words. Understanding these elements can provide insights into the nature of criminal activities, the evolution of their language, and the connections between various slang terms and specific illicit activities. This information can be invaluable for law enforcement, cybersecurity professionals, and researchers studying the dynamics of underground online communities.
 
@@ -153,7 +154,7 @@ Utility scripts and auxiliary functions used throughout the project to process d
 
 ## Installation
 
-To install the project, follow these simple steps. Note that this project uses Python `3.12`
+To install the project, follow these simple steps. Note that this project uses Python `3.12.2`
 
 1. Clone the repository:
     ```bash
@@ -176,6 +177,30 @@ Note: being quite heavy files (7 GB in total) choose carefully which models and 
     ```bash
     python download_files.py
     ```
+
+## Running on Google Colab
+
+To run the notebooks on Google Colab, follow these steps:
+
+1. Upload the repository to your Google Drive either manually or by cloning it from GitHub. You can refer to this [guide](https://www.geeksforgeeks.org/how-to-clone-github-repository-and-push-changes-in-colaboratory/)
+
+2. Mount your Google Drive in Colab:
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive')
+    ```
+3. To make the modules work, depending on the `.ipynb` file being opened, insert this line of code:
+    ```python
+    import sys
+    sys.path.insert(0, '/content/drive/MyDrive/path_to_current_ipynb_file/')
+    ```
+    This way, you can import the `.py` modules present in the `Utils` directory.
+4. Install the necessary libraries. For example:
+    ```python
+    !pip install pandas
+    ```
+    
+5. If you encounter the following error while performing DataFrame operations: `Index' object has no attribute '_format_flat'`, note that this is just a visualization issue. The cell will still execute successfully.
 
 ## Usage
 
