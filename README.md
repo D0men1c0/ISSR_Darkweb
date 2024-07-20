@@ -179,7 +179,7 @@ Note: being quite heavy files (7 GB in total) choose carefully which models and 
     python download_files.py
     ```
 
-## Running on Google Colab
+### Running on Google Colab
 
 To run the notebooks on Google Colab, follow these steps:
 
