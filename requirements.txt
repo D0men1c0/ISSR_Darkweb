@@ -31,3 +31,4 @@ umap_learn==0.5.6
 wordcloud==1.9.3
 squarify==0.4.3
 torch==2.2.2
+pyarrow==15.0.2
