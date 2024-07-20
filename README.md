@@ -202,7 +202,7 @@ To run the notebooks on Google Colab, follow these steps:
     This way, you can import the `.py` modules present in the `Utils` directory.
 4. Install the necessary libraries. For example:
     ```python
-    !pip install pandas
+    !pip install bertopic
     ```
     
 5. If you encounter the following error while performing DataFrame operations: `Index' object has no attribute '_format_flat'`, note that this is just a visualization issue. The cell will still execute successfully.
