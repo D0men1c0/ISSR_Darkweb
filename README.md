@@ -162,6 +162,8 @@ To install the project, follow these simple steps. **Note:** that this project u
     git clone https://github.com/D0men1c0/GSoC
     ```
 2. Install the dependencies using `requirements.txt`:
+
+    Using `venv` (Virtual Environment):
     ```bash
     # Ensure you are using Python 3.12
     python --version
@@ -169,6 +171,19 @@ To install the project, follow these simple steps. **Note:** that this project u
     # Create and activate a virtual environment (optional but recommended)
     python3.12 -m venv myenv
     source myenv/bin/activate   # On Windows: myenv\Scripts\activate
+
+    # Install the dependencies using requirements.txt
+    pip install -r requirements.txt
+    ```
+
+    Using `conda`:
+    ```bash
+    # Ensure you are using Python 3.12
+    python --version
+
+    # Create and activate a conda environment (optional but recommended)
+    conda create --name myenv python=3.12
+    conda activate myenv
 
     # Install the dependencies using requirements.txt
     pip install -r requirements.txt
