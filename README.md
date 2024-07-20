@@ -190,10 +190,14 @@ To run the notebooks on Google Colab, follow these steps:
     from google.colab import drive
     drive.mount('/content/drive')
     ```
-3. To make the modules work, depending on the `.ipynb` file being opened, insert this line of code:
+3. Change directory to the location of the current `.ipynb` file:
+    ```python
+    !cd /content/drive/MyDrive/path_to_current_ipynb_file/
+    ```
+4. Insert the directory containing utility modules into the system path. Replace `/content/drive/MyDrive/path_util_directory/` with the actual path to your utilities directory:
     ```python
     import sys
-    sys.path.insert(0, '/content/drive/MyDrive/path_to_current_ipynb_file/')
+    sys.path.insert(0, '/content/drive/MyDrive/path_util_directory/')
     ```
     This way, you can import the `.py` modules present in the `Utils` directory.
 4. Install the necessary libraries. For example:
