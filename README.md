@@ -241,7 +241,7 @@ import BERTopicUtils as btu
 from bertopic import BERTopic
 
 # Load the BERTopic model
-topic_model = BERTopic.load("ModelsContent/topic_model_all-MiniLM-L6-v2_190_20n_8dim")
+topic_model = BERTopic.load("ModelsContent/topic_model_all-MiniLM-L6-v2_190_20n_8dim", embedding_model='all-MiniLM-L6-v2')
 
 # Define a sentence for prediction
 sentence = ['recently closed Samsara market']
@@ -250,6 +250,8 @@ sentence = ['recently closed Samsara market']
 btu.predict_topic(topic_model, sentence, custom_labels=True)
 ```
 
+**Note:** we are using the `topic_model_all-MiniLM-L6-v2_190_20n_8dim`, which is not directly in the directory because it weighs 2.5GB but can be downloaded directly from the file `download_files.py`.
+Alternatively, there is the version topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors which is much smaller and is present in the directory, but the prediction results are poorer. <br>
 The BERTopic model used is one example, there are several. Just go to the ModelsContent subdirectory to see how many more there are.<br>
 Or also use the templates in the thread section on Models:
 
