@@ -190,9 +190,10 @@ To run the notebooks on Google Colab, follow these steps:
     from google.colab import drive
     drive.mount('/content/drive')
     ```
-3. Change directory to the location of the current `.ipynb` file. <br>Replace `/content/drive/MyDrive/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/` with the actual path to your current `.ipynb` file:
+3. Adds the local directory to the path of the current `.ipynb` file. <br>Replace `/content/drive/MyDrive/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/` with the actual path to your current `.ipynb` file:
     ```python
-    !cd /content/drive/MyDrive/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/
+    import os
+    os.chdir('/content/drive/MyDrive/ColabNotebooks/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/')
     ```
 4. To import the `.py` files present in the `Util` module, insert the directory containing the utility modules into the system path. <br>Replace `/content/drive/MyDrive/GSoC/Util/` with the actual path to your utilities directory:
     ```python
