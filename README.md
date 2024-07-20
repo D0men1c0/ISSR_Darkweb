@@ -261,7 +261,7 @@ cd ../ThreadAnalysis/Models
 
 By default, the top 5 labels are set, but just set the `num_classes` parameter with the number of topics desired.
 
-Clearly the custom predict_topic function is being used, alternatively, one could use BERTopic's `transform' function directly, without importing anything else.
+Clearly the custom `predict_topic` function is being used, alternatively, one could use BERTopic's `transform' function [directly]https://maartengr.github.io/BERTopic/getting_started/serialization/serialization.html, without importing anything else.
 
 ### Example Results
 <div>
