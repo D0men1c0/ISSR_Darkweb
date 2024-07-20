@@ -183,7 +183,7 @@ Note: being quite heavy files (7 GB in total) choose carefully which models and 
 
 To run the notebooks on Google Colab, follow these steps:
 
-1. Upload the repository to your Google Drive either manually or by cloning it from GitHub. You can refer to this [guide](https://www.geeksforgeeks.org/how-to-clone-github-repository-and-push-changes-in-colaboratory/)
+1. Upload the repository to your Google Drive either manually or by cloning it from GitHub. <br>You can refer to this [guide](https://www.geeksforgeeks.org/how-to-clone-github-repository-and-push-changes-in-colaboratory/)
 
 2. Mount your Google Drive in Colab:
     ```python
@@ -194,7 +194,7 @@ To run the notebooks on Google Colab, follow these steps:
     ```python
     !cd /content/drive/MyDrive/path_to_current_ipynb_file/
     ```
-4. Insert the directory containing utility modules into the system path. Replace `/content/drive/MyDrive/path_util_directory/` with the actual path to your utilities directory:
+4. Insert the directory containing utility modules into the system path. <br>Replace `/content/drive/MyDrive/path_util_directory/` with the actual path to your utilities directory:
     ```python
     import sys
     sys.path.insert(0, '/content/drive/MyDrive/path_util_directory/')
