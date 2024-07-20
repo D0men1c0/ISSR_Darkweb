@@ -190,16 +190,16 @@ To run the notebooks on Google Colab, follow these steps:
     from google.colab import drive
     drive.mount('/content/drive')
     ```
-3. Change directory to the location of the current `.ipynb` file:
+3. Change directory to the location of the current `.ipynb` file. <br>Replace `/content/drive/MyDrive/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/` with the actual path to your current `.ipynb` file:
     ```python
-    !cd /content/drive/MyDrive/path_to_current_ipynb_file/
+    !cd /content/drive/MyDrive/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/
     ```
-4. Insert the directory containing utility modules into the system path. <br>Replace `/content/drive/MyDrive/path_util_directory/` with the actual path to your utilities directory:
+4. Insert the directory containing utility modules into the system path. <br>Replace `/content/drive/MyDrive/GSoC/Util/` with the actual path to your utilities directory:
     ```python
     import sys
-    sys.path.insert(0, '/content/drive/MyDrive/path_util_directory/')
+    sys.path.insert(0, '/content/drive/MyDrive/GSoC/Util/')
     ```
-    This way, you can import the `.py` modules present in the `Utils` directory.
+    This way, you can import the `.py` modules present in the `Util` directory.
 4. Install the necessary libraries. For example:
     ```python
     !pip install bertopic
