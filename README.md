@@ -150,12 +150,12 @@ Contains script merged BERT models.
 Contains HTML files showing results of the analysis.
 
 8. `Util`
-Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.
-
+Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.<br>
+**Note:** If using Google Colab and wanting to import these modules, see point 4 of this section: [Running on Google Colab](#running-on-google-colab)
 
 ## Installation
 
-To install the project, follow these simple steps. Note that this project uses Python `3.12.2`
+To install the project, follow these simple steps. **Note:** that this project uses Python `3.12.2`
 
 1. Clone the repository:
     ```bash
@@ -194,7 +194,7 @@ To run the notebooks on Google Colab, follow these steps:
     ```python
     !cd /content/drive/MyDrive/GSoC/Analyze_files/CombiningAnalysisCompleteDataset/ContentAnalysis/
     ```
-4. Insert the directory containing utility modules into the system path. <br>Replace `/content/drive/MyDrive/GSoC/Util/` with the actual path to your utilities directory:
+4. To import the `.py` files present in the `Util` module, insert the directory containing the utility modules into the system path. <br>Replace `/content/drive/MyDrive/GSoC/Util/` with the actual path to your utilities directory:
     ```python
     import sys
     sys.path.insert(0, '/content/drive/MyDrive/GSoC/Util/')
