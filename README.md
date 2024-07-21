@@ -159,8 +159,7 @@ To install the project, follow these simple steps. **Note:** that this project u
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/humanai-foundation/humanai-foundation.github.io
-    cd humanai-foundation.github.io/gsoc/2024/ISSR_Darkweb
+    git clone https://github.com/D0men1c0/ISSR_Darkweb
     ```
 2. Install the dependencies using `requirements.txt`:
 
