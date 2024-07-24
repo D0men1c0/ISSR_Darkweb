@@ -1,0 +1,606 @@
+Topic,Words,Frequency,Timestamp,Name
+0,"product, strain, weed, price, vendor",1164,2018-02-14 07:22:04.800,Product Reviews and Purchases
+0,"link, vendor, cart, product, price",1364,2018-07-03 14:24:00.000,Product Reviews and Purchases
+0,"vendor, cart, product, weed, link",1508,2018-11-19 04:48:00.000,Product Reviews and Purchases
+0,"link, cart, vendor, weed, product",7190,2019-04-06 19:12:00.000,Product Reviews and Purchases
+0,"link, product, cart, vendor, price",2857,2019-08-23 09:36:00.000,Product Reviews and Purchases
+1,"deposit, address, ticket, wallet, btc",442,2018-02-14 07:22:04.800,Empire Deposit & Withdrawal Issues
+1,"deposit, address, ticket, btc, wallet",481,2018-07-03 14:24:00.000,Empire Deposit & Withdrawal Issues
+1,"deposit, address, ticket, btc, wallet",561,2018-11-19 04:48:00.000,Empire Deposit & Withdrawal Issues
+1,"deposit, address, ticket, btc, wallet",2808,2019-04-06 19:12:00.000,Empire Deposit & Withdrawal Issues
+1,"deposit, address, ticket, btc, wallet",1073,2019-08-23 09:36:00.000,Empire Deposit & Withdrawal Issues
+2,"key, pgp, account, pgp key, message",433,2018-02-14 07:22:04.800,PGP Key Security
+2,"key, pgp, account, pgp key, message",561,2018-07-03 14:24:00.000,PGP Key Security
+2,"key, pgp, account, pgp key, message",649,2018-11-19 04:48:00.000,PGP Key Security
+2,"key, pgp, account, pgp key, message",2864,2019-04-06 19:12:00.000,PGP Key Security
+2,"key, pgp, account, pgp key, message",1189,2019-08-23 09:36:00.000,PGP Key Security
+3,"order, shipped, day, ordered, week",272,2018-02-14 07:22:04.800,Order Shipping Status
+3,"order, shipped, day, ordered, week",327,2018-07-03 14:24:00.000,Order Shipping Status
+3,"order, shipped, day, ordered, week",345,2018-11-19 04:48:00.000,Order Shipping Status
+3,"order, shipped, day, ordered, week",1707,2019-04-06 19:12:00.000,Order Shipping Status
+3,"order, shipped, day, ordered, week",717,2019-08-23 09:36:00.000,Order Shipping Status
+4,"scam, scammer, scam scam, scammed, scam scam scam",245,2018-02-14 07:22:04.800,Vendor Scams and Detection
+4,"scam, scammer, scam scam, scam scam scam, scammed",293,2018-07-03 14:24:00.000,Vendor Scams and Detection
+4,"scam, scammer, scam scam, scammed, scam scam scam",351,2018-11-19 04:48:00.000,Vendor Scams and Detection
+4,"scam, scammer, pound pound pound, pound pound, pound",1650,2019-04-06 19:12:00.000,Vendor Scams and Detection
+4,"scam, scammer, scammed, scam scam, scam scam scam",648,2019-08-23 09:36:00.000,Vendor Scams and Detection
+5,"thanks, thank, lol, good, man",389,2018-02-14 07:22:04.800,Friendly Positive Talk
+5,"thanks, thank, lol, good, man",434,2018-07-03 14:24:00.000,Friendly Positive Talk
+5,"thanks, thank, lol, man, good",489,2018-11-19 04:48:00.000,Friendly Positive Talk
+5,"thanks, thank, lol, good, man",2320,2019-04-06 19:12:00.000,Friendly Positive Talk
+5,"thanks, thank, lol, good, man",952,2019-08-23 09:36:00.000,Friendly Positive Talk
+6,"ship, country, shipping, eu, vendor",279,2018-02-14 07:22:04.800,Shipping in EU Countries
+6,"ship, country, shipping, vendor, eu",323,2018-07-03 14:24:00.000,Shipping in EU Countries
+6,"ship, country, vendor, shipping, searched time",366,2018-11-19 04:48:00.000,Shipping in EU Countries
+6,"ship, country, shipping, vendor, eu",1770,2019-04-06 19:12:00.000,Shipping in EU Countries
+6,"ship, country, shipping, vendor, eu",687,2019-08-23 09:36:00.000,Shipping in EU Countries
+7,"coke, cocaine, good, quality, link",236,2018-02-14 07:22:04.800,High Quality Cocaine
+7,"coke, cocaine, product, vendor, quality",269,2018-07-03 14:24:00.000,High Quality Cocaine
+7,"coke, cocaine, link, good, vendor",315,2018-11-19 04:48:00.000,High Quality Cocaine
+7,"coke, cocaine, link, good, vendor",1485,2019-04-06 19:12:00.000,High Quality Cocaine
+7,"coke, cocaine, link, good, vendor",541,2019-08-23 09:36:00.000,High Quality Cocaine
+8,"card, carding, cc, get, know",263,2018-02-14 07:22:04.800,Carding Strategies
+8,"card, carding, cc, gift card, gift",318,2018-07-03 14:24:00.000,Carding Strategies
+8,"card, carding, cc, buy, gift card",371,2018-11-19 04:48:00.000,Carding Strategies
+8,"card, carding, cc, gift card, gift",1692,2019-04-06 19:12:00.000,Carding Strategies
+8,"card, carding, cc, get, gift",639,2019-08-23 09:36:00.000,Carding Strategies
+9,"pgp, begin pgp, begin, pgp signature, signature",219,2018-02-14 07:22:04.800,PGP Signature End
+9,"pgp, begin pgp, begin, signature, pgp signature",228,2018-07-03 14:24:00.000,PGP Signature End
+9,"pgp, begin pgp, begin, pgp signature, signature",280,2018-11-19 04:48:00.000,PGP Signature End
+9,"pgp, begin pgp, begin, pgp signature, signature",1241,2019-04-06 19:12:00.000,PGP Signature End
+9,"pgp, begin pgp, begin, pgp signature, signature",494,2019-08-23 09:36:00.000,PGP Signature End
+10,"lsd, tab, ug, vendor, link",219,2018-02-14 07:22:04.800,LSD Tab Marketplace Reviews
+10,"lsd, tab, ug, acid, pfcs",245,2018-07-03 14:24:00.000,LSD Tab Marketplace Reviews
+10,"lsd, tab, ug, vendor, acid",256,2018-11-19 04:48:00.000,LSD Tab Marketplace Reviews
+10,"lsd, tab, ug, vendor, acid",1321,2019-04-06 19:12:00.000,LSD Tab Marketplace Reviews
+10,"lsd, tab, ug, link, vendor",521,2019-08-23 09:36:00.000,LSD Tab Marketplace Reviews
+11,"vendor, good, nt, know, anyone",191,2018-02-14 07:22:04.800,Vendor Recommendation
+11,"vendor, good, know, anyone, nt",277,2018-07-03 14:24:00.000,Vendor Recommendation
+11,"vendor, good, know, nt, anyone",295,2018-11-19 04:48:00.000,Vendor Recommendation
+11,"vendor, good, know, anyone, nt",1387,2019-04-06 19:12:00.000,Vendor Recommendation
+11,"vendor, good, know, anyone, nt",542,2019-08-23 09:36:00.000,Vendor Recommendation
+12,"dispute, refund, vendor, order, mod",167,2018-02-14 07:22:04.800,Dispute Resolution
+12,"dispute, refund, order, vendor, mod",194,2018-07-03 14:24:00.000,Dispute Resolution
+12,"dispute, refund, vendor, order, mod",218,2018-11-19 04:48:00.000,Dispute Resolution
+12,"dispute, refund, vendor, order, mod",1109,2019-04-06 19:12:00.000,Dispute Resolution
+12,"dispute, know guy know, guy know guy, know guy, guy know",412,2019-08-23 09:36:00.000,Dispute Resolution
+13,"wsm, vendor, market, dream, order",175,2018-02-14 07:22:04.800,WSM Exit Scam Warnings
+13,"wsm, vendor, market, dream, order",209,2018-07-03 14:24:00.000,WSM Exit Scam Warnings
+13,"wsm, vendor, order, market, dream",234,2018-11-19 04:48:00.000,WSM Exit Scam Warnings
+13,"wsm, market, vendor, order, dream",978,2019-04-06 19:12:00.000,WSM Exit Scam Warnings
+13,"wsm, vendor, market, nt, order",374,2019-08-23 09:36:00.000,WSM Exit Scam Warnings
+14,"nt, get, drug, like, people",176,2018-02-14 07:22:04.800,Drugs and Police Enforcement
+14,"nt, drug, get, people, would",209,2018-07-03 14:24:00.000,Drugs and Police Enforcement
+14,"nt, get, drug, like, people",265,2018-11-19 04:48:00.000,Drugs and Police Enforcement
+14,"nt, get, people, like, drug",1148,2019-04-06 19:12:00.000,Drugs and Police Enforcement
+14,"nt, drug, get, like, people",416,2019-08-23 09:36:00.000,Drugs and Police Enforcement
+15,"monero, xmr, wallet, btc, exchange",244,2018-02-14 07:22:04.800,Monero Wallet Exchange and Bitcoin Use
+15,"monero, xmr, wallet, btc, exchange",291,2018-07-03 14:24:00.000,Monero Wallet Exchange and Bitcoin Use
+15,"monero, xmr, wallet, btc, exchange",329,2018-11-19 04:48:00.000,Monero Wallet Exchange and Bitcoin Use
+15,"monero, xmr, wallet, btc, exchange",1537,2019-04-06 19:12:00.000,Monero Wallet Exchange and Bitcoin Use
+15,"monero, xmr, wallet, btc, exchange",594,2019-08-23 09:36:00.000,Monero Wallet Exchange and Bitcoin Use
+16,"ddos, attack, ddos attack, gr euro, bennett",154,2018-02-14 07:22:04.800,Dread Market DDoS Attack
+16,"ddos, attack, ddos attack, market, link",196,2018-07-03 14:24:00.000,Dread Market DDoS Attack
+16,"ddos, attack, ddos attack, market, link",186,2018-11-19 04:48:00.000,Dread Market DDoS Attack
+16,"ddos, attack, ddos attack, market, link",872,2019-04-06 19:12:00.000,Dread Market DDoS Attack
+16,"ddos, attack, ddos attack, market, link",365,2019-08-23 09:36:00.000,Dread Market DDoS Attack
+17,"mdma, mda, vendor, price, quality",159,2018-02-14 07:22:04.800,MDMA Vendor Quality Prices
+17,"mdma, mda, vendor, quality, like",182,2018-07-03 14:24:00.000,MDMA Vendor Quality Prices
+17,"mdma, mda, price, vendor, quality",205,2018-11-19 04:48:00.000,MDMA Vendor Quality Prices
+17,"mdma, mda, vendor, price, good",993,2019-04-06 19:12:00.000,MDMA Vendor Quality Prices
+17,"mdma, mda, vendor, price, good",386,2019-08-23 09:36:00.000,MDMA Vendor Quality Prices
+18,"darknet, clearnet, link, nt, dark",142,2018-02-14 07:22:04.800,Darknet Market
+18,"darknet, link, clearnet, dark, nt",215,2018-07-03 14:24:00.000,Darknet Market
+18,"darknet, clearnet, link, dark, vendor",230,2018-11-19 04:48:00.000,Darknet Market
+18,"darknet, clearnet, link, dark, market",947,2019-04-06 19:12:00.000,Darknet Market
+18,"darknet, clearnet, link, dark, market",353,2019-08-23 09:36:00.000,Darknet Market
+19,"link, post, sub, handley, offord",150,2018-02-14 07:22:04.800,Dread Market Forum Rules and Bans
+19,"post, sub, link, mod, like",186,2018-07-03 14:24:00.000,Dread Market Forum Rules and Bans
+19,"link, post, sub, mod, nt",229,2018-11-19 04:48:00.000,Dread Market Forum Rules and Bans
+19,"post, link, sub, mod, nt",999,2019-04-06 19:12:00.000,Dread Market Forum Rules and Bans
+19,"link, post, sub, mod, banned",378,2019-08-23 09:36:00.000,Dread Market Forum Rules and Bans
+20,"bar, alp, vendor, cad, hulk",181,2018-02-14 07:22:04.800,Alprazolam Pressed Bars Reviews
+20,"bar, alp, vendor, like, hulk",224,2018-07-03 14:24:00.000,Alprazolam Pressed Bars Reviews
+20,"bar, alp, like, hulk, vendor",262,2018-11-19 04:48:00.000,Alprazolam Pressed Bars Reviews
+20,"bar, alp, hulk, vendor, like",1208,2019-04-06 19:12:00.000,Alprazolam Pressed Bars Reviews
+20,"bar, alp, hulk, vendor, like",475,2019-08-23 09:36:00.000,Alprazolam Pressed Bars Reviews
+21,"xanax, bar, alp, mg, nt",153,2018-02-14 07:22:04.800,Xanax Bars and Vendors
+21,"xanax, bar, vendor, alp, mg",198,2018-07-03 14:24:00.000,Xanax Bars and Vendors
+21,"xanax, bar, alp, vendor, mg",238,2018-11-19 04:48:00.000,Xanax Bars and Vendors
+21,"xanax, bar, alp, vendor, mg",1019,2019-04-06 19:12:00.000,Xanax Bars and Vendors
+21,"xanax, bar, alp, vendor, mg",428,2019-08-23 09:36:00.000,Xanax Bars and Vendors
+22,"market, dump, good, nt, new",140,2018-02-14 07:22:04.800,Market Upgrade Support
+22,"market, good, new market, like, get",147,2018-07-03 14:24:00.000,Market Upgrade Support
+22,"market, nt, good, like, new market",180,2018-11-19 04:48:00.000,Market Upgrade Support
+22,"market, good, new market, nt, like",851,2019-04-06 19:12:00.000,Market Upgrade Support
+22,"market, nt, good, new market, new",332,2019-08-23 09:36:00.000,Market Upgrade Support
+23,"feedback, review, vendor, negative, positive",131,2018-02-14 07:22:04.800,ecommerce feedback
+23,"feedback, review, vendor, negative, positive",173,2018-07-03 14:24:00.000,ecommerce feedback
+23,"feedback, review, vendor, negative, positive",202,2018-11-19 04:48:00.000,ecommerce feedback
+23,"feedback, review, vendor, negative, positive",910,2019-04-06 19:12:00.000,ecommerce feedback
+23,"feedback, review, vendor, negative, positive",386,2019-08-23 09:36:00.000,ecommerce feedback
+24,"mirror, working, working mirror, link, mirror link",108,2018-02-14 07:22:04.800,Mirror Link Working
+24,"mirror, working, working mirror, link, mirror link",106,2018-07-03 14:24:00.000,Mirror Link Working
+24,"mirror, working, working mirror, link, mirror link",144,2018-11-19 04:48:00.000,Mirror Link Working
+24,"mirror, working, working mirror, mirror link, link",594,2019-04-06 19:12:00.000,Mirror Link Working
+24,"mirror, working, working mirror, link, mirror link",276,2019-08-23 09:36:00.000,Mirror Link Working
+25,"pill, mg, vendor, good, order",312,2018-02-14 07:22:04.800,Drug Sales
+25,"mg, pill, online, sale online, adderall",384,2018-07-03 14:24:00.000,Drug Sales
+25,"mg, pill, link, vendor, price",387,2018-11-19 04:48:00.000,Drug Sales
+25,"mg, pill, vendor, price, product",1911,2019-04-06 19:12:00.000,Drug Sales
+25,"mg, pill, vendor, order, price",784,2019-08-23 09:36:00.000,Drug Sales
+26,"mail, box, package, address, po",214,2018-02-14 07:22:04.800,Mail Delivery Issues
+26,"box, mail, package, address, nt",286,2018-07-03 14:24:00.000,Mail Delivery Issues
+26,"box, address, mail, package, po",314,2018-11-19 04:48:00.000,Mail Delivery Issues
+26,"box, mail, package, address, po",1422,2019-04-06 19:12:00.000,Mail Delivery Issues
+26,"box, mail, package, address, po",593,2019-08-23 09:36:00.000,Mail Delivery Issues
+27,"review, thanks, thanks review, review thanks, nice review",93,2018-02-14 07:22:04.800,Positive Reviews Thank You Notes Nice
+27,"review, thanks, thanks review, review thanks, nice review",119,2018-07-03 14:24:00.000,Positive Reviews Thank You Notes Nice
+27,"review, thanks, thanks review, review thanks, nice review",134,2018-11-19 04:48:00.000,Positive Reviews Thank You Notes Nice
+27,"review, thanks, thanks review, review thanks, nice review",632,2019-04-06 19:12:00.000,Positive Reviews Thank You Notes Nice
+27,"review, thanks, thanks review, review thanks, nice review",264,2019-08-23 09:36:00.000,Positive Reviews Thank You Notes Nice
+28,"ticket, support ticket, support, libbeytipton, se en",82,2018-02-14 07:22:04.800,Support Ticket Confusion
+28,"ticket, support ticket, support, se en, se",142,2018-07-03 14:24:00.000,Support Ticket Confusion
+28,"ticket, support ticket, support, se en, se",144,2018-11-19 04:48:00.000,Support Ticket Confusion
+28,"ticket, support ticket, support, se en, se",696,2019-04-06 19:12:00.000,Support Ticket Confusion
+28,"ticket, support ticket, support, se en, se",267,2019-08-23 09:36:00.000,Support Ticket Confusion
+29,"cryptonia, market, empire, vendor, nightmare",124,2018-02-14 07:22:04.800,Cryptonia Market
+29,"cryptonia, market, empire, print, vendor",113,2018-07-03 14:24:00.000,Cryptonia Market
+29,"cryptonia, market, empire, vendor, like",136,2018-11-19 04:48:00.000,Cryptonia Market
+29,"cryptonia, market, empire, vendor, nt",588,2019-04-06 19:12:00.000,Cryptonia Market
+29,"cryptonia, market, empire, vendor, nightmare",253,2019-08-23 09:36:00.000,Cryptonia Market
+30,"escrow, fe, market, vendor, use escrow",103,2018-02-14 07:22:04.800,Market Escrow Usage
+30,"escrow, fe, vendor, use escrow, thc",117,2018-07-03 14:24:00.000,Market Escrow Usage
+30,"escrow, fe, vendor, use escrow, market",133,2018-11-19 04:48:00.000,Market Escrow Usage
+30,"escrow, fe, vendor, market, use escrow",639,2019-04-06 19:12:00.000,Market Escrow Usage
+30,"escrow, fe, vendor, market, use escrow",224,2019-08-23 09:36:00.000,Market Escrow Usage
+31,"onion, dot onion, dot, link, onion link",83,2018-02-14 07:22:04.800,Onion Links
+31,"onion, dot onion, dot, link, onion link",98,2018-07-03 14:24:00.000,Onion Links
+31,"onion, dot onion, dot, link, quality gbp",136,2018-11-19 04:48:00.000,Onion Links
+31,"onion, dot onion, dot, link, onion link",655,2019-04-06 19:12:00.000,Onion Links
+31,"onion, dot onion, dot, link, site",254,2019-08-23 09:36:00.000,Onion Links
+32,"det, er, og, har, jeg",80,2018-02-14 07:22:04.800,Kola;Vendor;Stealth Shipping;Review;Norway
+32,"det, er, og, har, jeg",114,2018-07-03 14:24:00.000,Kola;Vendor;Stealth Shipping;Review;Norway
+32,"det, er, og, har, jeg",109,2018-11-19 04:48:00.000,Kola;Vendor;Stealth Shipping;Review;Norway
+32,"det, er, og, har, jeg",593,2019-04-06 19:12:00.000,Kola;Vendor;Stealth Shipping;Review;Norway
+32,"link subscriber link, subscriber link, link subscriber, subscriber, det",230,2019-08-23 09:36:00.000,Kola;Vendor;Stealth Shipping;Review;Norway
+33,"tor, browser, network, javascript, tor browser",109,2018-02-14 07:22:04.800,Anonymous Browsing and Tor Networks
+33,"tor, browser, network, javascript, service",110,2018-07-03 14:24:00.000,Anonymous Browsing and Tor Networks
+33,"tor, browser, network, javascript, service",129,2018-11-19 04:48:00.000,Anonymous Browsing and Tor Networks
+33,"tor, browser, network, javascript, service",521,2019-04-06 19:12:00.000,Anonymous Browsing and Tor Networks
+33,"tor, sweet, me sweet sweet, me sweet, give me sweet",240,2019-08-23 09:36:00.000,Anonymous Browsing and Tor Networks
+34,"dread, priority shipping, shipping priority shipping, post, priority",79,2018-02-14 07:22:04.800,community appreciation
+34,"dread, blackark, reddit, post, link",103,2018-07-03 14:24:00.000,community appreciation
+34,"dread, post, reddit, link, red diamond",109,2018-11-19 04:48:00.000,community appreciation
+34,"dread, reddit, post, nt, like",566,2019-04-06 19:12:00.000,community appreciation
+34,"dread, reddit, post, link, nt",217,2019-08-23 09:36:00.000,community appreciation
+35,"meth, fentanyl, day, vendor, business day",84,2018-02-14 07:22:04.800,Meth Vendor Quality Review
+35,"meth, vendor, nt, business day, good",121,2018-07-03 14:24:00.000,Meth Vendor Quality Review
+35,"meth, address, business day, day, like",126,2018-11-19 04:48:00.000,Meth Vendor Quality Review
+35,"meth, business day, vendor, day, good",592,2019-04-06 19:12:00.000,Meth Vendor Quality Review
+35,"meth, day, vendor, business day, good",238,2019-08-23 09:36:00.000,Meth Vendor Quality Review
+36,"fent, fentanyl, opiate, heroin, nt",137,2018-02-14 07:22:04.800,Fentanyl Opiate Discussion
+36,"fent, fentanyl, heroin, opiate, ring",178,2018-07-03 14:24:00.000,Fentanyl Opiate Discussion
+36,"fent, fentanyl, opiate, heroin, get",187,2018-11-19 04:48:00.000,Fentanyl Opiate Discussion
+36,"fent, fentanyl, heroin, opiate, nt",864,2019-04-06 19:12:00.000,Fentanyl Opiate Discussion
+36,"fent, fentanyl, heroin, oz oz oz, opiate",329,2019-08-23 09:36:00.000,Fentanyl Opiate Discussion
+37,"link, link link, post, point link comment, link point link",113,2018-02-14 07:22:04.800,Links and Posts
+37,"link, link link, post, point link comment, link point link",139,2018-07-03 14:24:00.000,Links and Posts
+37,"link, link link, post, point link comment, link point link",139,2018-11-19 04:48:00.000,Links and Posts
+37,"link, link link, point link comment, link point link, link comment post",706,2019-04-06 19:12:00.000,Links and Posts
+37,"link, link link, point link comment, link point link, link comment post",235,2019-08-23 09:36:00.000,Links and Posts
+38,"pack, week, day, order, got",125,2018-02-14 07:22:04.800,Package Delay and Shipping
+38,"pack, doc, week, twt pleading, doc doc summons",143,2018-07-03 14:24:00.000,Package Delay and Shipping
+38,"pack, day, week, got, ordered",158,2018-11-19 04:48:00.000,Package Delay and Shipping
+38,"pack, week, day, got, ordered",763,2019-04-06 19:12:00.000,Package Delay and Shipping
+38,"pack, week, day, ordered, got",310,2019-08-23 09:36:00.000,Package Delay and Shipping
+39,"pm, interested, looking, find, please",112,2018-02-14 07:22:04.800,PM Interested Help Explanation
+39,"pm, interested, looking, find, please",106,2018-07-03 14:24:00.000,PM Interested Help Explanation
+39,"pm, interested, looking, find, please",133,2018-11-19 04:48:00.000,PM Interested Help Explanation
+39,"pm, interested, looking, find, please",576,2019-04-06 19:12:00.000,PM Interested Help Explanation
+39,"pm, interested, looking, please, find",230,2019-08-23 09:36:00.000,PM Interested Help Explanation
+40,"hugbunter, hugbunter hugbunter, link hugbunter, hugbunter link, link hugbunter hugbunter",71,2018-02-14 07:22:04.800,hugbunter links
+40,"hugbunter, hugbunter hugbunter, link hugbunter, hugbunter link, hugbunter hugbunter link",98,2018-07-03 14:24:00.000,hugbunter links
+40,"hugbunter, hugbunter hugbunter, link hugbunter, hugbunter link, link hugbunter hugbunter",97,2018-11-19 04:48:00.000,hugbunter links
+40,"hugbunter, hugbunter hugbunter, link hugbunter, hugbunter link, hugbunter hugbunter link",455,2019-04-06 19:12:00.000,hugbunter links
+40,"hugbunter, hugbunter hugbunter, link hugbunter, hugbunter link, hugbunter hugbunter link",202,2019-08-23 09:36:00.000,hugbunter links
+41,"drug, mississippi, investigation, enforcement, federal",81,2018-02-14 07:22:04.800,Darknet Drug Enforcement
+41,"drug, hosting, police, court, dark web",98,2018-07-03 14:24:00.000,Darknet Drug Enforcement
+41,"steps, drug, child, police, investigation",78,2018-11-19 04:48:00.000,Darknet Drug Enforcement
+41,"drug, police, enforcement, law, court",414,2019-04-06 19:12:00.000,Darknet Drug Enforcement
+41,"drug, police, court, investigation, enforcement",178,2019-08-23 09:36:00.000,Darknet Drug Enforcement
+42,"stealth, shipping, vendor, good, order",70,2018-02-14 07:22:04.800,Good Stealth Vendor Shipping
+42,"stealth, good, vendor, shipping, good stealth",105,2018-07-03 14:24:00.000,Good Stealth Vendor Shipping
+42,"stealth, good, vendor, plaque, shipping",98,2018-11-19 04:48:00.000,Good Stealth Vendor Shipping
+42,"stealth, good, vendor, shipping, good stealth",511,2019-04-06 19:12:00.000,Good Stealth Vendor Shipping
+42,"stealth, good, vendor, order, shipping",184,2019-08-23 09:36:00.000,Good Stealth Vendor Shipping
+43,"counterfeit, note, euro, bill, pen",75,2018-02-14 07:22:04.800,Counterfeit Money Sales
+43,"counterfeit, note, euro, bill, drug",101,2018-07-03 14:24:00.000,Counterfeit Money Sales
+43,"counterfeit, note, euro, bill, fake",107,2018-11-19 04:48:00.000,Counterfeit Money Sales
+43,"counterfeit, note, euro, bill, fake",537,2019-04-06 19:12:00.000,Counterfeit Money Sales
+43,"counterfeit, note, euro, bill, money",190,2019-08-23 09:36:00.000,Counterfeit Money Sales
+44,"empire, nightmare, empire empire, find empire, empire nightmare",76,2018-02-14 07:22:04.800,Empire Name Search
+44,"empire, nightmare, empire empire, find empire, nt",101,2018-07-03 14:24:00.000,Empire Name Search
+44,"empire, nightmare, ca, empire empire, find empire",119,2018-11-19 04:48:00.000,Empire Name Search
+44,"empire, nightmare, empire empire, find empire, empire nightmare",546,2019-04-06 19:12:00.000,Empire Name Search
+44,"empire, nightmare, empire empire, find empire, empire nightmare",198,2019-08-23 09:36:00.000,Empire Name Search
+45,"day, waiting, week, month, hour",135,2018-02-14 07:22:04.800,Waiting Time
+45,"day, week, waiting, month, hour",164,2018-07-03 14:24:00.000,Waiting Time
+45,"day, week, waiting, month, hour",204,2018-11-19 04:48:00.000,Waiting Time
+45,"day, week, waiting, month, time",844,2019-04-06 19:12:00.000,Waiting Time
+45,"day, week, waiting, month, time",334,2019-08-23 09:36:00.000,Waiting Time
+46,"gram usd, gram usd gram, usd gram, gram, id",76,2018-02-14 07:22:04.800,Fake IDs & Documents
+46,"id, passport, fake, license, scan",106,2018-07-03 14:24:00.000,Fake IDs & Documents
+46,"id, passport, fake, license, scan",109,2018-11-19 04:48:00.000,Fake IDs & Documents
+46,"id, passport, day days, fake, days",561,2019-04-06 19:12:00.000,Fake IDs & Documents
+46,"id, passport, fake, license, scan",227,2019-08-23 09:36:00.000,Fake IDs & Documents
+47,"bank, account, drop, card, credit",146,2018-02-14 07:22:04.800,Bank Drop Transaction
+47,"bank, account, drop, cash, bank drop",199,2018-07-03 14:24:00.000,Bank Drop Transaction
+47,"bank, account, drop, cash, bank drop",214,2018-11-19 04:48:00.000,Bank Drop Transaction
+47,"bank, account, drop, bank drop, cash",918,2019-04-06 19:12:00.000,Bank Drop Transaction
+47,"bank, account, drop, card, bank drop",373,2019-08-23 09:36:00.000,Bank Drop Transaction
+48,"wickr, monero, blockchain, nt, use wickr",70,2018-02-14 07:22:04.800,Wickr Abuse Policy Protect Wickr Community
+48,"wickr, using wickr, vendor, use wickr, message",60,2018-07-03 14:24:00.000,Wickr Abuse Policy Protect Wickr Community
+48,"wickr, vendor, use wickr, using wickr, nt",80,2018-11-19 04:48:00.000,Wickr Abuse Policy Protect Wickr Community
+48,"wickr, vendor, use wickr, contact, using wickr",380,2019-04-06 19:12:00.000,Wickr Abuse Policy Protect Wickr Community
+48,"wickr, vendor, via, contact, use wickr",161,2019-08-23 09:36:00.000,Wickr Abuse Policy Protect Wickr Community
+49,"de, und, que, un, da",56,2018-02-14 07:22:04.800,German Darknet Market
+49,"de, und, que, un, da",91,2018-07-03 14:24:00.000,German Darknet Market
+49,"de, und, que, un, da",79,2018-11-19 04:48:00.000,German Darknet Market
+49,"de, und, que, un, da",355,2019-04-06 19:12:00.000,German Darknet Market
+49,"de, und, que, un, da",159,2019-08-23 09:36:00.000,German Darknet Market
+50,"phishing, link, phishing link, phished, site",84,2018-02-14 07:22:04.800,Phishing Detection Techniques
+50,"phishing, link, phishing link, ford, phished",91,2018-07-03 14:24:00.000,Phishing Detection Techniques
+50,"phishing, phishing link, link, phished, site",123,2018-11-19 04:48:00.000,Phishing Detection Techniques
+50,"phishing, link, phishing link, phished, site",526,2019-04-06 19:12:00.000,Phishing Detection Techniques
+50,"phishing, link, phishing link, phished, site",217,2019-08-23 09:36:00.000,Phishing Detection Techniques
+51,"dream, nightmare, officeworksau, omnicorp, dream dream",60,2018-02-14 07:22:04.800,Dream Nightmare Experience
+51,"dream, nightmare, like, nt, hate",71,2018-07-03 14:24:00.000,Dream Nightmare Experience
+51,"dream, nightmare, dream dream, nt, use",75,2018-11-19 04:48:00.000,Dream Nightmare Experience
+51,"dream, nightmare, like, dream dream, nt",383,2019-04-06 19:12:00.000,Dream Nightmare Experience
+51,"dream, nightmare, dream dream, like, nt",167,2019-08-23 09:36:00.000,Dream Nightmare Experience
+52,"price, sale, good, usd usd, sell",79,2018-02-14 07:22:04.800,Sale;Promotional Offers;Good Deals
+52,"price, sale, sell, buy, good",113,2018-07-03 14:24:00.000,Sale;Promotional Offers;Good Deals
+52,"price, sale, good, sell, promo",108,2018-11-19 04:48:00.000,Sale;Promotional Offers;Good Deals
+52,"price, sale, good, buy, sell",569,2019-04-06 19:12:00.000,Sale;Promotional Offers;Good Deals
+52,"price, sale, visa, good, bank visa",232,2019-08-23 09:36:00.000,Sale;Promotional Offers;Good Deals
+53,"tails, tail, usb, electrum, persistent",101,2018-02-14 07:22:04.800,Tails;Electrum;Persistent File;USB Installation
+53,"tails, tail, usb, electrum, persistent",107,2018-07-03 14:24:00.000,Tails;Electrum;Persistent File;USB Installation
+53,"tails, tail, usb, electrum, file",134,2018-11-19 04:48:00.000,Tails;Electrum;Persistent File;USB Installation
+53,"tails, tail, electrum, usb, persistent",611,2019-04-06 19:12:00.000,Tails;Electrum;Persistent File;USB Installation
+53,"tails, tail, usb, electrum, persistent",237,2019-08-23 09:36:00.000,Tails;Electrum;Persistent File;USB Installation
+54,"adderall, amphetamine, mg, replacement, speed",68,2018-02-14 07:22:04.800,Adderall Replacement Pills
+54,"adderall, amphetamine, day, mg, vendor",74,2018-07-03 14:24:00.000,Adderall Replacement Pills
+54,"adderall, gr euro, euro, euro gr euro, euro gr",100,2018-11-19 04:48:00.000,Adderall Replacement Pills
+54,"adderall, amphetamine, mg, replacement, vendor",450,2019-04-06 19:12:00.000,Adderall Replacement Pills
+54,"adderall, amphetamine, mg, link, replacement",187,2019-08-23 09:36:00.000,Adderall Replacement Pills
+55,"cancel, order, auto, cancel order, vendor",88,2018-02-14 07:22:04.800,Auto Cancel Orders
+55,"cancel, order, auto, cancel order, glarner",81,2018-07-03 14:24:00.000,Auto Cancel Orders
+55,"cancel, order, auto, vendor, cancel order",129,2018-11-19 04:48:00.000,Auto Cancel Orders
+55,"cancel, order, auto, cancel order, day",488,2019-04-06 19:12:00.000,Auto Cancel Orders
+55,"cancel, order, auto, cancel order, vendor",177,2019-08-23 09:36:00.000,Auto Cancel Orders
+56,"mushroom, shrooms, homeland security, link, homeland",64,2018-02-14 07:22:04.800,Mushroom Guide & Dosage Information
+56,"mushroom, shrooms, link, ukstudydrugs, cubensis",50,2018-07-03 14:24:00.000,Mushroom Guide & Dosage Information
+56,"mushroom, shrooms, telegrass, cubensis, zip",99,2018-11-19 04:48:00.000,Mushroom Guide & Dosage Information
+56,"mushroom, shrooms, cubensis, vendor, psilocybin",390,2019-04-06 19:12:00.000,Mushroom Guide & Dosage Information
+56,"mushroom, shrooms, cubensis, onlinebuy, nt",160,2019-08-23 09:36:00.000,Mushroom Guide & Dosage Information
+57,"ketamine, vial, ml, ml ml vial, mg ml ml",58,2018-02-14 07:22:04.800,Ketamine Vendor Quality Shard
+57,"ketamine, gm, gm gm, bir, gm gm gm",74,2018-07-03 14:24:00.000,Ketamine Vendor Quality Shard
+57,"ketamine, gm, gm gm, gm gm gm, vendor",71,2018-11-19 04:48:00.000,Ketamine Vendor Quality Shard
+57,"ketamine, gm, gm gm, vendor, gm gm gm",342,2019-04-06 19:12:00.000,Ketamine Vendor Quality Shard
+57,"ketamine, gr euro, euro, euro gr euro, euro gr",151,2019-08-23 09:36:00.000,Ketamine Vendor Quality Shard
+58,"exit, exit scam, scam, exit scamming, scamming",64,2018-02-14 07:22:04.800,Exit Scam Market
+58,"exit, exit scam, scam, exit scamming, exit scammed",58,2018-07-03 14:24:00.000,Exit Scam Market
+58,"exit, exit scam, scam, exit scamming, exit scammed",74,2018-11-19 04:48:00.000,Exit Scam Market
+58,"exit, exit scam, scam, exit scamming, exit scammed",363,2019-04-06 19:12:00.000,Exit Scam Market
+58,"exit, exit scam, scam, exit scamming, scamming",132,2019-08-23 09:36:00.000,Exit Scam Market
+59,"phone, burner, sim, number, card",59,2018-02-14 07:22:04.800,Burner Phone Usage
+59,"phone, burner, sim, number, card",89,2018-07-03 14:24:00.000,Burner Phone Usage
+59,"phone, burner, sim, card, number",114,2018-11-19 04:48:00.000,Burner Phone Usage
+59,"phone, burner, sim, card, use",396,2019-04-06 19:12:00.000,Burner Phone Usage
+59,"phone, burner, number, sim, use",172,2019-08-23 09:36:00.000,Burner Phone Usage
+60,"dream, market, dream market, nightmare, vendor",68,2018-02-14 07:22:04.800,Dream Market
+60,"dream, market, dream market, nightmare, echo",87,2018-07-03 14:24:00.000,Dream Market
+60,"dream, market, dream market, sumlin, nightmare",88,2018-11-19 04:48:00.000,Dream Market
+60,"dream, market, dream market, nightmare, vendor",436,2019-04-06 19:12:00.000,Dream Market
+60,"dream, market, dream market, nightmare, vendor",181,2019-08-23 09:36:00.000,Dream Market
+61,"bond, vendor bond, bitcoin, bitcoin pay, bitcoin pay usd",54,2018-02-14 07:22:04.800,Vendor Bond Waiver Market
+61,"bond, vendor bond, vendor, bond back, cartel",53,2018-07-03 14:24:00.000,Vendor Bond Waiver Market
+61,"bond, vendor bond, vendor, bond back, market",47,2018-11-19 04:48:00.000,Vendor Bond Waiver Market
+61,"bond, vendor bond, vendor, bond back, market",274,2019-04-06 19:12:00.000,Vendor Bond Waiver Market
+61,"bond, vendor bond, vendor, bond back, market",118,2019-08-23 09:36:00.000,Vendor Bond Waiver Market
+62,"vpn, tor, use, proxy, card",71,2018-02-14 07:22:04.800,VPN and Tor Use
+62,"vpn, tor, use, using, proxy",111,2018-07-03 14:24:00.000,VPN and Tor Use
+62,"vpn, tor, use, using, proxy",117,2018-11-19 04:48:00.000,VPN and Tor Use
+62,"vpn, tor, use, using, ip",566,2019-04-06 19:12:00.000,VPN and Tor Use
+62,"vpn, tor, use, using, ip",189,2019-08-23 09:36:00.000,VPN and Tor Use
+63,"jabber, telegram, xmpp, vallerius, account",51,2018-02-14 07:22:04.800,Jabber/XMPP/OTR Chat Clients
+63,"jabber, telegram, xmpp, zopliclone, icq",59,2018-07-03 14:24:00.000,Jabber/XMPP/OTR Chat Clients
+63,"jabber, telegram, xmpp, link link link, link",61,2018-11-19 04:48:00.000,Jabber/XMPP/OTR Chat Clients
+63,"jabber, telegram, xmpp, use, pidgin",294,2019-04-06 19:12:00.000,Jabber/XMPP/OTR Chat Clients
+63,"jabber, telegram, xmpp, pidgin, otr",123,2019-08-23 09:36:00.000,Jabber/XMPP/OTR Chat Clients
+64,"dmt, per, psychedelics, psychedelic, market",62,2018-02-14 07:22:04.800,DMT Psychedelics Prices
+64,"dmt, psychedelics, vendor, per, psychedelic",69,2018-07-03 14:24:00.000,DMT Psychedelics Prices
+64,"dmt, psychedelics, per, psychedelic, ssh",80,2018-11-19 04:48:00.000,DMT Psychedelics Prices
+64,"dmt, darkbay, link link darkbay, darkbay darkbay link, darkbay darkbay",346,2019-04-06 19:12:00.000,DMT Psychedelics Prices
+64,"dmt, psychedelics, gm, per, psychedelic",140,2019-08-23 09:36:00.000,DMT Psychedelics Prices
+65,"captcha, meganz, kim, tool, captchas",34,2018-02-14 07:22:04.800,Captcha Issues in Darknet Market
+65,"captcha, captchas, link, nt, get",61,2018-07-03 14:24:00.000,Captcha Issues in Darknet Market
+65,"captcha, captchas, link, login, get",49,2018-11-19 04:48:00.000,Captcha Issues in Darknet Market
+65,"captcha, captchas, link, page, enter",274,2019-04-06 19:12:00.000,Captcha Issues in Darknet Market
+65,"captcha, captchas, link, get, page",108,2019-08-23 09:36:00.000,Captcha Issues in Darknet Market
+66,"sample, free sample, free, review, sample pack",57,2018-02-14 07:22:04.800,Free Sample Order
+66,"sample, free sample, free, review, order",68,2018-07-03 14:24:00.000,Free Sample Order
+66,"sample, free sample, free, review, phone number",84,2018-11-19 04:48:00.000,Free Sample Order
+66,"sample, free sample, free, review, sample pack",341,2019-04-06 19:12:00.000,Free Sample Order
+66,"sample, free sample, free, review, sample pack",132,2019-08-23 09:36:00.000,Free Sample Order
+67,"update, issue, problem, working, fixed",113,2018-02-14 07:22:04.800,Fixed Bug Issue
+67,"update, issue, problem, working, fixed",142,2018-07-03 14:24:00.000,Fixed Bug Issue
+67,"update, issue, problem, working, fixed",170,2018-11-19 04:48:00.000,Fixed Bug Issue
+67,"update, issue, problem, working, fixed",687,2019-04-06 19:12:00.000,Fixed Bug Issue
+67,"update, issue, problem, working, fixed",298,2019-08-23 09:36:00.000,Fixed Bug Issue
+68,"cgmc, link, vendor, invite, stats",31,2018-02-14 07:22:04.800,CGMC Invites
+68,"cgmc, invite, robertses, vendor, mh life",54,2018-07-03 14:24:00.000,CGMC Invites
+68,"cgmc, invite, vendor, happyhorse, nl vendor",63,2018-11-19 04:48:00.000,CGMC Invites
+68,"cgmc, invite, vendor, cgmc cgmc, nt",238,2019-04-06 19:12:00.000,CGMC Invites
+68,"cgmc, invite, vendor, nt, cgmc cgmc",97,2019-08-23 09:36:00.000,CGMC Invites
+69,"apollon, apollon market, market, empire, link",50,2018-02-14 07:22:04.800,Apollon Market Update
+69,"darkbay, darkbay darkbay, link link darkbay, link darkbay darkbay, darkbay darkbay link",47,2018-07-03 14:24:00.000,Apollon Market Update
+69,"apollon, market, apollon market, empire, order",56,2018-11-19 04:48:00.000,Apollon Market Update
+69,"apollon, market, apollon market, empire, vendor",264,2019-04-06 19:12:00.000,Apollon Market Update
+69,"apollon, market, apollon market, empire, link",91,2019-08-23 09:36:00.000,Apollon Market Update
+70,"paypal, transfer, account, paypal account, paypal transfer",63,2018-02-14 07:22:04.800,PayPal Account Transfer
+70,"paypal, transfer, account, paypal account, paypal transfer",89,2018-07-03 14:24:00.000,PayPal Account Transfer
+70,"pill per pill, pill per, pill, pill pill per, per pill pill",81,2018-11-19 04:48:00.000,PayPal Account Transfer
+70,"paypal, transfer, account, paypal account, paypal transfer",314,2019-04-06 19:12:00.000,PayPal Account Transfer
+70,"paypal, transfer, account, paypal account, paypal transfer",134,2019-08-23 09:36:00.000,PayPal Account Transfer
+71,"giveaway, win, number, winner, share application",55,2018-02-14 07:22:04.800,Giveaways & Contests
+71,"giveaway, win, number, winner, link",70,2018-07-03 14:24:00.000,Giveaways & Contests
+71,"giveaway, win, number, winner, link",80,2018-11-19 04:48:00.000,Giveaways & Contests
+71,"giveaway, win, number, winner, link",377,2019-04-06 19:12:00.000,Giveaways & Contests
+71,"giveaway, win, number, winner, link",157,2019-08-23 09:36:00.000,Giveaways & Contests
+72,"pm, working link, link, link please, please",45,2018-02-14 07:22:04.800,Working Link Requests
+72,"pm, working link, link, link please, please",47,2018-07-03 14:24:00.000,Working Link Requests
+72,"pm, working link, link, link please, please",58,2018-11-19 04:48:00.000,Working Link Requests
+72,"pm, working link, link, link please, please",249,2019-04-06 19:12:00.000,Working Link Requests
+72,"pm, working link, link, link please, please",117,2019-08-23 09:36:00.000,Working Link Requests
+73,"darkfail, link, dark, fail, dark fail",53,2018-02-14 07:22:04.800,Dark Fail Links Question
+73,"darkfail, link, fail, dark, dark fail",70,2018-07-03 14:24:00.000,Dark Fail Links Question
+73,"darkfail, link, fail, dark, dark fail",57,2018-11-19 04:48:00.000,Dark Fail Links Question
+73,"darkfail, link, fail, dark, link darkfail",291,2019-04-06 19:12:00.000,Dark Fail Links Question
+73,"darkfail, link, fail, dark, dark fail",127,2019-08-23 09:36:00.000,Dark Fail Links Question
+74,"empire, market, empire market, nightmare, vendor",82,2018-02-14 07:22:04.800,Empire Market Vendor Feedback
+74,"empire, market, empire market, nightmare, vendor",115,2018-07-03 14:24:00.000,Empire Market Vendor Feedback
+74,"empire, market, empire market, vendor, nightmare",108,2018-11-19 04:48:00.000,Empire Market Vendor Feedback
+74,"empire, market, empire market, nightmare, vendor",616,2019-04-06 19:12:00.000,Empire Market Vendor Feedback
+74,"empire, market, empire market, nightmare, vendor",223,2019-08-23 09:36:00.000,Empire Market Vendor Feedback
+75,"package, pack, day, delivery, tracking",147,2018-02-14 07:22:04.800,Package Delivery Tracking
+75,"package, pack, delivery, day, tracking",169,2018-07-03 14:24:00.000,Package Delivery Tracking
+75,"package, pack, delivery, day, tracking",202,2018-11-19 04:48:00.000,Package Delivery Tracking
+75,"package, day, pack, delivery, tracking",912,2019-04-06 19:12:00.000,Package Delivery Tracking
+75,"package, day, pack, delivery, tracking",386,2019-08-23 09:36:00.000,Package Delivery Tracking
+76,"zepp, devincentis, vallerius, bag, package",40,2018-02-14 07:22:04.800,Smuggling Methods & Detection
+76,"gram usd, gram usd gram, usd gram, gram, usd",50,2018-07-03 14:24:00.000,Smuggling Methods & Detection
+76,"bag, dog, seal, mylar, vac",64,2018-11-19 04:48:00.000,Smuggling Methods & Detection
+76,"bag, dog, seal, mylar, vac",298,2019-04-06 19:12:00.000,Smuggling Methods & Detection
+76,"bag, dog, seal, mylar, vac",90,2019-08-23 09:36:00.000,Smuggling Methods & Detection
+77,"opsec, opsec opsec, link opsec, pill, opsec link",29,2018-02-14 07:22:04.800,Opsec Guidance
+77,"opsec, opsec opsec, nt, link opsec, bad opsec",31,2018-07-03 14:24:00.000,Opsec Guidance
+77,"opsec, wallet, opsec opsec, link opsec, electrum",37,2018-11-19 04:48:00.000,Opsec Guidance
+77,"opsec, opsec opsec, link opsec, opsec link, link",208,2019-04-06 19:12:00.000,Opsec Guidance
+77,"opsec, opsec opsec, link opsec, measurement, link",87,2019-08-23 09:36:00.000,Opsec Guidance
+78,"link, working, working link, main link, main",65,2018-02-14 07:22:04.800,Link issues
+78,"link, working, working link, main link, link working",95,2018-07-03 14:24:00.000,Link issues
+78,"link, working, working link, main link, link working",101,2018-11-19 04:48:00.000,Link issues
+78,"link, working, working link, main link, link working",428,2019-04-06 19:12:00.000,Link issues
+78,"link, working, working link, main link, link working",186,2019-08-23 09:36:00.000,Link issues
+79,"money, dream market, pay, dream, market",34,2018-02-14 07:22:04.800,Money Losses
+79,"money, pay, get, dollar, oxies",40,2018-07-03 14:24:00.000,Money Losses
+79,"money, pay, get, money back, dollar",61,2018-11-19 04:48:00.000,Money Losses
+79,"money, pay, get, money back, dollar",251,2019-04-06 19:12:00.000,Money Losses
+79,"money, pay, get, money back, dollar",127,2019-08-23 09:36:00.000,Money Losses
+80,"tracking, tracking number, order, number, day",86,2018-02-14 07:22:04.800,Tracking Number Concerns
+80,"tracking, tracking number, order, number, day",97,2018-07-03 14:24:00.000,Tracking Number Concerns
+80,"tracking, tracking number, order, day, number",130,2018-11-19 04:48:00.000,Tracking Number Concerns
+80,"tracking, tracking number, order, number, day",548,2019-04-06 19:12:00.000,Tracking Number Concerns
+80,"tracking, tracking number, order, number, day",217,2019-08-23 09:36:00.000,Tracking Number Concerns
+81,"guide, seed, dmt, tutorial, feminized",25,2018-02-14 07:22:04.800,Guide Topic or Tutorial Help or Out
+81,"guide, would, tutorial, thanks, outdated",46,2018-07-03 14:24:00.000,Guide Topic or Tutorial Help or Out
+81,"guide, tutorial, outdated, thanks, would",31,2018-11-19 04:48:00.000,Guide Topic or Tutorial Help or Out
+81,"guide, tutorial, thanks, outdated, would",184,2019-04-06 19:12:00.000,Guide Topic or Tutorial Help or Out
+81,"guide, tutorial, would, outdated, thanks",71,2019-08-23 09:36:00.000,Guide Topic or Tutorial Help or Out
+82,"bir, bu, getting low, genetics, var",33,2018-02-14 07:22:04.800,bu bir kai
+82,"bir, mother, bu, boy, partner",28,2018-07-03 14:24:00.000,bu bir kai
+82,"bir, bu, na, kai, trainwreck",39,2018-11-19 04:48:00.000,bu bir kai
+82,"bir, bu, kai, ama, var",185,2019-04-06 19:12:00.000,bu bir kai
+82,"bir, gram speed paste, bu, speed paste pure, paste pure",71,2019-08-23 09:36:00.000,bu bir kai
+83,"rc, mxe, dck, rcs, fdck",58,2018-02-14 07:22:04.800,RC Sources
+83,"rc, mxe, seller, dck, use service",33,2018-07-03 14:24:00.000,RC Sources
+83,"rc, mxe, dck, rcs, rhw",60,2018-11-19 04:48:00.000,RC Sources
+83,"rc, mxe, dck, rcs, vendor",288,2019-04-06 19:12:00.000,RC Sources
+83,"rc, mxe, dck, rcs, source",110,2019-08-23 09:36:00.000,RC Sources
+84,"cash, btc, bitcoin, tower, atm",93,2018-02-14 07:22:04.800,Crypto Purchase Methods
+84,"link, link link, cash, btc, coinbase",120,2018-07-03 14:24:00.000,Crypto Purchase Methods
+84,"cash, btc, bitcoin, atm, buy",146,2018-11-19 04:48:00.000,Crypto Purchase Methods
+84,"cash, btc, bitcoin, coinbase, atm",643,2019-04-06 19:12:00.000,Crypto Purchase Methods
+84,"cash, btc, bitcoin, atm, coinbase",269,2019-08-23 09:36:00.000,Crypto Purchase Methods
+85,"olympus, market, cloth, beleive, fe escrow",28,2018-02-14 07:22:04.800,Olympus Market
+85,"olympus, market, annasbiogarten, welcome pack, fe escrow",23,2018-07-03 14:24:00.000,Olympus Market
+85,"olympus, market, fe escrow, dream, olympus market",43,2018-11-19 04:48:00.000,Olympus Market
+85,"olympus, market, fe escrow, dream, olympus market",167,2019-04-06 19:12:00.000,Olympus Market
+85,"olympus, market, dream, fe escrow, exit",77,2019-08-23 09:36:00.000,Olympus Market
+86,"log, logged, logging, link, login",31,2018-02-14 07:22:04.800,Logging and Session Issues
+86,"log, logged, logging, login, page",39,2018-07-03 14:24:00.000,Logging and Session Issues
+86,"log, logged, logging, login, page",43,2018-11-19 04:48:00.000,Logging and Session Issues
+86,"log, logged, logging, login, page",201,2019-04-06 19:12:00.000,Logging and Session Issues
+86,"log, logged, logging, login, page",87,2019-08-23 09:36:00.000,Logging and Session Issues
+87,"vacation, vacation mode, mode, back, injection aware",23,2018-02-14 07:22:04.800,Vacation Mode
+87,"vacation, vacation mode, mode, back, jun",33,2018-07-03 14:24:00.000,Vacation Mode
+87,"vacation, vacation mode, mode, scooter, back",45,2018-11-19 04:48:00.000,Vacation Mode
+87,"vacation, vacation mode, mode, back, profile",173,2019-04-06 19:12:00.000,Vacation Mode
+87,"vacation, vacation mode, mode, back, vendor",57,2019-08-23 09:36:00.000,Vacation Mode
+88,"message, contact, lin, send, email",58,2018-02-14 07:22:04.800,Message;Email Support
+88,"message, contact, email, support, send",77,2018-07-03 14:24:00.000,Message;Email Support
+88,"message, contact, send, email, support",92,2018-11-19 04:48:00.000,Message;Email Support
+88,"message, contact, send, email, support",381,2019-04-06 19:12:00.000,Message;Email Support
+88,"message, contact, email, support, send",140,2019-08-23 09:36:00.000,Message;Email Support
+89,"frenchtickler, frenchtickler buyer, sent frenchtickler, sent frenchtickler buyer, message sent frenchtickler",134,2018-02-14 07:22:04.800,Moderation and Deletion of Posts
+89,"post, mod, comment, sub, nt",113,2018-07-03 14:24:00.000,Moderation and Deletion of Posts
+89,"post, mod, comment, sub, thread",149,2018-11-19 04:48:00.000,Moderation and Deletion of Posts
+89,"post, mod, comment, sub, thread",716,2019-04-06 19:12:00.000,Moderation and Deletion of Posts
+89,"post, mod, comment, sub, thread",257,2019-08-23 09:36:00.000,Moderation and Deletion of Posts
+90,"xmr, wallet, address, deposit, monero",37,2018-02-14 07:22:04.800,XMR Wallet Issue
+90,"xmr, wallet, deposit, ticket, support",45,2018-07-03 14:24:00.000,XMR Wallet Issue
+90,"xmr, pure usd may, phama ketamine pure, isomer phama, isomer phama ketamine",50,2018-11-19 04:48:00.000,XMR Wallet Issue
+90,"xmr, wallet, monero, deposit, issue",277,2019-04-06 19:12:00.000,XMR Wallet Issue
+90,"xmr, wallet, deposit, monero, issue",104,2019-08-23 09:36:00.000,XMR Wallet Issue
+91,"image, exif, upload, exif data, data",34,2018-02-14 07:22:04.800,Image Exif Data Upload
+91,"image, exif, upload, exif data, data",39,2018-07-03 14:24:00.000,Image Exif Data Upload
+91,"image, exif, upload, exif data, christmas vendy gave",44,2018-11-19 04:48:00.000,Image Exif Data Upload
+91,"image, exif, upload, exif data, data",187,2019-04-06 19:12:00.000,Image Exif Data Upload
+91,"image, exif, upload, exif data, data",95,2019-08-23 09:36:00.000,Image Exif Data Upload
+92,"back, hope, good, welcome back, luck",197,2018-02-14 07:22:04.800,hope recovery
+92,"back, hope, good, luck, welcome back",214,2018-07-03 14:24:00.000,hope recovery
+92,"back, hope, good, luck, welcome back",241,2018-11-19 04:48:00.000,hope recovery
+92,"back, hope, good, luck, welcome back",1125,2019-04-06 19:12:00.000,hope recovery
+92,"back, hope, good, luck, welcome back",463,2019-08-23 09:36:00.000,hope recovery
+93,"review, template, pic, picture, bitwarden",40,2018-02-14 07:22:04.800,Review templates and images
+93,"review, template, pic, picture, done",58,2018-07-03 14:24:00.000,Review templates and images
+93,"review, template, pic, picture, thc",65,2018-11-19 04:48:00.000,Review templates and images
+93,"review, template, pic, picture, link",278,2019-04-06 19:12:00.000,Review templates and images
+93,"review, template, pic, picture, link",106,2019-08-23 09:36:00.000,Review templates and images
+94,"cheer, bubbakush, link bubbakush, bubbakush link, bubbakush link bubbakush",24,2018-02-14 07:22:04.800,Cheer Positivity Justification
+94,"cheer, cheer cheer, dot onion, dot, cheer mate",28,2018-07-03 14:24:00.000,Cheer Positivity Justification
+94,"cheer, cheer cheer, better run, cheer mate, mate",44,2018-11-19 04:48:00.000,Cheer Positivity Justification
+94,"cheer, cheer cheer, cheer mate, mate, anyone",159,2019-04-06 19:12:00.000,Cheer Positivity Justification
+94,"cheer, cheer cheer, cheer mate, mate, allowed due phishing",52,2019-08-23 09:36:00.000,Cheer Positivity Justification
+95,"bulk, price, article, vendor, good",55,2018-02-14 07:22:04.800,Bulk Kratom Vendors
+95,"bulk, price, good, vendor, looking",68,2018-07-03 14:24:00.000,Bulk Kratom Vendors
+95,"bulk, price, vendor, get, good",79,2018-11-19 04:48:00.000,Bulk Kratom Vendors
+95,"bulk, price, vendor, good, kratom",337,2019-04-06 19:12:00.000,Bulk Kratom Vendors
+95,"bulk, vendor, price, good, market",136,2019-08-23 09:36:00.000,Bulk Kratom Vendors
+96,"wallstreet, wall, wall st, st, wallstreetmarket",30,2018-02-14 07:22:04.800,Wallstreet Market Forum Links
+96,"wallstreet, wall st, wall, st, wallstreetmarket",32,2018-07-03 14:24:00.000,Wallstreet Market Forum Links
+96,"wallstreet, wall st, wall, st, wallstreetmarket",35,2018-11-19 04:48:00.000,Wallstreet Market Forum Links
+96,"wallstreet, wall st, wall, st, wallstreetmarket",210,2019-04-06 19:12:00.000,Wallstreet Market Forum Links
+96,"wallstreet, wall st, wall, st, wallstreetmarket",72,2019-08-23 09:36:00.000,Wallstreet Market Forum Links
+97,"product, quality, vendor, shipping, price",160,2018-02-14 07:22:04.800,Product Review
+97,"product, vendor, shipping, stealth, price",223,2018-07-03 14:24:00.000,Product Review
+97,"product, vendor, shipping, price, order",225,2018-11-19 04:48:00.000,Product Review
+97,"product, vendor, order, shipping, stealth",1034,2019-04-06 19:12:00.000,Product Review
+97,"vendor, product, price, order, stealth",395,2019-08-23 09:36:00.000,Product Review
+98,"listing, killuminati day, killuminati day ago, list, killuminati",45,2018-02-14 07:22:04.800,Listing Management and Visibility
+98,"listing, list, per, superlist, vendor",42,2018-07-03 14:24:00.000,Listing Management and Visibility
+98,"listing, list, hashish, vendor, superlist",55,2018-11-19 04:48:00.000,Listing Management and Visibility
+98,"listing, list, superlist, vendor, search",260,2019-04-06 19:12:00.000,Listing Management and Visibility
+98,"listing, list, superlist, vendor, page",91,2019-08-23 09:36:00.000,Listing Management and Visibility
+99,"fuck, shit, like, nt, cunt",241,2018-02-14 07:22:04.800,Mom sex;Insults
+99,"fuck, like, nt, get, shit",279,2018-07-03 14:24:00.000,Mom sex;Insults
+99,"fuck, like, cunt, shit, lol",338,2018-11-19 04:48:00.000,Mom sex;Insults
+99,"fuck, like, nt, cunt, shit",1576,2019-04-06 19:12:00.000,Mom sex;Insults
+99,"like, fuck, cunt, nt, lol",642,2019-08-23 09:36:00.000,Mom sex;Insults
+100,"empire, market, exit, scam, nt",98,2018-02-14 07:22:04.800,Empire Market
+100,"empire, market, exit, scam, would",118,2018-07-03 14:24:00.000,Empire Market
+100,"empire, market, yourfavoritedreammarketonoinlink viewproduct offer, yourfavoritedreammarketonoinlink viewproduct, yourfavoritedreammarketonoinlink",118,2018-11-19 04:48:00.000,Empire Market
+100,"empire, market, exit, scam, nt",565,2019-04-06 19:12:00.000,Empire Market
+100,"empire, market, feedback, exit, heey new feedback",239,2019-08-23 09:36:00.000,Empire Market
+101,"protonmail, protonmailcom, email, proton, secmail",23,2018-02-14 07:22:04.800,Protonmail Alternatives
+101,"protonmail, protonmailcom, email, proton, secmail",28,2018-07-03 14:24:00.000,Protonmail Alternatives
+101,"protonmail, protonmailcom, email, proton, secmail",24,2018-11-19 04:48:00.000,Protonmail Alternatives
+101,"protonmail, protonmailcom, email, proton, secmail",159,2019-04-06 19:12:00.000,Protonmail Alternatives
+101,"protonmail, protonmailcom, email, proton, secmail",62,2019-08-23 09:36:00.000,Protonmail Alternatives
+102,"wallet, node, gui, monero, remote node",38,2018-02-14 07:22:04.800,Monero Wallet Update
+102,"wallet, node, gui, monero, remote node",40,2018-07-03 14:24:00.000,Monero Wallet Update
+102,"wallet, node, gui, monero, remote node",45,2018-11-19 04:48:00.000,Monero Wallet Update
+102,"wallet, node, gui, monero, remote node",212,2019-04-06 19:12:00.000,Monero Wallet Update
+102,"wallet, node, gui, monero, remote node",88,2019-08-23 09:36:00.000,Monero Wallet Update
+103,"multisig, nbome, do, enthusiastoflsd, please do",23,2018-02-14 07:22:04.800,MultiSig Market Transactions
+103,"multisig, nt, market, escrow, transaction",33,2018-07-03 14:24:00.000,MultiSig Market Transactions
+103,"multisig, listingphp lsid, lsid, listingphp, market",36,2018-11-19 04:48:00.000,MultiSig Market Transactions
+103,"multisig, market, transaction, escrow, key",149,2019-04-06 19:12:00.000,MultiSig Market Transactions
+103,"multisig, truedialog, teary, market, teary pm",66,2019-08-23 09:36:00.000,MultiSig Market Transactions
+104,"bunk, bunk bar, bar, hulk, fraud",32,2018-02-14 07:22:04.800,Bunk and Bar
+104,"bunk, bunk bar, bar, got, pack",37,2018-07-03 14:24:00.000,Bunk and Bar
+104,"bunk, bunk bar, bar, hulk, pack",42,2018-11-19 04:48:00.000,Bunk and Bar
+104,"bunk, bunk bar, bar, hulk, pack",174,2019-04-06 19:12:00.000,Bunk and Bar
+104,"bunk, bunk bar, bar, hulk, pack",70,2019-08-23 09:36:00.000,Bunk and Bar
+105,"mg, benzo, benzos, alprazolam, alp",200,2018-02-14 07:22:04.800,Benzodiazepine use and abuse
+105,"mg, benzo, alprazolam, benzos, alp",247,2018-07-03 14:24:00.000,Benzodiazepine use and abuse
+105,"mg, benzo, benzos, alprazolam, alp",256,2018-11-19 04:48:00.000,Benzodiazepine use and abuse
+105,"mg, benzo, benzos, alprazolam, alp",1263,2019-04-06 19:12:00.000,Benzodiazepine use and abuse
+105,"mg, benzo, benzos, alp, alprazolam",494,2019-08-23 09:36:00.000,Benzodiazepine use and abuse
+106,"pelican, valero, child, bird, pelicanvendor",13,2018-02-14 07:22:04.800,Pelican Bird Giveaway
+106,"pelican, bird, pelicanvendor, serpent market, serpent",18,2018-07-03 14:24:00.000,Pelican Bird Giveaway
+106,"pelican, bird, pelicanvendor, bigbird, pelicanvendor link",29,2018-11-19 04:48:00.000,Pelican Bird Giveaway
+106,"pelican, bird, pelicanvendor, link, bigbird",131,2019-04-06 19:12:00.000,Pelican Bird Giveaway
+106,"pelican, bird, pelicanvendor, bigbird, pelicanvendor pelicanvendor link",58,2019-08-23 09:36:00.000,Pelican Bird Giveaway
+107,"heinekenexpress, christmas vendy gave, day christmas vendy, christmas vendy, vendy gave",28,2018-02-14 07:22:04.800,Heineken Express Reviews
+107,"heinekenexpress, link heinekenexpress, link, heinekenexpress link, heinekenexpress heinekenexpress",22,2018-07-03 14:24:00.000,Heineken Express Reviews
+107,"heinekenexpress, link heinekenexpress, heinekenexpress link, link, heinekenexpress heinekenexpress",30,2018-11-19 04:48:00.000,Heineken Express Reviews
+107,"heinekenexpress, link heinekenexpress, link, heinekenexpress link, heinekenexpress heinekenexpress",136,2019-04-06 19:12:00.000,Heineken Express Reviews
+107,"heinekenexpress, link heinekenexpress, heinekenexpress link, heinekenexpress heinekenexpress, link heinekenexpress heinekenexpress",50,2019-08-23 09:36:00.000,Heineken Express Reviews
+108,"rdp, sock, se, get code, se en",30,2018-02-14 07:22:04.800,RDP Socks for Carding
+108,"rdp, sock, card, vpn, ip",45,2018-07-03 14:24:00.000,RDP Socks for Carding
+108,"rdp, sock, vpn, ip, card",45,2018-11-19 04:48:00.000,RDP Socks for Carding
+108,"rdp, sock, use, card, vpn",214,2019-04-06 19:12:00.000,RDP Socks for Carding
+108,"rdp, sock, use, vpn, card",67,2019-08-23 09:36:00.000,RDP Socks for Carding
+109,"dnm, wir, dm, link, broward",37,2018-02-14 07:22:04.800,DNM Reddit Subs
+109,"dnm, dm, dread, link, forum",58,2018-07-03 14:24:00.000,DNM Reddit Subs
+109,"dnm, dm, dread, link, forum",63,2018-11-19 04:48:00.000,DNM Reddit Subs
+109,"dnm, link, dread, forum, dm",321,2019-04-06 19:12:00.000,DNM Reddit Subs
+109,"dnm, link, dm, forum, dread",119,2019-08-23 09:36:00.000,DNM Reddit Subs
+110,"pic, picture, photo, photoshop, post pic",42,2018-02-14 07:22:04.800,Pics and posts
+110,"pic, picture, photo, photoshop, extension",44,2018-07-03 14:24:00.000,Pics and posts
+110,"pic, picture, photo, photoshop, post pic",48,2018-11-19 04:48:00.000,Pics and posts
+110,"pic, picture, photo, photoshop, post pic",264,2019-04-06 19:12:00.000,Pics and posts
+110,"pic, picture, photo, photoshop, post pic",78,2019-08-23 09:36:00.000,Pics and posts
+111,"empire, link, empiremarket, empire link, link empire",35,2018-02-14 07:22:04.800,Empire Market Links
+111,"empire, link, empiremarket, empire link, link empire",36,2018-07-03 14:24:00.000,Empire Market Links
+111,"empire, link, mimosas, empiremarket, empire link",50,2018-11-19 04:48:00.000,Empire Market Links
+111,"empire, link, empiremarket, empire link, empire market",198,2019-04-06 19:12:00.000,Empire Market Links
+111,"empire, link, empiremarket, empire link, working",79,2019-08-23 09:36:00.000,Empire Market Links
+112,"invite, invite code, code, need invite, get invite",12,2018-02-14 07:22:04.800,Darknet Market Invites
+112,"invite, invite code, code, need invite, get invite",27,2018-07-03 14:24:00.000,Darknet Market Invites
+112,"invite, invite code, code, need invite, get invite",23,2018-11-19 04:48:00.000,Darknet Market Invites
+112,"invite, invite code, code, need invite, get invite",117,2019-04-06 19:12:00.000,Darknet Market Invites
+112,"invite, invite code, code, need invite, get invite",45,2019-08-23 09:36:00.000,Darknet Market Invites
+113,"samsara, hinzugefgt, wurde, market, sie",32,2018-02-14 07:22:04.800,Samsara Market
+113,"samsara, greenhouse, link linxli, greenhouse link, market",26,2018-07-03 14:24:00.000,Samsara Market
+113,"samsara, market, link, samsara market, dream",32,2018-11-19 04:48:00.000,Samsara Market
+113,"samsara, market, samsara market, dream, sam",144,2019-04-06 19:12:00.000,Samsara Market
+113,"samsara, market, samsara market, sam, dream",56,2019-08-23 09:36:00.000,Samsara Market
+114,"chemical, product, vendor, nt, drug",94,2018-02-14 07:22:04.800,Chemistry Research and Supply
+114,"chemical, helix, vendor, good, link",98,2018-07-03 14:24:00.000,Chemistry Research and Supply
+114,"vendor, chemical, know, nt, test",115,2018-11-19 04:48:00.000,Chemistry Research and Supply
+114,"vendor, chemical, get, nt, would",539,2019-04-06 19:12:00.000,Chemistry Research and Supply
+114,"chemical, vendor, know, product, good",218,2019-08-23 09:36:00.000,Chemistry Research and Supply
+115,"rapture, market, centos, rapture market, poison",20,2018-02-14 07:22:04.800,Rapture Market GBP
+115,"rapture, zeroday, vulnerability, exploit, zeroday exploit",26,2018-07-03 14:24:00.000,Rapture Market GBP
+115,"rapture, rapture market, market, rapturemarket, gbp",23,2018-11-19 04:48:00.000,Rapture Market GBP
+115,"rapture, link, link link, rapture market, market",98,2019-04-06 19:12:00.000,Rapture Market GBP
+115,"rapture, rapture market, market, rapturemarket, link",47,2019-08-23 09:36:00.000,Rapture Market GBP
+116,"water, ibbco, get, acetone, like",156,2018-02-14 07:22:04.800,Acetone Recrystallization Techniques
+116,"port, water, nt, prize, acetone",178,2018-07-03 14:24:00.000,Acetone Recrystallization Techniques
+116,"water, acetone, nt, like, one",199,2018-11-19 04:48:00.000,Acetone Recrystallization Techniques
+116,"water, acetone, nt, like, use",856,2019-04-06 19:12:00.000,Acetone Recrystallization Techniques
+116,"water, nt, like, acetone, ultra europe",365,2019-08-23 09:36:00.000,Acetone Recrystallization Techniques
+117,"witchman, link, link witchman, witchman link, witchman witchman",28,2018-02-14 07:22:04.800,Link Witchman Discussion
+117,"witchman, link, link witchman, witchman link, witchman witchman",20,2018-07-03 14:24:00.000,Link Witchman Discussion
+117,"witchman, link witchman, link, witchman link, witchman witchman",22,2018-11-19 04:48:00.000,Link Witchman Discussion
+117,"witchman, link, link witchman, witchman link, witchman witchman",103,2019-04-06 19:12:00.000,Link Witchman Discussion
+117,"witchman, link, link witchman, witchman link, witchman witchman",45,2019-08-23 09:36:00.000,Link Witchman Discussion
+118,"tochka, sassafras oil, sassafras, market, oil",19,2018-02-14 07:22:04.800,Tochka market
+118,"tochka, market, nt, vendor, make",18,2018-07-03 14:24:00.000,Tochka market
+118,"tochka, shipping product, hxxps com, market, hxxps",23,2018-11-19 04:48:00.000,Tochka market
+118,"tochka, market, som, og, vendor",98,2019-04-06 19:12:00.000,Tochka market
+118,"tochka, market, strain, glue, vendor",52,2019-08-23 09:36:00.000,Tochka market
+119,"post, know guy know, guy know guy, know guy, guy know",199,2018-02-14 07:22:04.800,Read Post Discussion
+119,"post, know guy know, guy know guy, know guy, guy know",255,2018-07-03 14:24:00.000,Read Post Discussion
+119,"post, know guy know, guy know guy, know guy, guy know",319,2018-11-19 04:48:00.000,Read Post Discussion
+119,"post, know guy know, guy know guy, know guy, guy know",1284,2019-04-06 19:12:00.000,Read Post Discussion
+119,"post, know guy know, guy know guy, know guy, guy know",532,2019-08-23 09:36:00.000,Read Post Discussion
+120,"subdread, sub, post, create, subdreads",46,2018-02-14 07:22:04.800,Subdread creation issues
+120,"subdread, sub, hazard, post, subdreads",59,2018-07-03 14:24:00.000,Subdread creation issues
+120,"subdread, post, sub, link, subdreads",46,2018-11-19 04:48:00.000,Subdread creation issues
+120,"subdread, sub, post, link, subdreads",260,2019-04-06 19:12:00.000,Subdread creation issues
+120,"subdread, sub, link, post, subdreads",98,2019-08-23 09:36:00.000,Subdread creation issues
