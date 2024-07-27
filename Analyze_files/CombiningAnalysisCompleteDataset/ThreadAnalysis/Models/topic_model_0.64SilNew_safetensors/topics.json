@@ -65930,7 +65930,16 @@
     "5": "5_order_package_shipping_delivery",
     "6": "6_bitcoin_card_wallet_btc"
   },
-  "custom_labels": null,
+  "custom_labels": [
+    "-1_anyone_new_help_free",
+    "Drug Vendor Europe",
+    "Dream Vendor Nightmare",
+    "Trusted Vendor Scams",
+    "Vendor MDMA Review",
+    "Drug Discussion",
+    "Order Shipping & Tracking",
+    "Financial Services and Products"
+  ],
   "_outliers": 1,
   "topic_aspects": {}
 }

@@ -236,6 +236,24 @@ def predict_topic(topic_model: BERTopic, sentence: list, num_classes: int = 5, c
     
     return df_finals
 
+def predict_single_topic(topic_model: BERTopic, sentence: list) -> pd.DataFrame:
+    """
+    Predict the single topic of a sentence using the BERTopic model.
+    :param topic_model: The BERTopic model.
+    :param sentence: The sentence to predict the topic of.
+    :return: A DataFrame with the predicted topic.
+    """
+    results, _ = topic_model.transform(sentence)
+    # Create a DataFrame with the results
+    df_finals = pd.DataFrame([(topic_model.get_topic(results[0]), topic_model.custom_labels_[results[0]+1])], columns=['Topic', 'Label'])
+
+    # Extract the words and sentence
+    df_finals['Words'] = df_finals['Topic'].apply(lambda topic: [word for word, _ in topic])
+
+    df_finals['Sentence'] = sentence * len(df_finals)
+    
+    return df_finals
+
 def generate_topic_label(llm, documents: list, keywords: str) -> str:
     """
     Generate a label for a topic based on the given documents and keywords using the LLM.
