@@ -12,5 +12,6 @@
   "top_n_words": 10,
   "verbose": true,
   "zeroshot_min_similarity": 0.7,
-  "zeroshot_topic_list": null
+  "zeroshot_topic_list": null,
+  "embedding_model": "all-MiniLM-L6-v2"
 }
