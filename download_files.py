@@ -36,6 +36,11 @@ def add_copy_suffix(destination: str) -> str:
 # List of files to download with their respective Google Drive file IDs and destination paths
 files_to_download = [
     {
+        "file_id": "1YUJoI6rYL5d8zjTlkAYhYlMbx9WBXRGH",
+        "destination": "ShowModelsBaselineBERT/Content/CSV121Topic/document_topic_proba.parquet",
+        "file_size": "180 MB"
+    },
+    {
         "file_id": "1mIHndJj5VBNIkmGzKzIzFnniKm4sQ6Bq",
         "destination": f"{PATH_CONTENT}/DatasetsContentBERTopic/BERTopic_all-MiniLM-L6-v2_190_20n_8dim.parquet",
         "file_size": "444 MB"
