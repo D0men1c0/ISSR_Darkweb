@@ -193,6 +193,10 @@ Note: being quite heavy files (7 GB in total) choose carefully which models and 
     ```bash
     python download_files.py
     ```
+4. (Optional) Run the `llama_download.py` script to download the llama quantized model library, which is used for assigning labels. This file is approximately 4.2GB and is not required for running the examples but is necessary for reproducibility of results. 
+    ```bash
+    python llama_download.py
+    ```
 
 ### Running on Google Colab
 
