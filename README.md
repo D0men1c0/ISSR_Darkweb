@@ -197,7 +197,10 @@ Note: being quite heavy files (7 GB in total) choose carefully which models and 
     ```bash
     python llama_download.py
     ```
-
+    Note: with Google Colab, just run this:
+      ```bash
+      !wget https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-GGUF/resolve/main/openhermes-2.5-mistral-7b.Q4_K_M.gguf
+      ```
 ### Running on Google Colab
 
 To run the notebooks on Google Colab, follow these steps:
