@@ -1,15 +1,15 @@
-Topic,Words,Frequency,Timestamp,Name
-0,"vendor, weed, xanax, mg, cocaine",1815,2019-08-05 17:55:40.800,Drug Vendor Europe
-0,"vendor, weed, xanax, mg, cocaine",6830,2019-12-10 12:00:00.000,Drug Vendor Europe
-1,"market, empire, dream, vendor, nightmare",1278,2019-08-05 17:55:40.800,Dream Vendor Nightmare
-1,"market, empire, dream, vendor, nightmare",4958,2019-12-10 12:00:00.000,Dream Vendor Nightmare
-2,"vendor, scammer, scam, looking, anyone",1487,2019-08-05 17:55:40.800,Trusted Vendor Scams
-2,"vendor, scammer, scam, looking, uk",5420,2019-12-10 12:00:00.000,Trusted Vendor Scams
-3,"review, vendor, vendor review, review vendor, mdma",853,2019-08-05 17:55:40.800,Vendor MDMA Review
-3,"review, vendor, vendor review, review vendor, mg",3377,2019-12-10 12:00:00.000,Vendor MDMA Review
-4,"vendor, mdma, market, review, get",1315,2019-08-05 17:55:40.800,Drug Discussion
-4,"vendor, mdma, lsd, market, looking",4984,2019-12-10 12:00:00.000,Drug Discussion
-5,"order, vendor, shipping, package, delivery",580,2019-08-05 17:55:40.800,Order Shipping & Tracking
-5,"order, vendor, package, shipping, delivery",2196,2019-12-10 12:00:00.000,Order Shipping & Tracking
-6,"bitcoin, card, vendor, wallet, btc",573,2019-08-05 17:55:40.800,Financial Services and Products
-6,"bitcoin, card, wallet, vendor, btc",2250,2019-12-10 12:00:00.000,Financial Services and Products
+Topic,Words,Frequency,Timestamp
+0,"vendor, weed, xanax, mg, cocaine",1815,2019-08-05 17:55:40.800
+0,"vendor, weed, xanax, mg, cocaine",6830,2019-12-10 12:00:00.000
+1,"market, empire, dream, vendor, nightmare",1278,2019-08-05 17:55:40.800
+1,"market, empire, dream, vendor, nightmare",4958,2019-12-10 12:00:00.000
+2,"vendor, scammer, scam, looking, anyone",1487,2019-08-05 17:55:40.800
+2,"vendor, scammer, scam, looking, uk",5420,2019-12-10 12:00:00.000
+3,"review, vendor, vendor review, review vendor, mdma",853,2019-08-05 17:55:40.800
+3,"review, vendor, vendor review, review vendor, mg",3377,2019-12-10 12:00:00.000
+4,"vendor, mdma, market, review, get",1315,2019-08-05 17:55:40.800
+4,"vendor, mdma, lsd, market, looking",4984,2019-12-10 12:00:00.000
+5,"order, vendor, shipping, package, delivery",580,2019-08-05 17:55:40.800
+5,"order, vendor, package, shipping, delivery",2196,2019-12-10 12:00:00.000
+6,"bitcoin, card, vendor, wallet, btc",573,2019-08-05 17:55:40.800
+6,"bitcoin, card, wallet, vendor, btc",2250,2019-12-10 12:00:00.000
