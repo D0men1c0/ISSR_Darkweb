@@ -1,0 +1,204 @@
+Topic,Count,BERTopic_Name,Representation,Representative_Docs,Custom_Name_GenAI,Custom_Name_Zero_Shot
+56,242,56_apollon_apollon market_market_apollon apollon,"['apollon' 'apollon market' 'market' 'apollon apollon' 'mysteryland'
+ 'market apollon' 'vendor apollon' 'jerry' 'apollo' 'tom jerry']",['back apollon' 'apollon' 'apollon market'],Apollon Market,market - apollon - apollon market
+24,544,24_coke_coke vendor_best coke_uk coke,"['coke' 'coke vendor' 'best coke' 'uk coke' 'uk' 'good coke' 'best'
+ 'coke review' 'domestic coke' 'cola']",['fire coke' 'coke vendor ' 'coke vendor'],Coke Topic,cocaine
+62,290,62_alprazolam_powder_alprazolam powder_flualprazolam,"['alprazolam' 'powder' 'alprazolam powder' 'flualprazolam' 'etizolam'
+ 'flubromazolam' 'mg' 'diclazepam' 'clonazolam' 'etizolam powder']","['usa domestic alprazolam powder mxe apvp inbome cnbome previewoffreedom crosspost'
+ 'usa domestic rarity previewoffreedom product listed ready go mxe apvp alprazolam powder inbome hcl cnbome hcl'
+ 'usa domestic rarity previewoffreedom product listed ready go mxe apvp alprazolam powder inbome hcl cnbome hcl crosspost']",Alprazolam Powder,powder - alprazolam - alprazolam powder
+0,5021,0_weed_cannabis_cart_thc,"['weed' 'cannabis' 'cart' 'thc' 'review' 'hash' 'shatter' 'distillate'
+ 'oz' 'bud']","['product vendor review ml lemon kush wax vape kit cartridge'
+ 'new vendor special hq budget oil hq indoor shake popcornnugs gram thc vape carts edibles'
+ 'exotic carts mario carts dank vapes cereal cart top shelf bud cheapest price dnm']",Cannabis Weed Vape Cart Reviews,marijuana
+16,998,16_review_vendor review_review vendor_vendor,"['review' 'vendor review' 'review vendor' 'vendor' 'review review'
+ 'feedback' 'reviews' 'review template' 'sample' 'template']","['xpost danknation vendor review sunaero multistrain review'
+ 'needing send sample bar trusted reviewer would leave review'
+ 'customer reviews balenciaga']",Vendor Reviews Product,reviews vendor
+66,222,66_tor_tor browser_browser_tor network,"['tor' 'tor browser' 'browser' 'tor network' 'network' 'tor tor'
+ 'tor project' 'research' 'vpn' 'project']",['tor browser help' 'review tor browser' 'tor browser'],Tor Browser Research,tor browser
+8,1233,8_xanax_mg_diazepam_xanax vendor,"['xanax' 'mg' 'diazepam' 'xanax vendor' 'valium' 'mg xanax' 'bar'
+ 'xanax bar' 'xanax mg' 'bars']","['vendor level trust level pharma xanax bar mg pfizer xanax originally sealed bottle free worldwide shipping su'
+ 'vendor level trust level pharma xanax bar mg pfizer xanax originally sealed bottle worldwide shipping'
+ 'vendor level trust level pharma xanax bar mg pfizer xanax originally sealed bottle free worldwide shipping']",Xanax Vendor Xanax Bars,xanax
+4,3142,4_vendor_vendor vendor_vendor inquiry_inquiry,"['vendor' 'vendor vendor' 'vendor inquiry' 'inquiry' 'new vendor' 'new'
+ 'looking' 'trusted' 'looking vendor' 'legit']","['post pgp verified message vendor tag' 'new vendor level verified status'
+ 'verified legit vendors list']",Trusted Vendor Inquiries,vendor vendor - vendor - vendor inquiry
+51,497,51_dream_dream vendor_dream market_vendor dream,"['dream' 'dream vendor' 'dream market' 'vendor dream' 'vendor' 'market'
+ 'vendor inquiry' 'inquiry' 'nightmare market' 'nightmare']","['dream market vendor inquiry' 'vendor inquiry dreamweaver weaverofdreams'
+ 'vendor inquiry crystalcave dream market']",Dream Market Vendor Inquiry,dream - dream vendor - dread
+30,480,30_ticket_support ticket_support_please,"['ticket' 'support ticket' 'support' 'please' 'ticket support' 'month'
+ 'response' 'help' 'ticket please' 'ticket ticket']","['support ticket ticket dispute open' 'support ticket open month'
+ 'please help support ticket support ticket']",Ticket Support,ticket support
+26,483,26_counterfeit_note_euro_money,"['counterfeit' 'note' 'euro' 'money' 'counterfeit money'
+ 'counterfeit euro' 'fake' 'bill' 'counterfeit note' 'currency']","['find best usd counterfeit note'
+ 'grade counterfeit note euro gbp usd cad test talk business'
+ 'buy counterfeit euro note']",Counterfeit Notes,counterfeit money
+23,556,23_drug_drugsuk_drugs_selling drug,"['drug' 'drugsuk' 'drugs' 'selling drug' 'drug dealer' 'pharma' 'anyone'
+ 'online' 'drug checking' 'drug market']","['use drug' 'drug sale'
+ 'dutchdrugz dangers of misadvertizing underdosed product lead overdosing somewhere line mental drug tips crosspost']",Drug Misadvertizing Risks,drugs - drugsuk - drug
+14,763,14_dispute_mod_moderator_dispute dispute,"['dispute' 'mod' 'moderator' 'dispute dispute' 'please' 'help'
+ 'help dispute' 'resolved' 'admin' 'dispute vendor']",['mod please help dispute' 'mod help dispute' 'dispute mod please help'],Dispute resolution,ask help - moderator
+3,1815,3_empire_empire market_empire empire_market,"['empire' 'empire market' 'empire empire' 'market' 'deposit'
+ 'vendor empire' 'market empire' 'ticket' 'empire vendor' 'link']","['empire back' 'empire market back'
+ 'empire support please help deposit issue ticket']",Empire Market Deposit Issues,empire market
+67,178,67_mephedrone_meopcp_mxe_mescaline,"['mephedrone' 'meopcp' 'mxe' 'mescaline' 'mmc' 'mephedrone mmc' 'amt'
+ 'meodmt' 'mephedrone vendor' 'meow']","['eurovalz new stock list mxe mephedrone available' 'meopcp mxe'
+ 'mxe meopcp source']",Mephedrone,methamphetamine - pills
+15,771,15_cocaine_cocaine vendor_fishscale_peruvian,"['cocaine' 'cocaine vendor' 'fishscale' 'peruvian' 'colombian' 'uncut'
+ 'pure' 'fishscale cocaine' 'ukwhite' 'cocaine review']","['pure flake cocaine kg high purity cocaine quality superb'
+ 'sample order available pure colombian flake cocaine lab test'
+ 'sample order available pure colombian flake cocaine lab test crosspost']",Cocaine Vendor Fish,cocaine vendor - cocaine
+29,479,29_meth_crystal meth_crystal_meth vendor,"['meth' 'crystal meth' 'crystal' 'meth vendor' 'methamphetamine'
+ 'best meth' 'speed' 'vendor' 'meth review' 'meth speed']",['crystal meth uk' 'crystal meth' 'crystal meth vendor'],Crystal Meth Vendor Review,methamphetamine
+1,2035,1_help_guy_sub_need,['help' 'guy' 'sub' 'need' 'back' 'question' 'day' 'advice' 'shit' 'post'],"['hi guy update post' 'way make sub like old reddit rc source sub'
+ 'hey guy need help see']",Subreddit Help Needed,ask help - ask help post
+18,654,18_pgp_key_pgp key_public,"['pgp' 'key' 'pgp key' 'public' 'public pgp' 'message' 'lost' 'vendor pgp'
+ 'decrypt' 'lost pgp']",['empire public pgp key' 'pgp key' 'vendor pgp key'],Public PGP Key,pgp key
+5,1649,5_scammer_scam_exit_scamming,"['scammer' 'scam' 'exit' 'scamming' 'scammed' 'exit scam' 'selective'
+ 'exit scamming' 'alert' 'warning']","['market exit scam' 'market exit scam next'
+ 'scam alert ukdrugdealer beware avoid cost scammer']",Exit Scammer Warning,fraud - scammer
+2,2005,2_order_shipping_package_pack,"['order' 'shipping' 'package' 'pack' 'delivery' 'shipped' 'ship' 'usps'
+ 'delivered' 'international']","['package show informed delivery'
+ 'usps informed delivery work say mail incoming'
+ 'package mail outside us show usps informed delivery']",USPS Package Delivery,order
+37,419,37_dread_dread dread_cafe dread_cafe,"['dread' 'dread dread' 'cafe dread' 'cafe' 'dread word' 'word day' 'word'
+ 'sub dread' 'sub' 'new dread']",['dread well' 'dread' 'dread back'],Cafe Dread Topics,dread
+54,245,54_onion_onion site_site_onion link,"['onion' 'onion site' 'site' 'onion link' 'onion list' 'link' 'list'
+ 'onion address' 'onions' 'onion service']",['onion site' 'vendor onion' 'onion'],Onion links,site - onion site - onion
+31,471,31_hacked_hacker_hacking_job,"['hacked' 'hacker' 'hacking' 'job' 'lfw' 'malware' 'hack' 'exploit'
+ 'account' 'developer']","['lfw developer hacking security'
+ 'looking professional hacker hacking developer'
+ 'looking exploit file developer malware']",Hacker Developer Job Exploits,hacking
+35,393,35_tails_tail_electrum_wallet,"['tails' 'tail' 'electrum' 'wallet' 'whonix' 'monero' 'usb'
+ 'electrum wallet' 'electrum tail' 'monero wallet']","['updated tail electrum issue setting gui monero wallet'
+ 'tails electrum wallet issue' 'tails electrum']",Tails Electrum Monero Wallet Issue,tail - tails - electrum
+12,909,12_carding_card_credit_credit card,"['carding' 'card' 'credit' 'credit card' 'debit' 'gift' 'debit card'
+ 'gift card' 'prepaid' 'cards']","['online carding service card sale' 'eu credit debit card'
+ 'looking one press physical credit debit card']",Credit Card Service,credit card
+45,306,45_wallstreet_wall_wall street_street,"['wallstreet' 'wall' 'wall street' 'street' 'wall st' 'st' 'street market'
+ 'wallstreet market' 'wallstreetmarket' 'market']",['wallstreet market' 'hall of fame wall of shame' 'hall fame wall shame'],Wall Street Market,wallstreet
+10,999,10_crosspost_giveaway_review crosspost_crosspost vendor,"['crosspost' 'giveaway' 'review crosspost' 'crosspost vendor' 'review'
+ 'crosspost review' 'crosspost new' 'winner' 'vendor crosspost' 'envoy']","['giveaway winner announcement' 'giveaway crosspost'
+ 'usaconnect subscriber xtc giveaway crosspost']",Giveaway Crossposts,crosspost vendor
+13,882,13_dream_dream market_nightmare_market,"['dream' 'dream market' 'nightmare' 'market' 'dream dream'
+ 'nightmare market' 'market dream' 'dream nightmare' 'anyone' 'dream alt']",['dream anyone else' 'dream market still' 'dream market'],Dream Market,dream market - dread
+40,397,40_withdraw_withdrawal_withdrawl_withdraws,"['withdraw' 'withdrawal' 'withdrawl' 'withdraws' 'btc' 'withdraw btc'
+ 'working' 'pin' 'issue' 'withdraw pin']","['withdrawal working stuck pending'
+ 'withdraw problem pending withdraw hour'
+ 'withdrawal working vendor account rstclass week ca nt withdraw btc mods sort']",Withdrawal Issues BTC,withdrawal - withdrawl - withdraw
+47,327,47_paypal_transfer_paypal transfer_paypal account,"['paypal' 'transfer' 'paypal transfer' 'paypal account' 'western union'
+ 'western' 'union' 'account' 'transfer paypal' 'venmo']","['paypal account transfer' 'are western union paypal transfer ever scam'
+ 'looking legit western union transfer vendor paypal transfer']",PayPal Transfer Scams,paypal transfer - paypal - transfer
+46,283,46_ddos_ddos attack_attack_ddos ddos,"['ddos' 'ddos attack' 'attack' 'ddos ddos' 'ddos attacks' 'attacks'
+ 'attack ddos' 'market ddos' 'market' 'ddos market']",['new ddos attack' 'ddos attack' 'attack ddos'],DDOS Attacks,ddos attack
+11,933,11_monero_btc_bitcoin_coin,"['monero' 'btc' 'bitcoin' 'coin' 'wallet' 'crypto' 'buying' 'buy' 'way'
+ 'anonymously']","['bitcoin monero' 'best way exchange btc monero'
+ 'noob need help buying bitcoin monero anonymously']",Monero Exchange,bitcoin
+28,485,28_wsm_wsm wsm_wsm vendor_vendor wsm,"['wsm' 'wsm wsm' 'wsm vendor' 'vendor wsm' 'wsm order' 'dream wsm'
+ 'wsm exit' 'vendor' 'order wsm' 'exit']",['wsm vendor' 'wsm back' 'wsm down'],WSM Vendor,wsm vendor - wsm market
+55,253,55_phishing_phishing link_phished_link,"['phishing' 'phishing link' 'phished' 'link' 'warning' 'phishing site'
+ 'phishing warning' 'site' 'warning phishing' 'attempt']",['phishing warning' 'phishing link' 'warning empire phishing link'],Phishing Warning,phishing
+17,1020,17_market_market market_new market_markets,"['market' 'market market' 'new market' 'markets' 'marketplace' 'new'
+ 'core' 'grey market' 'core market' 'grey']","['really really like serpent market hopefully traffic come'
+ 'none marketplace link working' 'currently working migrating core market']",New Market Core,new market
+33,474,33_adderall_mg_ir_ritalin,"['adderall' 'mg' 'ir' 'ritalin' 'vyvanse' 'mg adderall' 'adderall mg'
+ 'pharmacy' 'adderall vendor' 'brand name']","['back mg adderall ir straight pharmacy brand name press real deal'
+ 'mg adderall brand name ir pharmacy' 'mg adderall ir brand name pharmacy']",Adderall Pharmacy Brand Name,adderall - pills
+42,378,42_heroin_heroin vendor_afghan_afghan heroin,"['heroin' 'heroin vendor' 'afghan' 'afghan heroin' 'synthetic heroin'
+ 'best heroin' 'synthetic' 'heroin sale' 'heroin review' 'ww']","['huge heroin sale get afghan heroin gram uk ww shipping crosspost'
+ 'liquidgold afghan burmese heroin sale extended uk ww'
+ 'liquidgold afghan burmese heroin best quality uk ww']",Afghan Heroin Sale,heroin
+6,1390,6_darknet_dark_web_dark web,"['darknet' 'dark' 'web' 'dark web' 'darkfail' 'darkweb' 'sentenced' 'drug'
+ 'prison' 'dark net']","['billings woman arrested alongside father pleads guilty dark web drug trafficking'
+ 'switzerland four men arrested using dark web child porn forum'
+ 'father son sentenced prison selling drugs dark web']",Dark Web Drug Trafficking Arrests,darknet
+7,1319,7_mdma_mda_mdma vendor_domestic,"['mdma' 'mda' 'mdma vendor' 'domestic' 'usa' 'us' 'mdma review'
+ 'domestic mdma' 'sale' 'mda powder']","['best domestic vendor mda mdma pressed pill'
+ 'champagne mdma purity crystal mdma pill mg'
+ 'pure mda powder us domestic oz escrow ship day']",MDMA Vendor USA Sale,mdma
+60,221,60_fentanyl_fent_carfentanil_selling fentanyl,"['fentanyl' 'fent' 'carfentanil' 'selling fentanyl' 'analogue'
+ 'fentanyl vendor' 'fentanyl analogue' 'admits' 'fentanyl distribution'
+ 'distribution']","['furanyl fentanyl fentanyl analogue eu' 'fentanyl'
+ 'looking furanyl fentanyl fentanyl analogue eu']",Fentanyl,fent - fentanyl - carfentanil
+19,646,19_deposit_deposited_ticket_address,"['deposit' 'deposited' 'ticket' 'address' 'double' 'double deposit'
+ 'deposit address' 'btc' 'btc deposit' 'deposit issue']","['missing deposit double deposit please help'
+ 'help deposited btc address twice support ticket'
+ 'double twice deposit support ticket']",Double Deposit Support Ticket,ticket - deposited - deposit
+34,433,34_xmr_btc xmr_btc_xmrto,"['xmr' 'btc xmr' 'btc' 'xmrto' 'xmr btc' 'xmr deposit' 'monero'
+ 'monero xmr' 'xmr withdrawal' 'lfw']",['btc xmr' 'xmr btc' 'btc xmr xmr xmrto'],xmr xmr,btc - btc xmr - xmr
+48,281,48_heard_happened_anyone_anyone heard,"['heard' 'happened' 'anyone' 'anyone heard' 'thewizzardnl' 'anybody heard'
+ 'has anyone' 'has' 'anybody' 'therealrc']","['anybody heard theoutfit' 'anybody heard pickledrick recently'
+ 'oops tadoe chief keef shiba actually fredo']",Document Mentions,event happened
+21,608,21_oxycodone_mg_oxy_opiate,"['oxycodone' 'mg' 'oxy' 'opiate' 'opiateconnect' 'oxycodone mg' 'opioids'
+ 'oxycontin' 'morphine' 'mg mg']","['mda oxycodone mg mg mg dilaudid mg original prescription'
+ 'mda purity oxycodone mg mg mg original canadian pharmacy dilaudid mg'
+ 'original oxycodone canadian pharmacy mg mg mg mda dilaudid xtc']",Oxycodone and Dilaudid Purchase,oxycodone
+43,341,43_de_har_noen_som,['de' 'har' 'noen' 'som' 'fra' 'en' 'la' 'para' 'mi' 'som har'],"['acabei de ser ameaado esto apagando meus thread sem dar nenhuma explicao peo galera para se unir geral vamos abrir outro topico'
+ 'noen som har hrt noe fra norskkvalitet'
+ 'noen som har hrt fra letterman psychedelist det siste']",Discussion Topics,har - noen - de
+36,371,36_mushroom_mushrooms_shrooms_magic,"['mushroom' 'mushrooms' 'shrooms' 'magic' 'cubensis' 'magic mushrooms'
+ 'psilocybin' 'psilocybe' 'magic mushroom' 'penis']","['psilocybe cubensis golden teacher mushrooms available ounce'
+ 'eu uk magic mushrooms magic chocolate empire mushroom price drop'
+ 'uk magic mushrooms magic chocolate empire mushroom price drop']",Mushrooms Magic Penis,mushrooms
+49,308,49_benzos_benzo_rc_benzo vendor,"['benzos' 'benzo' 'rc' 'benzo vendor' 'rc benzos' 'benzobananas'
+ 'rc benzo' 'benzoboys' 'best benzos' 'vendor benzos']","['benzos wickr wickr benzos email benzos secmailpro jabber benzos jabberixcom genuine eu pharma ww shipping'
+ 'discreetlab various rc benzo blotter fmdmb product czech republic shipping worldwide'
+ 'discreetlab selling various rc benzo blotter fmdmb product shipping czech republic']",Benzos Vendors,rc - benzo - benzos
+44,339,44_dnm_dnms_dn_bible,"['dnm' 'dnms' 'dn' 'bible' 'dnstars' 'dnmuk' 'dm' 'avenger' 'dnm vendor'
+ 'vendor bible']",['please update dnm bible' 'dnm bible' 'dnm vendor bible'],DNMS Bible,dnm - dnms - dn
+32,470,32_login_account_password_log,"['login' 'account' 'password' 'log' 'fa' 'error' 'registration' 'ca nt'
+ 'nt' 'username']",['disabled password login' 'ca nt login using fa' 'login problem fa error'],Login Issues,access problems
+9,1012,9_lsd_ug_tab_lsd vendor,"['lsd' 'ug' 'tab' 'lsd vendor' 'acid' 'lsd tab' 'gammagoblin' 'free' 'usa'
+ 'mdma']","['free lsd ug tab'
+ 'point one free lsd blotter lsd tab void realm teacher gaze acid pure uk uk samsara market crosspost'
+ 'point one lsd blotters lsd tab void realm teacher gaze goblins den acid pure crosspost']",LSD Vendor Tab List,tab - lsd - ug
+53,328,53_bank_bank log_bank drop_log,"['bank' 'bank log' 'bank drop' 'log' 'bank account' 'drop' 'logs'
+ 'bank logs' 'account' 'bank logins']","['bank logs ccs fullz anything fraud and weed usa worldwide'
+ 'weed usa worldwide bank logs ccs fullz anything fraud'
+ 'bank logs cashout']",Bank Fraud Cards,bank drop - bank log - bank
+25,509,25_pill_xtc_xtc pill_ecstasy,"['pill' 'xtc' 'xtc pill' 'ecstasy' 'pills' 'mg' 'xtc pills' 'pill press'
+ 'press' 'pillchills']","['samsung mg xtc pills uk best ecstasy offer new stock xpress dnm sale'
+ 'ca ecstasy mda xtc pills made mg mda pill'
+ 'samsung mg xtc pills uk best ecstasy offer new stock xpress dream sale dnm sale']",xtc pills for sale,pills - xtc
+22,544,22_id_passport_fake_fake id,"['id' 'passport' 'fake' 'fake id' 'license' 'scan' 'driver' 'driving'
+ 'driver license' 'dl']","['kyc photoshop documents fakeid photo id address proof id holding pic selfie confirm identity passport ssn utility bills driving license'
+ 'buy registered fake passport id card driver license visa etc'
+ 'selling passport driving license id scan']",Fake IDs and Licenses,fake IDs
+39,375,39_cryptonia_cryptonia market_cryptonia cryptonia_dcdutchconnectionuk,"['cryptonia' 'cryptonia market' 'cryptonia cryptonia'
+ 'dcdutchconnectionuk' 'empire cryptonia' 'market' 'dutyfreesmoking'
+ 'vendor cryptonia' 'nightmare' 'cryptonia new']",['become vendor cryptonia' 'cryptonia already' 'cryptonia down'],Cryptonia Vendor,cryptonia market - dread
+20,590,20_bar_bunk_bars_selaminy,"['bar' 'bunk' 'bars' 'selaminy' 'hulk' 'xmf' 'xanmasterfrank'
+ 'thebartender' 'bunk bar' 'pack']",['bar xmf' 'bunk bar' 'selaminy hulk bars review'],Bar Reviews,bunk bar
+57,226,57_opsec_opsec opsec_opsec question_bad opsec,"['opsec' 'opsec opsec' 'opsec question' 'bad opsec' 'question'
+ 'good opsec' 'opsec guide' 'guide' 'dnm' 'help opsec']",['good opsec vendor' 'help opsec' 'opsec'],Opsec and Guides,opensec
+41,335,41_escrow_multisig_escrow escrow_full escrow,"['escrow' 'multisig' 'escrow escrow' 'full escrow' 'escrow order' 'extend'
+ 'extend escrow' 'order escrow' 'escrow service' 'full']",['escrow first' 'full escrow' 'multisig escrow question'],Escrow Services and Multisig,escrow service
+52,331,52_order_cancel_cancelled_refund,"['order' 'cancel' 'cancelled' 'refund' 'cancel order' 'canceled'
+ 'cancelled order' 'order cancelled' 'refunded' 'auto']","['order cancelled support btc refund yet missing something'
+ 'get btc back order auto cancel' 'cancelled order refund']",Order Cancelled,order cancelled
+65,198,65_chemical_research_research chemical_chems,"['chemical' 'research' 'research chemical' 'chems' 'research chemicals'
+ 'chemicals' 'chem' 'chemgenie' 'chemical vendor' 'chemist']","['chem theory honorable research chemical supplier'
+ 'canada research chemical vendor'
+ 'new stock top purity research chemical china']",Research Chemicals,research chemical - research - chemical
+50,326,50_fraud_fraudsters_fraud vendor_loan fraud,"['fraud' 'fraudsters' 'fraud vendor' 'loan fraud' 'fraudfox' 'loan'
+ 'fraud fraud' 'fraud forum' 'uk fraud' 'best fraud']",['uk fraud vendor' 'new fraud vendor' 'fraud'],Fraud Vendor Loan,fraud
+63,202,63_dmt_dmt vendor_dmt vape_odsmt,"['dmt' 'dmt vendor' 'dmt vape' 'odsmt' 'dmt dmt' 'changa' 'bluefairy'
+ 'looking dmt' 'dmt changa' 'shimshai']",['best dmt vendor' 'dmt' 'vendor dmt'],DMT Vendors,dmt vape - dmt - dmt vendor
+58,229,58_link_working link_working_pm,"['link' 'working link' 'working' 'pm' 'link please' 'pm link'
+ 'link working' 'please' 'pm working' 'please pm']","['anyone pm working link' 'please pm someone working link'
+ 'pm working link']",PM Working Share Links,link
+38,382,38_cc_cvv_vbv_cc vendor,"['cc' 'cvv' 'vbv' 'cc vendor' 'cc cvv' 'non' 'non vbv' 'ccv' 'cvv vendor'
+ 'fullz']","['selling hq cc cvv good price' 'legit uk hq cc non vbv vendor'
+ 'get best cc cvv']",cc vending,vbv - cc - cvv
+61,211,61_cgmc_invite_invite code_code,"['cgmc' 'invite' 'invite code' 'code' 'cgmc invite' 'code cgmc'
+ 'invite cgmc' 'cgmc cgmc' 'registration' 'cgmc open']",['need invite code cgmc' 'cgmc invite code' 'invite code cgmc'],Invite Code CGMC,cgmc - invite - invite code
+27,467,27_ketamine_ketamine vendor_ketamine review_mdma ketamine,"['ketamine' 'ketamine vendor' 'ketamine review' 'mdma ketamine'
+ 'review ketamine' 'racemic' 'ketamine ketamine' 'review' 'usaconnect'
+ 'domestic ketamine']",['ketamine us' 'get ketamine' 'ketamine vendor'],Ketamine Vendor,ketamine review - ketamine - ketamine vendor
+64,187,64_captcha_rapture_rapture market_captcha captcha,"['captcha' 'rapture' 'rapture market' 'captcha captcha' 'incorrect'
+ 'login' 'dread captcha' 'link' 'main' 'main link']","['captcha' 'use rapture registration login captcha picture'
+ 'rapture market captcha shit']",Rapture Market Captcha,capcha
+59,219,59_mirror_working mirror_working_mirror link,"['mirror' 'working mirror' 'working' 'mirror link' 'empire mirror'
+ 'mirror working' 'mirror please' 'mirrors' 'link' 'pm']","['empire mirror working' 'anyone working mirror link'
+ 'always find working mirror link']",mirror link,mirror - mirror link - working mirror
