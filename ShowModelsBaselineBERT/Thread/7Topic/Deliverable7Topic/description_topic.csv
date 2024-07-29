@@ -1,0 +1,25 @@
+Topic,Count,BERTopic_Name,Representation,Representative_Docs,Custom_Name_GenAI,Custom_Name_Zero_Shot
+4,6299,4_mdma_lsd_get_looking,['mdma' 'lsd' 'get' 'looking' 'wsm' 'good' 'btc' 'question' 'legit' 'got'],"['hey ro im gon na pull pk'
+ 'life wonderful life get life like get away hey great predictable'
+ 'holy shit fuck']",Drug Discussion,buy drugs
+2,6907,2_vendor_scammer_scam_looking,"['vendor' 'scammer' 'scam' 'looking' 'scamming' 'sale' 'exit'
+ 'vendor vendor' 'warning' 'legit']","['looking good reliable vendor sell ounce' 'vendor selective scamming'
+ 'trusted vendor shop ship eu domestic']",Trusted Vendor Scams,scammer - vendor scammer
+1,6236,1_market_empire_dream_nightmare,"['market' 'empire' 'dream' 'nightmare' 'vendor' 'dream market'
+ 'empire market' 'nightmare market' 'new' 'anyone']","['next market' 'dream market vendor rstclass nightmare market'
+ 'nightmare market scam']",Dream Vendor Nightmare,market drug - empire market
+5,2776,5_order_package_shipping_delivery,"['order' 'package' 'shipping' 'delivery' 'pack' 'shipped' 'ordering'
+ 'tracking' 'vendor' 'ordered']","['order accepted day still hasnt marked shipped'
+ 'package mail outside us show usps informed delivery'
+ 'placed order week ago still shown informed delivery marked shipped extend finalize date shou']",Order Shipping & Tracking,orders
+6,2823,6_bitcoin_card_wallet_btc,"['bitcoin' 'card' 'wallet' 'btc' 'bank' 'credit' 'carding' 'coin' 'paypal'
+ 'cash']","['credit cards paypal prepaid card find'
+ 'got cc setup credit card reader charge amount card amount go hacked bank account use'
+ 'need uk bank account debit card']",Financial Services and Products,bitcoin wallet
+0,8645,0_weed_xanax_vendor_cocaine,"['weed' 'xanax' 'vendor' 'cocaine' 'mg' 'uk' 'coke' 'best' 'ketamine'
+ 'drug']","['high quality weed thc product europe'
+ 'new xanax vendor special promo xanax bar straight pfizer usa shipping worldwide'
+ 'xtc lsd cb ice mdma ketamine bulk price world wide shipping']",Drug Vendor Europe,sell drugs
+3,4230,3_review_vendor review_vendor_review vendor,"['review' 'vendor review' 'vendor' 'review vendor' 'review review' 'mg'
+ 'sample' 'mdma' 'feedback' 'dream']","['empire vendor cocaine review' 'first ever review'
+ 'vendor review dream market']",Vendor MDMA Review,review vendor - review product

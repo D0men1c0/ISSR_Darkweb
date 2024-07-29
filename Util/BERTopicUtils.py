@@ -243,9 +243,9 @@ def predict_single_topic(topic_model: BERTopic, sentence: list) -> pd.DataFrame:
     :param sentence: The sentence to predict the topic of.
     :return: A DataFrame with the predicted topic.
     """
-    results, _ = topic_model.transform(sentence)
+    results, prob = topic_model.transform(sentence)
     # Create a DataFrame with the results
-    df_finals = pd.DataFrame([(topic_model.get_topic(results[0]), topic_model.custom_labels_[results[0]+1])], columns=['Topic', 'Label'])
+    df_finals = pd.DataFrame([(topic_model.get_topic(results[0]), prob[0], topic_model.custom_labels_[results[0]+1])], columns=['Topic', 'Probabilities', 'Label'])
 
     # Extract the words and sentence
     df_finals['Words'] = df_finals['Topic'].apply(lambda topic: [word for word, _ in topic])
