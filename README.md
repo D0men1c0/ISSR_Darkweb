@@ -259,8 +259,9 @@ btu.predict_topic(topic_model, sentence, custom_labels=True)
 
 **Note:** we are using the `topic_model_all-MiniLM-L6-v2_190_20n_8dim`, which is not directly in the directory because it weighs 2.5GB but can be downloaded directly from the file `download_files.py`.
 Alternatively, there is the version `topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors` which is much smaller and is present in the directory, but the prediction results are much poorer. <br>
+Note: if **utilising safetensors models** use the function `btu.predict_single_topic(topic_model, sentence)`, because with safetensors Umap and Hdbscan are not reported, so the prediction must be made on embeddings and not on probabilities. <br>
 The BERTopic model used is one example, there are several. Just go to the ModelsContent subdirectory to see how many more there are.<br>
-Or also use the templates in the thread section on Models:
+Or also use the models in the thread section on Models:
 
 ```bash
 cd ../ThreadAnalysis/Models
