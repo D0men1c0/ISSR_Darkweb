@@ -77,8 +77,10 @@ The structure of the repository is as follows:
 │   └───RawData
 ├───Img
 │   ├───Content
+│   ├───Merged
 │   └───Thread
 ├───MergedModelBERT
+│   └───Merged_Models_safetensors
 ├───MLModelsBERT
 │   ├───Content
 │   │   └───SavedModels
@@ -86,7 +88,12 @@ The structure of the repository is as follows:
 │       └───SavedModels
 ├───ShowModelsBaselineBERT
 │   ├───Content
+│   │   └───CSV121Topic
 │   └───Thread
+│       ├───68Topic
+│       │   └───CSV68Topic
+│       └───7Topic
+│           └───CSV7Topic
 ├───ShowResultsHTML
 └───Util
 ```
@@ -133,6 +140,7 @@ Stores tables datasets used in the project.
     Stores images used for topic representation graphics found with BERTopic.
 
     - `Content`: Images related to content analysis.
+    - `Merged`: Images related to merged models analysis.
     - `Thread`: Images related to thread analysis.
 
 4. `MergedModelBERT`

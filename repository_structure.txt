@@ -36,8 +36,10 @@
 │   └───RawData
 ├───Img
 │   ├───Content
+│   ├───Merged
 │   └───Thread
 ├───MergedModelBERT
+│   └───Merged_Models_safetensors
 ├───MLModelsBERT
 │   ├───Content
 │   │   └───SavedModels
@@ -45,6 +47,11 @@
 │       └───SavedModels
 ├───ShowModelsBaselineBERT
 │   ├───Content
+│   │   └───CSV121Topic
 │   └───Thread
+│       ├───68Topic
+│       │   └───CSV68Topic
+│       └───7Topic
+│           └───CSV7Topic
 ├───ShowResultsHTML
 └───Util
