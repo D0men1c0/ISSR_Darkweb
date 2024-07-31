@@ -8,7 +8,7 @@
 - [Installation](#installation)
   - [Running on Google Colab](#running-on-google-colab)
 - [Usage](#usage)
-  - [Safetensors and Hugging Face](#safetensors_and_hugging_face)
+  - [Safetensors and Hugging Face](#safetensors-and-hugging-face)
 - [Datasets Used](#datasets-used)
 - [Summary of Work Done](#summary-of-work-done)
 - [Results](#results)
