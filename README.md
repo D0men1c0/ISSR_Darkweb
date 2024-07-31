@@ -8,6 +8,7 @@
 - [Installation](#installation)
   - [Running on Google Colab](#running-on-google-colab)
 - [Usage](#usage)
+  - [Safetensors and Hugging Face](#safetensors_and_hugging_face)
 - [Datasets Used](#datasets-used)
 - [Summary of Work Done](#summary-of-work-done)
 - [Results](#results)
@@ -259,7 +260,6 @@ btu.predict_topic(topic_model, sentence, custom_labels=True)
 
 **Note:** we are using the `topic_model_all-MiniLM-L6-v2_190_20n_8dim`, which is not directly in the directory because it weighs 2.5GB but can be downloaded directly from the file `download_files.py`.
 Alternatively, there is the version `topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors` which is much smaller and is present in the directory, but the prediction results are much poorer. <br>
-**Note:** if **utilising safetensors models** use the function `btu.predict_single_topic(topic_model, sentence)`, because with safetensors Umap and Hdbscan are not reported, so the prediction must be made on embeddings and not on probabilities. <br>
 The BERTopic model used is one example, there are several. Just go to the ModelsContent subdirectory to see how many more there are.<br>
 Or also use the models in the thread section on Models:
 
@@ -330,6 +330,67 @@ Clearly the custom `predict_topic` function is being used, alternatively, one co
 </div>
 
 Note: In the same `.ipynb` file there are other examples
+
+### Safetensors and Hugging Face
+
+If utilising safetensors or Hugging Face (see https://huggingface.co/D0men1c0) models use:
+```python
+from bertopic import BERTopic
+
+# Load the BERTopic model
+topic_model = BERTopic.load("D0men1c0/ISSR_Dark_Web_Merged_Models_Content_Thread")
+
+# Define a sentence for prediction
+sentence = ['recently closed Samsara market']
+
+# Predict
+results, _ = topic_model.transform(sentence)
+
+# Get topic info
+topic_model.get_topic_info(results[0])
+```
+because with safetensors Umap and Hdbscan are not reported, so the prediction must be made on embeddings and not on probabilities.
+
+#### Example Results
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Topic</th>
+      <th>Count</th>
+      <th>Name</th>
+      <th>CustomName</th>
+      <th>Representation</th>
+      <th>Representative_Docs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>113</td>
+      <td>290</td>
+      <td>113_samsara_market_samsara market_sam</td>
+      <td>Samsara Market</td>
+      <td>[samsara, market, samsara market, sam, dream, ...</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ## Datasets Used
 
