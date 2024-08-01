@@ -50,17 +50,26 @@ def preprocess_title(title: str) -> str:
     tokens = [lemmatizer.lemmatize(token.lower()) for token in tokens]
     return ' '.join(tokens)
 
-def preprocess_content(content: str) -> str:
+def preprocess_content(content: str, lowercase: bool = True) -> str:
     """
-    Preprocesses the content of a news article by tokenizing, lowercasing, and removing stopwords
+    Preprocesses the content of a news article by tokenizing, optionally lowercasing, and removing stopwords.
     :param content: the content of a news article
+    :param lowercase: whether to convert text to lowercase (default is True)
     :return: the preprocessed content
     """
-    # Tokenize and filter tokens
-    tokens = [token.lower() for token in word_tokenize(content) if token.isalpha()]
-
+    # Tokenize the content
+    tokens = word_tokenize(content)
+    
+    # Optionally convert to lowercase
+    if lowercase:
+        tokens = [token.lower() for token in tokens]
+    
+    # Filter out non-alphabetic tokens
+    tokens = [token for token in tokens if token.isalpha()]
+    
     # Remove stopwords
     tokens = [token for token in tokens if token not in stopwords.words('english')]
+    
     return ' '.join(tokens)
 
 def clean_sentences(text: str) -> str:
