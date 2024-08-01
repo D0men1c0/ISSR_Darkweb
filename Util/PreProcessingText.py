@@ -17,6 +17,21 @@ nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
+def remove_html_tags(text: str) -> str:
+    """
+    Removes HTML tags from a string.
+    :param text: the text to remove HTML tags from
+    :return: the text with HTML tags removed
+    """
+    soup = BeautifulSoup(text, "html.parser")
+    text = soup.get_text()
+    
+    text = re.sub(r'\n+', ' ', text)
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r'\d+', '', text)
+    text = text.strip()
+    
+    return text
 
 def preprocess_title(title: str) -> str:
     """
