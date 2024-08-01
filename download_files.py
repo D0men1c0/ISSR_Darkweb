@@ -66,6 +66,11 @@ files_to_download = [
         "file_size": "2.5 GB"
     },
     {
+        "file_id": "1Iyt69eUigfRe984NKPtNGMH9rcsKUlYs",
+        "destination": f"{PATH_CONTENT}/ModelsContent/topic_model_all-MiniLM-L6-v2_150_150n_10dim_white_nation",
+        "file_size": "670 MB"
+    },
+    {
         "file_id": "1M-f-T7URHM457bpbP5sX0qjPUf9ve4ON",
         "destination": f"{PATH_THREAD}/topic_model_0.64SilNew",
         "file_size": "560 MB"
