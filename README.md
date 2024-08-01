@@ -235,7 +235,10 @@ To run the notebooks on Google Colab, follow these steps:
 4. Install the necessary libraries. For example:
     ```python
     !pip install bertopic
-    !pip install sentence_transformers
+    !torch
+    !pip install llama_cpp_python
+    !pip install umap_learn
+    !pip install hdbscan
     ```
     
 5. If you encounter the following error while performing DataFrame operations: `Index' object has no attribute '_format_flat'`, note that this is just a visualization issue. The cell will still execute successfully.
