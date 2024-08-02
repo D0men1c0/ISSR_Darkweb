@@ -9,6 +9,20 @@ from gensim import corpora
 from itertools import combinations
 import numpy
 
+def get_corpus(df: pd.DataFrame, text_column: str, lower: bool = True) -> list:
+    """
+    Load the corpus from the DataFrame.
+    :param df: the DataFrame containing the corpus
+    :param text_column: the text column
+    :param lower: whether to convert the text to lowercase
+    :return: the corpus
+    """
+    corpus = df[text_column].tolist()
+    if lower:
+        corpus = [x.lower() for x in corpus]
+    corpus = list(set(corpus))
+    return corpus
+
 def load_data_filtered(input_file: str, name_column: str) -> pd.DataFrame:
     """
     Load the filtered data from the input file.
