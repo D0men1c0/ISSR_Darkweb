@@ -118,7 +118,7 @@ def plot_probability_distribution(df: pd.DataFrame, feature: str = 'Probability'
     :param df: DataFrame containing a 'Probability' column.
     """
     plt.figure(figsize=figsize)
-    sns.histplot(df['Probability'], bins=20, kde=True, color='skyblue')
+    sns.histplot(df[feature], bins=20, kde=True, color='skyblue')
     
     plt.title('Distribution of Document Probabilities')
     plt.xlabel('Probability')
