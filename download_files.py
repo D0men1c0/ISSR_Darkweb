@@ -83,7 +83,7 @@ files_to_download = [
     {
         "file_id": "1PmuE6dS0yORKBeePAA4SXQ2y3p3xKPDP",
         "destination": f"{PATH_THREAD}/topic_model_all-MiniLM-L6-v2_500_150n_10dim_raid",
-        "file_size": "670 MB"
+        "file_size": "1.1 GB"
     },
     {
         "file_id": "1WfGggs_oHpKRf9hJF6tvLjLdKI8A20WG",
