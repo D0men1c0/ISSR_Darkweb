@@ -81,6 +81,11 @@ files_to_download = [
         "file_size": "550 MB"
     },
     {
+        "file_id": "1PmuE6dS0yORKBeePAA4SXQ2y3p3xKPDP",
+        "destination": f"{PATH_THREAD}/topic_model_all-MiniLM-L6-v2_500_150n_10dim_raid",
+        "file_size": "670 MB"
+    },
+    {
         "file_id": "1WfGggs_oHpKRf9hJF6tvLjLdKI8A20WG",
         "destination": 'Analyze_files/CombiningAnalysisCompleteDataset/ThreadAnalysis/PreProcessFiles/threads_preprocessed_embeddings_raids.npz',
         "file_size": "130 MB"
