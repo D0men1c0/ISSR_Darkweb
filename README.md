@@ -491,12 +491,13 @@ Content:
 
 ## Future work
 
-- [ ] **Merge Baselines**: The next steps involve merging the baselines obtained from the Thread and Content sections into a single model to integrate both representations, with Thread providing general topics and Content extending them.
+- [X] **Merge Baselines**: The next steps involve merging the baselines obtained from the Thread and Content sections into a single model to integrate both representations, with Thread providing general topics and Content extending them.
 - [X] **Validation**: Validate the results using clustering metrics and machine learning models. Given the data volume, LightGBM may not be sufficient, so exploring neural networks could be beneficial.
-- [ ] **Topic Refinement**: Conduct a final review of the topics, potentially integrating specific expressions that need to be highlighted (e.g., a particular abbreviation for a drug that wasn't identified).
-- [ ] **Integration with LLAMA2**: Incorporate LLAMA2 to better explain and refine the topic labels. LLAMA2 can provide more detailed and contextually relevant labels, enhancing the interpretability of the topics.
-- [ ] **Deployment on HuggingFace**: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
-- [ ] **Temporal Validation**: If time permits, validate the results over time using LSTM (currently done with BERT) to ensure temporal consistency and gain additional insights.
+- [X] **Topic Refinement**: Conduct a final review of the topics, potentially integrating specific expressions that need to be highlighted (e.g., a particular abbreviation for a drug that wasn't identified).
+- [X] **Integration with GenAI**: Incorporate Generative AI to better explain and refine the topic labels. Mistral can provide more detailed and contextually relevant labels, enhancing the interpretability of the topics.
+- [X] **Deployment on HuggingFace**: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
+- [X] **Temporal Validation**: If time permits, validate the results over time using LSTM (currently done with BERT) to ensure temporal consistency and gain additional insights.
+- [ ] **Dataset Integration**: Explore the integration of additional datasets to make the merged model more robust and comprehensive. This would involve aligning different datasets to ensure consistency and leveraging diverse data sources to cover more topics and nuances.
 - [ ] **Multimodal Model**: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
 
 
