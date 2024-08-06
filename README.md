@@ -401,14 +401,22 @@ because with safetensors Umap and Hdbscan are not reported, so the prediction mu
 
 ## Datasets Used
 
-The CrimeBB dataset was used, specifically the "dread-2023-06-21" data scraped from Dread, updated on 2023-06-21 (for more details see the Citations section).<br> 
+The CrimeBB and ExtremeBB datasets (for more details, see the Citations section) were used, specifically the following data:
+- **dread-2023-06-21** scraped from Dread, updated on 2023-06-21
+- **extremebb-white-nations 2021-12-10** scraped from White Nations, updated on 2021-12-10
+- **raidforums 2023-06-21** scraped from Raid Forums, updated on 2023-06-21
+
 Dread is a popular forum on the Dark Web where users exchange opinions and reviews on various topics, including drug sales, seller reviews, password and bitcoin transactions, as well as passports and fake IDs.
 
-For more details, here is a tables structure:
+ExtremeBB's "white-nations" dataset covers discussions related to conspiracies, climate change, elections, and racism, reflecting a broad range of socio-political issues.
+
+RaidForums, on the other hand, focuses on leaked and cracked accounts from social media, games, Spotify, and other platforms, highlighting discussions around data breaches and unauthorized access.
+
+For more details, here is a general tables structure:
 
 <img src="Img/structure_tables.png" alt="structure_tables" width="500" height="600"/>
 
-<br>The following tables were analyzed to extract the topics:
+The following tables were analyzed to extract the topics:
 - **Dread Posts:** Contains 290k records.
 - **Dread Threads:** Contains 75k records.
 - **White Nations Posts:** Contains 52k records.
