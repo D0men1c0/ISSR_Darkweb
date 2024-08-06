@@ -9,6 +9,7 @@
   - [Running on Google Colab](#running-on-google-colab)
 - [Usage](#usage)
   - [Safetensors and Hugging Face](#safetensors-and-hugging-face)
+- [Summary of the Analysis](#summary-of-the-analysis)
 - [Datasets Used](#datasets-used)
 - [Summary of Work Done](#summary-of-work-done)
 - [Results](#results)
@@ -398,6 +399,10 @@ because with safetensors Umap and Hdbscan are not reported, so the prediction mu
   </tbody>
 </table>
 </div>
+
+## Summary of the Analysis
+
+I recommend checking the `ShowResultsHTML` folder, which contains HTML files with all the results obtained so far for each baseline, including additional analyses, graphs, and examples of predictions.
 
 ## Datasets Used
 
