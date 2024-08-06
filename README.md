@@ -443,7 +443,7 @@ To build more robust models, it was decided to analyze two additional datasets w
 The first dataset (**White Nations**) contained 31 topics derived from 52k data points, while the second dataset (**Raid Forums**) included 26 topics from 94k data points. <br>
 The first dataset covered topics such as conspiracies, climate change, elections, and racism, whereas the second dataset focused on leaked and cracked accounts (social media, games, Spotify, etc.).
 
-<br> Finally, to achieve a more robust model, the four baselines found were combined: the one with 68 topics, the one with 121 topics, the one with 31 topics, and the one with 26 topics, resulting in a total of `173` topics (see https://huggingface.co/D0men1c0/ISSR_Dark_Web_Merged_Models_Content_White_Nations_Raid).
+Finally, to achieve a more robust model, the four baselines found were combined: the one with 68 topics, the one with 121 topics, the one with 31 topics, and the one with 26 topics, resulting in a total of `173` topics (see https://huggingface.co/D0men1c0/ISSR_Dark_Web_Merged_Models_Content_White_Nations_Raid).
 
 ## Results
 
