@@ -4,9 +4,11 @@
 │   │   │   ├───DatasetsContentBERTopic
 │   │   │   ├───LLAMA
 │   │   │   ├───ModelsContent
+│   │   │   │   ├───topic_model_all-MiniLM-L6-v2_150_150n_10dim_white_nation_safetensors
 │   │   │   │   └───topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors
 │   │   │   ├───PreProcessFiles
 │   │   │   └───ZeroShotClassificationResultsContent
+│   │   │       ├───all-MiniLM-L6-v2_150_150n_10dim
 │   │   │       └───all-MiniLM-L6-v2_190_20n_8dim
 │   │   └───ThreadAnalysis
 │   │       ├───DatasetsThreadBERTopic
@@ -14,10 +16,12 @@
 │   │       ├───Models
 │   │       │   ├───topic_model_0.50Sil300_safetensors
 │   │       │   ├───topic_model_0.64SilNew_safetensors
+│   │       │   ├───topic_model_all-MiniLM-L6-v2_150_150n_10dim_raid_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_150_20n_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_200_safetensors
 │   │       │   └───topic_model_all-MiniLM-L6-v2_400_safetensors
 │   │       ├───OtherFilesPreviousApproach
+│   │       ├───PreProcessFiles
 │   │       ├───ResultsCluster
 │   │       ├───ResultsGridSearchBERTopic
 │   │       └───ZeroShotClassificationResults
@@ -39,7 +43,9 @@
 │   ├───Merged
 │   └───Thread
 ├───MergedModelBERT
-│   └───Merged_Models_safetensors
+│   ├───Merged_Models_safetensors
+│   ├───Merged_Models_White_Nations_Raid_safetensors
+│   └───Merged_Models_White_Nations_safetensors
 ├───MLModelsBERT
 │   ├───Content
 │   │   └───SavedModels
@@ -47,8 +53,11 @@
 │       └───SavedModels
 ├───ShowModelsBaselineBERT
 │   ├───Content
-│   │   └───CSV121Topic
+│   │   ├───CSV121Topic
+│   │   └───CSV31TopicWhiteNation
 │   └───Thread
+│       ├───26TopicRaid
+│       │   └───CSV26TopicRaid
 │       ├───68Topic
 │       │   └───CSV68Topic
 │       └───7Topic

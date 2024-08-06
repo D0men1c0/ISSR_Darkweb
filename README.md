@@ -45,9 +45,11 @@ The structure of the repository is as follows:
 │   │   │   ├───DatasetsContentBERTopic
 │   │   │   ├───LLAMA
 │   │   │   ├───ModelsContent
+│   │   │   │   ├───topic_model_all-MiniLM-L6-v2_150_150n_10dim_white_nation_safetensors
 │   │   │   │   └───topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors
 │   │   │   ├───PreProcessFiles
 │   │   │   └───ZeroShotClassificationResultsContent
+│   │   │       ├───all-MiniLM-L6-v2_150_150n_10dim
 │   │   │       └───all-MiniLM-L6-v2_190_20n_8dim
 │   │   └───ThreadAnalysis
 │   │       ├───DatasetsThreadBERTopic
@@ -55,10 +57,12 @@ The structure of the repository is as follows:
 │   │       ├───Models
 │   │       │   ├───topic_model_0.50Sil300_safetensors
 │   │       │   ├───topic_model_0.64SilNew_safetensors
+│   │       │   ├───topic_model_all-MiniLM-L6-v2_150_150n_10dim_raid_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_150_20n_safetensors
 │   │       │   ├───topic_model_all-MiniLM-L6-v2_200_safetensors
 │   │       │   └───topic_model_all-MiniLM-L6-v2_400_safetensors
 │   │       ├───OtherFilesPreviousApproach
+│   │       ├───PreProcessFiles
 │   │       ├───ResultsCluster
 │   │       ├───ResultsGridSearchBERTopic
 │   │       └───ZeroShotClassificationResults
@@ -80,7 +84,9 @@ The structure of the repository is as follows:
 │   ├───Merged
 │   └───Thread
 ├───MergedModelBERT
-│   └───Merged_Models_safetensors
+│   ├───Merged_Models_safetensors
+│   ├───Merged_Models_White_Nations_Raid_safetensors
+│   └───Merged_Models_White_Nations_safetensors
 ├───MLModelsBERT
 │   ├───Content
 │   │   └───SavedModels
@@ -88,8 +94,11 @@ The structure of the repository is as follows:
 │       └───SavedModels
 ├───ShowModelsBaselineBERT
 │   ├───Content
-│   │   └───CSV121Topic
+│   │   ├───CSV121Topic
+│   │   └───CSV31TopicWhiteNation
 │   └───Thread
+│       ├───26TopicRaid
+│       │   └───CSV26TopicRaid
 │       ├───68Topic
 │       │   └───CSV68Topic
 │       └───7Topic
@@ -400,8 +409,10 @@ For more details, here is a tables structure:
 <img src="Img/structure_tables.png" alt="structure_tables" width="500" height="600"/>
 
 <br>The following tables were analyzed to extract the topics:
-- **Post:** Contains 290k records.
-- **Thread:** Contains 75k records.
+- **Dread Posts:** Contains 290k records.
+- **Dread Threads:** Contains 75k records.
+- **White Nations Posts:** Contains 52k records.
+- **Raid Forums Threads:** Contains 94k records
 
 ## Summary of Work Done
 
@@ -409,7 +420,7 @@ The objective of this project was to analyze the evolution of language among Dar
 
 To gain an overview of the topics discussed, the `thread` field was analyzed first. Various approaches such as TF-IDF, LDA, and Zero-shot classification were used, and a class was developed that combined Sentence Transformer with t-SNE, PCA, and k-means. However, these methods did not yield optimal results.<br> Therefore, the BERTopic library was employed, which, thanks to its modularity, enabled the analysis of text by applying different strategies including Sentence BERT, c-TFIDF, KeyBERTInspired, introducing diversity with custom classes, and using UMAP for dimensionality reduction and HDBSCAN for clustering. Subsequently, Zero-shot classification was applied to the topic names.
 
-This comprehensive approach resulted in two baselines:
+This comprehensive approach resulted in two baselines with Dread forums:
 
 - One with 7 macro clusters (general topics)
 - Another with 68 clusters (aiming to identify as many relevant topics as possible while avoiding micro clusters)
@@ -420,6 +431,11 @@ To further validate the results from an accuracy metrics perspective, a LightGBM
 
 Subsequently, the `content` field in the posts was analyzed to verify if the topics identified matched those in the threads, which they did, resulting in 121 clusters.
 
+To build more robust models, it was decided to analyze two additional datasets with the same structure. 
+The first dataset (**White Nations**) contained 31 topics derived from 52k data points, while the second dataset (**Raid Forums**) included 26 topics from 94k data points. <br>
+The first dataset covered topics such as conspiracies, climate change, elections, and racism, whereas the second dataset focused on leaked and cracked accounts (social media, games, Spotify, etc.).
+
+<br> Finally, to achieve a more robust model, the four baselines found were combined: the one with 68 topics, the one with 121 topics, the one with 31 topics, and the one with 26 topics, resulting in a total of `173` topics (see https://huggingface.co/D0men1c0/ISSR_Dark_Web_Merged_Models_Content_White_Nations_Raid).
 
 ## Results
 
@@ -444,6 +460,26 @@ Content:
 | Davies Bouldin Score                    | 0.46              |
 | Dos Score (Diversity Overlapped Score)  | 0.24              |
 | Outliers                                | 0.35              |
+
+Thread Raid Forums:
+
+| Metric                                  | Value (26 Topics)|
+|-----------------------------------------|-------------------|
+| Coherence Score                         | 0.51              |
+| Silhouette Score                        | 0.62              |
+| Davies Bouldin Score                    | 0.48              |
+| Dos Score (Diversity Overlapped Score)  | 0.20              |
+| Outliers                                | 0.38              |
+
+Content White Nations:
+
+| Metric                                  | Value (31 Topics)|
+|-----------------------------------------|-------------------|
+| Coherence Score                         | 0.46              |
+| Silhouette Score                        | 0.60              |
+| Davies Bouldin Score                    | 0.55              |
+| Dos Score (Diversity Overlapped Score)  | 0.20              |
+| Outliers                                | 0.32              |
 
 
 There are many other graphs present representing topics and their distribution, for reasons of space only the `Content` graph of the top 10 most frequent topics distributed over time will be shown
