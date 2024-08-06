@@ -449,7 +449,7 @@ Finally, to achieve a more robust model, the four baselines found were combined:
 
 These are the results of the cluster analysis produced by BERT on both threads and content.<br> For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTM`.
 
-Thread:
+Dread Thread:
 
 | Metric                                  | Value (68 Topics) | Value (7 Topics) |
 |-----------------------------------------|-------------------|------------------|
@@ -459,7 +459,7 @@ Thread:
 | Dos Score (Diversity Overlapped Score)  | 0.06              | 0.80             |
 | Outliers                                | 0.30              | 0.42             |
 
-Content:
+Dread Content:
 
 | Metric                                  | Value (121 Topics)|
 |-----------------------------------------|-------------------|
@@ -469,7 +469,7 @@ Content:
 | Dos Score (Diversity Overlapped Score)  | 0.24              |
 | Outliers                                | 0.35              |
 
-Thread Raid Forums:
+Raid Forums Thread:
 
 | Metric                                  | Value (26 Topics)|
 |-----------------------------------------|-------------------|
@@ -479,7 +479,7 @@ Thread Raid Forums:
 | Dos Score (Diversity Overlapped Score)  | 0.20              |
 | Outliers                                | 0.38              |
 
-Content White Nations:
+White Nations Content:
 
 | Metric                                  | Value (31 Topics)|
 |-----------------------------------------|-------------------|
@@ -490,7 +490,7 @@ Content White Nations:
 | Outliers                                | 0.32              |
 
 
-There are many other graphs present representing topics and their distribution, for reasons of space only the `Content` graph of the top 10 most frequent topics distributed over time will be shown
+There are many other graphs present representing topics and their distribution, for reasons of space only the `Dread  Content` graph of the top 10 most frequent topics distributed over time will be shown
 
 <div style="text-align: center;">
   <img src="Img/Content/120TimeSeries.png" alt="Distribution Topic" width="800" height="400"/>
@@ -541,7 +541,7 @@ Content:
 - [X] **Integration with GenAI**: Incorporate Generative AI to better explain and refine the topic labels. Mistral can provide more detailed and contextually relevant labels, enhancing the interpretability of the topics.
 - [X] **Deployment on HuggingFace**: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
 - [X] **Temporal Validation**: If time permits, validate the results over time using LSTM (currently done with BERT) to ensure temporal consistency and gain additional insights.
-- [ ] **Dataset Integration**: Explore the integration of additional datasets to make the merged model more robust and comprehensive. This would involve aligning different datasets to ensure consistency and leveraging diverse data sources to cover more topics and nuances.
+- [X] **Dataset Integration**: Explore the integration of additional datasets to make the merged model more robust and comprehensive. This would involve aligning different datasets to ensure consistency and leveraging diverse data sources to cover more topics and nuances.
 - [ ] **Multimodal Model**: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
 
 
