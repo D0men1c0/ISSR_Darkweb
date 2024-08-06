@@ -452,7 +452,7 @@ Finally, to achieve a more robust model, the four baselines found were combined:
 
 ## Results
 
-These are the results of the cluster analysis produced by BERT on both threads and content.<br> For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTM`.
+These are the results of the cluster analysis produced by BERT on both threads and content.<br> For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTML`.
 
 Dread Thread:
 
