@@ -10,7 +10,42 @@ from collections import defaultdict
 import networkx as nx
 from typing import Union
 from tqdm import tqdm
+import torch
+from transformers import pipeline
 
+
+def sentiment_analysis(df: pd.DataFrame, text_column: str, model_name: str, max_length: int = 512) -> pd.DataFrame:
+    """
+    Classify text in a specified column of a DataFrame using a pre-trained text classification model and add the results to the DataFrame.
+    :param df: The DataFrame containing the text data
+    :param text_column: The name of the column containing the text to classify
+    :param model_name: The name of the pre-trained model to use for classification
+    :param max_length: The maximum length of the text to be classified (default is 512)
+    :return: The DataFrame with added columns for classification labels and probabilities
+    """
+    device = 0 if torch.cuda.is_available() else -1
+    print(device)
+    classifier = pipeline("text-classification", model=model_name, max_length=max_length, device=device)
+    count = 0
+    sentiments = []
+    probabilities = []
+
+    # Loop through each record with a progress bar
+    for text in tqdm(df[text_column], desc='Classifying Text', leave=True):
+        try:
+          result = classifier(text)[0]
+          sentiments.append(result['label'])
+          probabilities.append(result['score'])
+        except Exception as e:
+          count += 1
+          sentiments.append('None')
+          probabilities.append(0.0)
+    # Add the results to the DataFrame
+    print(f'Failed to classify {count} records')
+    df['sentiment'] = sentiments
+    df['sentiment_probability'] = probabilities
+
+    return df
 
 def plot_topic_distribution(df: pd.DataFrame, figsize: tuple = (8, 6)) -> None:
     """
@@ -53,6 +88,239 @@ def extract_max_probabilities(df: pd.DataFrame) -> pd.DataFrame:
     # Calculate the maximum probability for each record
     df['Max_Probability'] = df['Probability'].apply(np.max)
     return df
+
+def calculate_sentiment_statistics(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Calculate the maximum, minimum, and mean sentiment probabilities for each topic and sentiment.
+    :param df: DataFrame containing 'Topic', 'sentiment', and 'sentiment_probability' columns.
+    :return: DataFrame with calculated statistics.
+    """
+    # Group by 'Topic' and 'sentiment' and calculate statistics
+    stats_df = df.groupby(['Topic', 'sentiment']).agg(
+        max_probability=('sentiment_probability', 'max'),
+        min_probability=('sentiment_probability', 'min'),
+        mean_probability=('sentiment_probability', 'mean'),
+        median_probability=('sentiment_probability', 'median')
+    ).reset_index()
+    
+    return stats_df
+
+def plot_sentiment_distribution(df: pd.DataFrame, chart_type: str = 'histogram', figsize: tuple = (10, 6)) -> None:
+    """
+    Plot the distribution of sentiment labels in the DataFrame as either a histogram or a pie chart.
+    :param df: DataFrame containing the 'sentiment' column.
+    :param chart_type: Type of chart to plot ('histogram' or 'piechart').
+    :param figsize: Size of the figure (width, height).
+    """
+    # Define custom colors for sentiments
+    sentiment_colors = {
+        'NEU': 'gray',
+        'NEG': 'red',
+        'POS': 'blue'
+    }
+
+    if chart_type == 'histogram':
+        plt.figure(figsize=figsize)
+        sns.countplot(
+            data=df, 
+            x='sentiment', 
+            order=df['sentiment'].value_counts().index, 
+            palette=sentiment_colors
+        )
+        plt.title('Distribution of Sentiment Labels')
+        plt.xlabel('Sentiment')
+        plt.ylabel('Count')
+        plt.show()
+    
+    elif chart_type == 'piechart':
+        # Calculate the proportions of each sentiment
+        sentiment_counts = df['sentiment'].value_counts()
+        proportions = sentiment_counts / sentiment_counts.sum()
+        
+        plt.figure(figsize=figsize)
+        plt.pie(
+            proportions,
+            labels=proportions.index,
+            autopct='%1.1f%%',
+            startangle=140,
+            colors=[sentiment_colors.get(label, 'gray') for label in proportions.index],
+            textprops={'color': 'black'}
+        )
+        plt.title('Sentiment Distribution')
+        plt.show()
+
+    else:
+        raise ValueError("Invalid chart_type. Choose 'histogram' or 'piechart'.")
+    
+def plot_sentiment_probabilities(df: pd.DataFrame, figsize: tuple = (10, 6)) -> None:
+    """
+    Plot the distribution of sentiment probabilities in the DataFrame.
+    :param df: DataFrame containing the 'sentiment_probability' column.
+    """
+    plt.figure(figsize=figsize)
+    sns.histplot(df['sentiment_probability'], bins=20, kde=True)
+    plt.title('Distribution of Sentiment Probabilities')
+    plt.xlabel('Sentiment Probability')
+    plt.ylabel('Frequency')
+    plt.show()
+
+def plot_sentiment_distribution_topic(df: pd.DataFrame, chart_type: str = 'hist', cols: int = 3, width: int = 18, height: int = 6) -> None:
+    """
+    Create subplots showing the distribution of sentiment counts or proportions for each topic.
+    :param df: DataFrame containing 'Topic' and 'sentiment' columns.
+    :param chart_type: Type of chart to use ('hist' for histogram or 'pie' for pie chart).
+    :param cols: Number of columns in the subplot grid.
+    :param width: Width of the entire figure.
+    :param height: Height of each subplot.
+    """
+    # Define colors for the charts and set the order
+    sentiment_colors = {
+        'NEU': 'gray',
+        'POS': 'blue',
+        'NEG': 'red'
+    }
+    sentiment_order = list(sentiment_colors.keys())
+    
+    # Get the unique topics
+    topics = df['Topic'].unique()
+    num_topics = len(topics)
+    rows = math.ceil(num_topics / cols)
+    
+    # Create the figure and axes
+    fig, axes = plt.subplots(rows, cols, figsize=(width, rows * height))
+    axes = axes.flatten()
+    
+    for idx, topic in enumerate(topics):
+        ax = axes[idx]
+        
+        # Filter the DataFrame for the current topic
+        topic_df = df[df['Topic'] == topic]
+        
+        if chart_type == 'hist':
+            # Create the count plot (histogram) with a fixed order for sentiment categories
+            sns.countplot(
+                data=topic_df, 
+                x='sentiment', 
+                palette=sentiment_colors, 
+                order=sentiment_order, 
+                ax=ax
+            )
+            ax.set_title(f'Sentiment Distribution for Topic {topic}')
+            ax.set_xlabel('Sentiment')
+            ax.set_ylabel('Count')
+            
+            handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=sentiment_colors[sentiment], markersize=10) for sentiment in sentiment_order]
+            ax.legend(handles=handles, labels=sentiment_order, title='Sentiment', loc='upper right')
+            
+            max_count = topic_df['sentiment'].value_counts().max()
+            ax.set_ylim(0, max_count * 1.1)
+        
+        elif chart_type == 'pie':
+            sentiment_counts = topic_df['sentiment'].value_counts()
+            proportions = sentiment_counts / sentiment_counts.sum()
+            
+            # Create the pie chart
+            wedges, texts, autotexts = ax.pie(
+                proportions, 
+                labels=proportions.index, 
+                colors=[sentiment_colors.get(label, 'gray') for label in proportions.index],
+                autopct='%1.1f%%',
+                startangle=140,
+                textprops={'color': 'black'}
+            )
+            
+            # Set the title for the subplot
+            ax.set_title(f'Sentiment Distribution for Topic {topic}')
+            
+            handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=sentiment_colors[label], markersize=10) for label in sentiment_order]
+            labels = [label for label in sentiment_order if label in proportions.index]
+            ax.legend(handles=handles, labels=labels, title='Sentiment', loc='upper right')
+
+    # Hide any unused subplots
+    for j in range(len(topics), len(axes)):
+        axes[j].axis('off')
+    
+    plt.tight_layout()
+    plt.show()
+
+def plot_sentiment_statistics_by_topic(df: pd.DataFrame, cols: int = 3, width: int = 18, height: int = 6) -> None:
+    """
+    Create subplots showing the maximum, minimum, mean, and median sentiment probabilities for each topic and sentiment.
+    :param df: DataFrame containing calculated sentiment statistics.
+    :param cols: Number of columns in the subplot grid.
+    :param width: Width of the entire figure.
+    :param height: Height of each subplot.
+    """
+    melted_df = df.melt(id_vars=['Topic', 'sentiment'], 
+                        value_vars=['max_probability', 'min_probability', 'mean_probability', 'median_probability'], 
+                        var_name='Statistic', 
+                        value_name='Probability')
+    
+    topics = df['Topic'].unique()
+    num_topics = len(topics)
+    rows = math.ceil(num_topics / cols)
+    
+    fig, axes = plt.subplots(rows, cols, figsize=(width, rows * height), sharex=True)
+    axes = axes.flatten()
+
+    sentiment_order = ['POS', 'NEG', 'NEU']
+    statistic_order = ['max_probability', 'min_probability', 'mean_probability', 'median_probability']
+    
+    statistic_colors = {
+        'max_probability': 'aqua',
+        'min_probability': 'wheat',
+        'mean_probability': 'lightgreen',
+        'median_probability': 'salmon'
+    }
+    
+    for idx, topic in enumerate(topics):
+        ax = axes[idx]
+        
+        topic_df = melted_df[melted_df['Topic'] == topic]
+        
+        # Create the bar plot
+        sns.barplot(data=topic_df, x='sentiment', y='Probability', hue='Statistic', 
+                    ax=ax, palette=statistic_colors, order=sentiment_order)
+        
+        ax.set_title(f'Sentiment Probability Statistics for Topic {topic}')
+        ax.set_xlabel('Sentiment')
+        ax.set_ylabel('Probability')
+        
+        # Adjust the y-axis limit based on the data for each subplot
+        max_probability = topic_df['Probability'].max()
+        ax.set_ylim(0, max_probability * 1.1)
+        
+        # Add a fixed legend in the top right corner
+        handles, labels = ax.get_legend_handles_labels()
+        ax.legend(handles=handles, labels=[label.replace('_', ' ').title() for label in statistic_order], 
+                  title='Statistic', loc='upper right', bbox_to_anchor=(1.15, 1))
+    
+    # Hide any unused subplots
+    for j in range(len(topics), len(axes)):
+        axes[j].axis('off')
+    
+    plt.tight_layout()
+    plt.show()
+
+def plot_sentiment_over_time(df: pd.DataFrame, figsize: tuple = (14, 10)) -> None:
+    """
+    Plot the sentiment distribution over time.
+    :param df: DataFrame containing 'Created_on' and 'sentiment' columns.
+    """
+    df['Created_on'] = pd.to_datetime(df['Created_on'])
+    
+    # Aggregate sentiment counts by month
+    sentiment_over_time = df.groupby([df['Created_on'].dt.to_period('M'), 'sentiment']).size().unstack().fillna(0)
+
+    plt.figure(figsize=figsize)
+    ax = sentiment_over_time.plot(kind='line', marker='o', linestyle='-', linewidth=2, markersize=8)
+    
+    plt.title('Sentiment Distribution Over Time', fontsize=16)
+    plt.xlabel('Date', fontsize=14)
+    plt.ylabel('Count', fontsize=14)
+    plt.legend(title='Sentiment', fontsize=12)
+    plt.grid(True)
+    plt.show()
 
 def plot_topic_percentage_distribution(df: pd.DataFrame, figsize: tuple = (8, 6)) -> None:
     """
