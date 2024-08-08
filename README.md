@@ -109,6 +109,8 @@ The structure of the repository is as follows:
 │       └───7Topic
 │           └───CSV7Topic
 ├───ShowResultsHTML
+│   ├───ReproducibilityResults
+│   └───ShowFinalAnalysisBaselines
 └───Util
 ```
 
@@ -170,7 +172,7 @@ Contains script merged BERT models.
     - `Thread`: Thread-related models.
 
 7. `ShowResultsHTML`
-Contains HTML files showing results of the analysis.
+Contains HTML files showing the results of the final analysis and the reproducibility of the results.
 
 8. `Util`
 Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.<br>
@@ -406,7 +408,7 @@ because with safetensors Umap and Hdbscan are not reported, so the prediction mu
 
 ## Summary of the Analysis
 
-I recommend checking the `ShowResultsHTML` folder, which contains HTML files with all the results obtained so far for each baseline, including additional analyses, graphs, and examples of predictions.
+I recommend checking the `ShowResultsHTML/ShowFinalAnalysisBaselines` directory, which contains HTML files with all the results obtained so far for each baseline, including additional analyses, graphs, and examples of predictions.
 
 ## Datasets Used
 
