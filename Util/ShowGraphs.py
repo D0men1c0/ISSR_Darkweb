@@ -243,35 +243,31 @@ def plot_sentiment_distribution_topic(df: pd.DataFrame, chart_type: str = 'hist'
     plt.tight_layout()
     plt.show()
 
-def plot_sentiment_statistics_by_topic(df: pd.DataFrame, cols: int = 3, width: int = 18, height: int = 6) -> None:
+def plot_sentiment_statistics_by_topic(df: pd.DataFrame, cols: int = 3, width: int = 18, height: int = 6, palette_name: str = "rocket_r") -> None:
     """
     Create subplots showing the maximum, minimum, mean, and median sentiment probabilities for each topic and sentiment.
     :param df: DataFrame containing calculated sentiment statistics.
     :param cols: Number of columns in the subplot grid.
     :param width: Width of the entire figure.
     :param height: Height of each subplot.
+    :param palette_name: Name of the seaborn color palette to use.
     """
     melted_df = df.melt(id_vars=['Topic', 'sentiment'], 
                         value_vars=['max_probability', 'min_probability', 'mean_probability', 'median_probability'], 
-                        var_name='Statistic', 
+                        var_name='Statistics', 
                         value_name='Probability')
     
     topics = df['Topic'].unique()
     num_topics = len(topics)
     rows = math.ceil(num_topics / cols)
     
-    fig, axes = plt.subplots(rows, cols, figsize=(width, rows * height), sharex=True)
+    fig, axes = plt.subplots(rows, cols, figsize=(width, rows * height))
     axes = axes.flatten()
 
-    sentiment_order = ['POS', 'NEG', 'NEU']
+    sentiment_order = ['NEU', 'POS', 'NEG']
     statistic_order = ['max_probability', 'min_probability', 'mean_probability', 'median_probability']
-    
-    statistic_colors = {
-        'max_probability': 'aqua',
-        'min_probability': 'wheat',
-        'mean_probability': 'lightgreen',
-        'median_probability': 'salmon'
-    }
+
+    palette = sns.color_palette(palette_name, len(statistic_order))
     
     for idx, topic in enumerate(topics):
         ax = axes[idx]
@@ -279,8 +275,8 @@ def plot_sentiment_statistics_by_topic(df: pd.DataFrame, cols: int = 3, width: i
         topic_df = melted_df[melted_df['Topic'] == topic]
         
         # Create the bar plot
-        sns.barplot(data=topic_df, x='sentiment', y='Probability', hue='Statistic', 
-                    ax=ax, palette=statistic_colors, order=sentiment_order)
+        sns.barplot(data=topic_df, x='sentiment', y='Probability', hue='Statistics', 
+                    ax=ax, palette=palette, order=sentiment_order)
         
         ax.set_title(f'Sentiment Probability Statistics for Topic {topic}')
         ax.set_xlabel('Sentiment')
@@ -290,10 +286,12 @@ def plot_sentiment_statistics_by_topic(df: pd.DataFrame, cols: int = 3, width: i
         max_probability = topic_df['Probability'].max()
         ax.set_ylim(0, max_probability * 1.1)
         
+        ax.set_xticklabels(sentiment_order)
+        
         # Add a fixed legend in the top right corner
         handles, labels = ax.get_legend_handles_labels()
         ax.legend(handles=handles, labels=[label.replace('_', ' ').title() for label in statistic_order], 
-                  title='Statistic', loc='upper right', bbox_to_anchor=(1.15, 1))
+                  title='Statistic', loc='upper right', bbox_to_anchor=(1.4, 1), framealpha=0.5)
     
     # Hide any unused subplots
     for j in range(len(topics), len(axes)):
