@@ -553,7 +553,7 @@ Content:
 - [X] **Deployment on HuggingFace**: Push both the "general" model with 7 topics and the more specific model resulting from merging the Thread and Content sub-models to HuggingFace.
 - [X] **Temporal Validation**: If time permits, validate the results over time using LSTM (currently done with BERT) to ensure temporal consistency and gain additional insights.
 - [X] **Dataset Integration**: Explore the integration of additional datasets to make the merged model more robust and comprehensive. This would involve aligning different datasets to ensure consistency and leveraging diverse data sources to cover more topics and nuances.
-- [ ] **Sentiment Analysis**: Implement sentiment analysis on processed documents to evaluate the prevailing sentiment within each cluster, providing deeper insights into the emotional tone and audience perceptions related to specific topics.
+- [X] **Sentiment Analysis**: Implement sentiment analysis on processed documents to evaluate the prevailing sentiment within each cluster, providing deeper insights into the emotional tone and audience perceptions related to specific topics.
 - [ ] **Multimodal Model**: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
 
 
