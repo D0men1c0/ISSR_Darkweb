@@ -25,8 +25,8 @@
     },
     "vocab": {
       "gun": 1,
-      "drug": 0,
-      "people": 2
+      "people": 2,
+      "drug": 0
     }
   }
 }
