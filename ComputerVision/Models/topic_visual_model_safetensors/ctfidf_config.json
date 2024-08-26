@@ -1,0 +1,32 @@
+{
+  "ctfidf_model": {
+    "bm25_weighting": false,
+    "reduce_frequent_words": true
+  },
+  "vectorizer_model": {
+    "params": {
+      "analyzer": "word",
+      "binary": false,
+      "decode_error": "strict",
+      "encoding": "utf-8",
+      "input": "content",
+      "lowercase": true,
+      "max_df": 1.0,
+      "max_features": null,
+      "min_df": 1,
+      "ngram_range": [
+        1,
+        1
+      ],
+      "stop_words": "english",
+      "strip_accents": null,
+      "token_pattern": "(?u)\\b\\w\\w+\\b",
+      "vocabulary": null
+    },
+    "vocab": {
+      "gun": 1,
+      "drug": 0,
+      "people": 2
+    }
+  }
+}
