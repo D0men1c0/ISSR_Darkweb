@@ -18,6 +18,7 @@
 - [Summary of Work Done](#summary-of-work-done)
 - [Results](#results)
   - [Cluster Validation using LightGBM and LSTM](#cluster-validation-using-lightgbm-and-lstm)
+- [Multimodal Model](#multimodal-model)
 - [Future work](#future-work)
 - [Acknowledgements](#acknowledgements)
 - [Citation](#citation)
@@ -84,7 +85,6 @@ The structure of the repository is as follows:
 │   ├───Embeddings
 │   └───Models
 │       └───topic_visual_model_safetensors
-│           └───images
 ├───Datasets
 │   ├───CleanedData
 │   ├───FeatureEngineeringData
@@ -127,13 +127,13 @@ The structure of the repository is as follows:
 The roles of the different folders are detailed below:
 
 1. `Analyze_files`
-Contains files and scripts for data analysis.
+  Contains files and scripts for data analysis.
 
     1. `CombiningAnalysisCompleteDataset`
-    Folder containing the analysis of tables (boards, threads, members, posts) merged into one
+      Folder containing the analysis of tables (boards, threads, members, posts) merged into one
 
         1. `ContentAnalysis`
-        Focuses on analysing the content of table posts using BERT models to extract topics. Contains notebook analysis (and their folders) on `White Nations` and `Dread` posts.
+          Focuses on analysing the content of table posts using BERT models to extract topics. Contains notebook analysis (and their folders) on `White Nations` and `Dread` posts.
 
             - `DatasetsContentBERTopic`: Contains datasets with the original content field with information extracted from BERT.
             - `LLAMA`: Stores the results of the use of Mistral on custom topic names.
@@ -142,7 +142,7 @@ Contains files and scripts for data analysis.
             - `ZeroShotClassificationResultsContent`: Stores the results of the zero shot classification on custom topic names.
 
         2. `ThreadAnalysis`
-        Focuses on analysing the content of table thread using BERT models to extract topics. Contains notebook analysis (and their folders) on `Raid Forums` and `Dread` threads.
+          Focuses on analysing the content of table thread using BERT models to extract topics. Contains notebook analysis (and their folders) on `Raid Forums` and `Dread` threads.
 
             - `DatasetsThreadBERTopic`: Same role as the content, focusing instead on the thread
             - `LLAMA`: Same role as the content, focusing instead on the thread.
@@ -154,10 +154,10 @@ Contains files and scripts for data analysis.
             - `ZeroShotClassificationResults`: Same role as the content, focusing instead on the thread.
 
     2. `SingleDatasetsAnalysis`
-    Contains analyses for separate individual tables (boards, posts, members, threads) for the Dread dataset, as well as a threads table for Raid Forums and a posts table for White Nations.
+      Contains analyses for separate individual tables (boards, posts, members, threads) for the Dread dataset, as well as a threads table for Raid Forums and a posts table for White Nations.
 
 2. `Datasets`
-Stores tables datasets used in the project.
+    Stores tables datasets used in the project.
 
     - `CleanedData`: Contains cleaned data ready for analysis.
     - `FeatureEngineeringData`: Contains data prepared for feature engineering.
@@ -165,6 +165,22 @@ Stores tables datasets used in the project.
     - `RawData`: Contains raw, unprocessed data tables.
 
 3. `ComputerVision`
+    Contains resources for making the model multimodal by integrating computer vision components.<br>
+    Due to the lack of direct image data from the dark web, a public dataset was used. <br>
+    The dataset is sourced from [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project) and includes three folders: train, test, and validation, featuring images related to drugs, guns, people, and robbers. <br>
+    The dataset comprises approximately 3700 images with corresponding annotations.
+
+    - `Datasets`: 
+      - `RawData`: Contains the dataset in three subfolders:
+        - *test*: Images for testing
+        - *train*: Images for training
+        - *valid*: Images for validation
+
+    - `Embeddings`: Contains embeddings derived from the images.
+
+    - `Models`: Includes the trained visual model.
+
+    Additionally, there is a notebook file that demonstrates the visual model's performance in identifying the four topics with corresponding predictions.
 
 4. `Img`
     Stores images used for topic representation graphics found with BERTopic.
@@ -184,13 +200,13 @@ Stores tables datasets used in the project.
 
 7. `ShowModelsBaselineBERT`
     Provides summaries of the baseline BERT models (using notebooks) and includes additional analyses with CSV files. <br>
-    These analyses cover topic descriptions, original documents with topic associations, sentiment analysis for each document and topic, the evolution of topics over time, and example of predictions.
+    hese analyses cover topic descriptions, original documents with topic associations, sentiment analysis for each document and topic, the evolution of topics over time, and example of predictions.
 
-    - **`Content`**: 
+    - `Content`: 
       - *Dread Posts*: 121 topics
       - *White Nation Posts*: 31 topics
 
-    - **`Thread`**: 
+    - `Thread`: 
       - *Dread Threads*: 7 topics and 68 topics
       - *Raid Forums Threads*: 26 topics
 
@@ -201,14 +217,12 @@ Stores tables datasets used in the project.
     Contains HTML files that display the results of the final analysis and the reproducibility of the results. <br>
 
     This folder has two subdirectories:
-
-    - **`ReproducibilityResults`**: Documents the entire process of training, evaluating, and testing all baseline models, including LSTM and LightGBM.
-
-    - **`ShowFinalAnalysisBaselines`**: Presents the analyses from section 7, offering a comprehensive and consolidated view of the results.
+    - `ReproducibilityResults`: Documents the entire process of training, evaluating, and testing all baseline models, including LSTM and LightGBM.
+    - `ShowFinalAnalysisBaselines`: Presents the analyses from section 7, offering a comprehensive and consolidated view of the results.
 
 9. `Util`
-Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.<br>
-**Note:** If using Google Colab and wanting to import these modules, see point 4 of this section: [Running on Google Colab](#running-on-google-colab)
+    Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.<br>
+    **Note:** If using Google Colab and wanting to import these modules, see point 4 of this section: [Running on Google Colab](#running-on-google-colab)
 
 ## Installation
 
@@ -258,6 +272,7 @@ Note: being quite heavy files (7 GB in total) choose carefully which models and 
       ```bash
       !wget https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-GGUF/resolve/main/openhermes-2.5-mistral-7b.Q4_K_M.gguf
       ```
+
 ### Running on Google Colab
 
 To run the notebooks on Google Colab, follow these steps:
@@ -463,6 +478,9 @@ The following tables were analyzed to extract the topics:
 - **White Nations Posts:** Contains 52k records.
 - **Raid Forums Threads:** Contains 94k records
 
+In addition, to make the model multimodal, as described in section [Repository Structure](#repository-structure), a public dataset from [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project) was used. <br>
+This dataset includes approximately 3700 images, divided into training, testing, and validation sets, covering four topics: people, guns, drugs, and robbers.
+
 ## Summary of Work Done
 
 The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. <br> Initially, each table in the dataset was examined, reducing the number of features and eliminating outliers and duplicates. The focus was specifically on two tables: threads and posts, analyzing the fields `thread` and `content` respectively.
@@ -573,6 +591,31 @@ These are the results obtained by LightGBM using the embedding and classes obtai
 |:------------------------------------------------------:|:---------------------------------------------------------------:|
 | Loss Train Val 121 Topics                             | Accuracy Train Val 121 Topics                                  |
 
+## Multimodal Model
+
+In addition to the work done so far, a multimodal approach has been developed to further enhance the model's capabilities. <br>
+As described previously, this involves integrating visual data with the existing textual baseline models. <br>
+Although the current visual model is based on a public dataset rather than images from the dark web, it serves as a proof of concept for how a multimodal model can be effectively utilized.
+
+A BERTopic model was trained using images from the dataset provided by [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project). <br>
+This dataset includes approximately 3700 images divided into training, testing, and validation sets, covering four topics: people, guns, drugs, and robbers. The approach involved:
+
+1. **Embedding Extraction**: Using models to generate embeddings from the images, which were then associated with captions.
+2. **Visual Model Training**: Training a visual model to obtain topic representations from these embeddings.
+
+The model was trained using the training and testing sets and was evaluated on the validation set. <br>
+It successfully identified the four relevant topics: drugs, guns, people, and robbers.
+
+### Advantages of the Multimodal Model
+
+The multimodal model provides several significant advantages:
+
+- **Enhanced Topic Detection**: The integration of visual data allows for more precise identification of topics. For instance, the model can differentiate between specific types of drugs, such as yellow heroin versus brown heroin, based on visual cues.
+- **Improved Context Understanding**: By combining text and image data, the model can provide a deeper understanding of the context. This is particularly useful for identifying and categorizing nuanced topics.
+- **Versatility**: The model's ability to analyze both text and images means it can adapt to various types of content and contexts.<br> This capability will be crucial when images directly from the dark web become available, enabling the combination of baseline text models with visual data to create a robust multimodal model.
+- **Predictive Accuracy**: By leveraging visual data, the model can achieve more accurate predictions and insights, which are beneficial for applications that require detailed topic analysis and classification.
+
+This demonstration underscores the potential of integrating visual data with text-based models and sets the stage for future advancements when dark web images can be incorporated into the model.
 
 ## Future work
 
