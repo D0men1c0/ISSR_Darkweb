@@ -167,7 +167,7 @@ The roles of the different folders are detailed below:
 3. `ComputerVision`
     Contains resources for making the model multimodal by integrating computer vision components.<br>
     Due to the lack of direct image data from the dark web, a public dataset was used. <br>
-    The dataset is sourced from [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project) and includes three folders: train, test, and validation, featuring images related to drugs, guns, people, and robbers. <br>
+    The dataset is sourced from [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project/dataset/9) and includes three folders: train, test, and validation, featuring images related to drugs, guns, people, and robbers. <br>
     The dataset comprises approximately 3700 images with corresponding annotations.
 
     - `Datasets`: 
@@ -478,7 +478,7 @@ The following tables were analyzed to extract the topics:
 - **White Nations Posts:** Contains 52k records.
 - **Raid Forums Threads:** Contains 94k records
 
-In addition, to make the model multimodal, as described in section [Repository Structure](#repository-structure), a public dataset from [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project) was used. <br>
+In addition, to make the model multimodal, as described in section [Repository Structure](#repository-structure), a public dataset from [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project/dataset/9) was used. <br>
 This dataset includes approximately 3700 images, divided into training, testing, and validation sets, covering four topics: people, guns, drugs, and robbers.
 
 ## Summary of Work Done
@@ -597,7 +597,7 @@ In addition to the work done so far, a multimodal approach has been developed to
 As described previously, this involves integrating visual data with the existing textual baseline models. <br>
 Although the current visual model is based on a public dataset rather than images from the dark web, it serves as a proof of concept for how a multimodal model can be effectively utilized.
 
-A BERTopic model was trained using images from the dataset provided by [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project). <br>
+A BERTopic model was trained using images from the dataset provided by [Roboflow's Drug Detection Project](https://universe.roboflow.com/freakinggojo-er8b5/drug_detection_project/dataset/9). <br>
 This dataset includes approximately 3700 images divided into training, testing, and validation sets, covering four topics: people, guns, drugs, and robbers. The approach involved:
 
 1. **Embedding Extraction**: Using models to generate embeddings from the images, which were then associated with captions.
