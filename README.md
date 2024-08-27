@@ -38,7 +38,6 @@ Unlike other approaches based on a few datasets, this method allows for the anal
 
 Additionally, associating this data with images could lead to more precise identification. The current results are already highly valuable, demonstrating the potential of this approach.
 
-
 ## Repository Structure
 
 The structure of the repository is as follows:
@@ -76,6 +75,16 @@ The structure of the repository is as follows:
 │   │           ├───all-MiniLM-L6-v2_400
 │   │           └───distiluse_7cluster
 │   └───SingleDatasetsAnalysis
+├───ComputerVision
+│   ├───Datasets
+│   │   └───RawData
+│   │       ├───test
+│   │       ├───train
+│   │       └───valid
+│   ├───Embeddings
+│   └───Models
+│       └───topic_visual_model_safetensors
+│           └───images
 ├───Datasets
 │   ├───CleanedData
 │   ├───FeatureEngineeringData
@@ -87,7 +96,8 @@ The structure of the repository is as follows:
 ├───Img
 │   ├───Content
 │   ├───Merged
-│   └───Thread
+│   ├───Thread
+│   └───Visual
 ├───MergedModelBERT
 │   ├───Merged_Models_safetensors
 │   ├───Merged_Models_White_Nations_Raid_safetensors
@@ -123,26 +133,28 @@ Contains files and scripts for data analysis.
     Folder containing the analysis of tables (boards, threads, members, posts) merged into one
 
         1. `ContentAnalysis`
-        Focuses on analysing the content of table posts using BERT models to extract topics.
+        Focuses on analysing the content of table posts using BERT models to extract topics. Contains notebook analysis (and their folders) on `White Nations` and `Dread` posts.
 
             - `DatasetsContentBERTopic`: Contains datasets with the original content field with information extracted from BERT.
-            - `ModelsContent`: Holds the specific BERTopic models for content analysis.
+            - `LLAMA`: Stores the results of the use of Mistral on custom topic names.
+            - `ModelsContent`: Holds the specific BERTopic models for content analysis (both pickle and safetensors).
             - `PreProcessFiles`: Contains the pre-processing files of the content field.
             - `ZeroShotClassificationResultsContent`: Stores the results of the zero shot classification on custom topic names.
-            - `LLAMA`: Stores the results of the use of LLAMA2 on custom topic names.
 
         2. `ThreadAnalysis`
-        Focuses on analysing the content of table thread using BERT models to extract topics.
+        Focuses on analysing the content of table thread using BERT models to extract topics. Contains notebook analysis (and their folders) on `Raid Forums` and `Dread` threads.
 
-            - `DatasetsThreadBERTopic`: Same role as the content, focusing instead on the thread 
+            - `DatasetsThreadBERTopic`: Same role as the content, focusing instead on the thread
+            - `LLAMA`: Same role as the content, focusing instead on the thread.
+            - `Models`: Same role as the content, focusing instead on the thread.
             - `OtherFilesPreviousApproach`: Contains files from previous approaches.
+            - `PreProcessFiles`: Same role as the content, focusing instead on the thread.
             - `ResultsCluster`: Dataset on cluster analysis of a previous approach.
             - `ResultsGridSearchBERTopic`: Contains the results of the grid search of BERTopic.
             - `ZeroShotClassificationResults`: Same role as the content, focusing instead on the thread.
-            - `LLAMA`: Same role as the content, focusing instead on the thread.
 
     2. `SingleDatasetsAnalysis`
-    Contains analyses for separate individual tables (boards, discussions, members, messages).
+    Contains analyses for separate individual tables (boards, posts, members, threads) for the Dread dataset, as well as a threads table for Raid Forums and a posts table for White Nations.
 
 2. `Datasets`
 Stores tables datasets used in the project.
@@ -152,29 +164,49 @@ Stores tables datasets used in the project.
     - `IntentCrime`: Specific dataset related to crime intent used for Zero-shot classification.
     - `RawData`: Contains raw, unprocessed data tables.
 
-3. `Img`
+3. `ComputerVision`
+
+4. `Img`
     Stores images used for topic representation graphics found with BERTopic.
 
     - `Content`: Images related to content analysis.
     - `Merged`: Images related to merged models analysis.
     - `Thread`: Images related to thread analysis.
+    - `Visual`: Images related to visual model.
 
-4. `MergedModelBERT`
-Contains script merged BERT models.
+5. `MergedModelBERT`
+    Contains scripts for the merged BERT models based on the baselines. Specifically, there are three new merged models: one for Dread content and Dread threads, one combining the previous model with White Nations, and a final model that merges everything—Dread content, Dread threads, White Nations, and Raid Forums—resulting in a total of `173` topics. <br> 
+    This was done to create a robust model capable of covering as many topics as possible. <br> 
+    This folder also contains the resulting models (pickle and safetensors).
 
-5. `MLModelsBERT`
+6. `MLModelsBERT`
     Contains Machine Learning scripts and models used to validate datasets obtained from BERT approaches on content and threads including LightGBM and LSTM.
 
-6. `ShowModelsBaselineBERT`
-    Displays baseline BERT models.
+7. `ShowModelsBaselineBERT`
+    Provides summaries of the baseline BERT models (using notebooks) and includes additional analyses with CSV files. <br>
+    These analyses cover topic descriptions, original documents with topic associations, sentiment analysis for each document and topic, the evolution of topics over time, and example of predictions.
 
-    - `Content`: Content-related models.
-    - `Thread`: Thread-related models.
+    - **`Content`**: 
+      - *Dread Posts*: 121 topics
+      - *White Nation Posts*: 31 topics
 
-7. `ShowResultsHTML`
-Contains HTML files showing the results of the final analysis and the reproducibility of the results.
+    - **`Thread`**: 
+      - *Dread Threads*: 7 topics and 68 topics
+      - *Raid Forums Threads*: 26 topics
 
-8. `Util`
+    In addition to summarizing the models, this section also presents insights and analyses using various charts. <br> 
+    These include visualizations of the topics, documents, topic evolution over time, and sentiment analysis for each topic, offering a comprehensive view beyond just the model summaries.
+
+8. `ShowResultsHTML`
+    Contains HTML files that display the results of the final analysis and the reproducibility of the results. <br>
+
+    This folder has two subdirectories:
+
+    - **`ReproducibilityResults`**: Documents the entire process of training, evaluating, and testing all baseline models, including LSTM and LightGBM.
+
+    - **`ShowFinalAnalysisBaselines`**: Presents the analyses from section 7, offering a comprehensive and consolidated view of the results.
+
+9. `Util`
 Utility scripts and auxiliary functions used throughout the project to process data and evaluate models.<br>
 **Note:** If using Google Colab and wanting to import these modules, see point 4 of this section: [Running on Google Colab](#running-on-google-colab)
 
@@ -256,8 +288,6 @@ To run the notebooks on Google Colab, follow these steps:
     !pip install umap_learn
     !pip install hdbscan
     ```
-    
-5. If you encounter the following error while performing DataFrame operations: `Index' object has no attribute '_format_flat'`, note that this is just a visualization issue. The cell will still execute successfully.
 
 ## Usage
 
@@ -408,7 +438,7 @@ because with safetensors Umap and Hdbscan are not reported, so the prediction mu
 
 ## Summary of the Analysis
 
-I recommend checking the `ShowResultsHTML/ShowFinalAnalysisBaselines` directory, which contains HTML files with all the results obtained so far for each baseline, including additional analyses, graphs, and examples of predictions.
+I recommend checking the `ShowResultsHTML/ShowFinalAnalysisBaselines` directory, which contains HTML files with all the results obtained so far for each baseline, including additional analyses, sentiment analysis, graphs, and examples of predictions.
 
 ## Datasets Used
 
@@ -435,7 +465,7 @@ The following tables were analyzed to extract the topics:
 
 ## Summary of Work Done
 
-The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. Initially, each table in the dataset was examined, reducing the number of features and eliminating outliers and duplicates. The focus was specifically on two tables: threads and posts, analyzing the fields `thread` and `content` respectively.
+The objective of this project was to analyze the evolution of language among Dark Web users using a series of Natural Language Processing (NLP) models. <br> Initially, each table in the dataset was examined, reducing the number of features and eliminating outliers and duplicates. The focus was specifically on two tables: threads and posts, analyzing the fields `thread` and `content` respectively.
 
 To gain an overview of the topics discussed, the `thread` field was analyzed first. Various approaches such as TF-IDF, LDA, and Zero-shot classification were used, and a class was developed that combined Sentence Transformer with t-SNE, PCA, and k-means. However, these methods did not yield optimal results.<br> Therefore, the BERTopic library was employed, which, thanks to its modularity, enabled the analysis of text by applying different strategies including Sentence BERT, c-TFIDF, KeyBERTInspired, introducing diversity with custom classes, and using UMAP for dimensionality reduction and HDBSCAN for clustering. Subsequently, Zero-shot classification was applied to the topic names.
 
@@ -460,7 +490,7 @@ Finally, to achieve a more robust model, the four baselines found were combined:
 
 These are the results of the cluster analysis produced by BERT on both threads and content.<br> For further graphical analysis (distance between clusters, hierarchy, distribution in space), please consult the html directory: `ShowResultsHTML`.
 
-Dread Thread:
+**Dread Thread:**
 
 | Metric                                  | Value (68 Topics) | Value (7 Topics) |
 |-----------------------------------------|-------------------|------------------|
@@ -470,7 +500,7 @@ Dread Thread:
 | Dos Score (Diversity Overlapped Score)  | 0.06              | 0.80             |
 | Outliers                                | 0.30              | 0.42             |
 
-Dread Content:
+**Dread Content:**
 
 | Metric                                  | Value (121 Topics)|
 |-----------------------------------------|-------------------|
@@ -480,7 +510,7 @@ Dread Content:
 | Dos Score (Diversity Overlapped Score)  | 0.24              |
 | Outliers                                | 0.35              |
 
-Raid Forums Thread:
+**Raid Forums Thread:**
 
 | Metric                                  | Value (26 Topics)|
 |-----------------------------------------|-------------------|
@@ -490,7 +520,7 @@ Raid Forums Thread:
 | Dos Score (Diversity Overlapped Score)  | 0.20              |
 | Outliers                                | 0.38              |
 
-White Nations Content:
+**White Nations Content:**
 
 | Metric                                  | Value (31 Topics)|
 |-----------------------------------------|-------------------|
@@ -511,7 +541,7 @@ There are many other graphs present representing topics and their distribution, 
 
 These are the results obtained by LightGBM using the embedding and classes obtained by BERT for the thread field in a classification task:
 
-Thread:
+**Dread Thread:**
 
 | Metric              | Value (68 Topics) | Value (7 Topics) |
 |---------------------|-------------------|------------------|
@@ -526,9 +556,9 @@ Thread:
 |:------------------------------------------------------:|:---------------------------------------------------:|
 | Loss Train Val 68 Topics                             | Loss Train Val 7 Topics                            |
 
-<br>Instead, a neural network using two inputs was chosen for `Content`: a timestamp treated as LSTM and another input with embeddings obtained from BERT. In this way it is also possible to make predictions based on time and understand the evolution of the language.
+<br>Instead, a neural network using two inputs was chosen for `Dread Content`: a timestamp treated as LSTM and another input with embeddings obtained from BERT. In this way it is also possible to make predictions based on time and understand the evolution of the language.
 
-Content:
+**Dread Content:**
 
 | Metric              | Value (121 Topics)|
 |---------------------|-------------------|
@@ -554,7 +584,7 @@ Content:
 - [X] **Temporal Validation**: If time permits, validate the results over time using LSTM (currently done with BERT) to ensure temporal consistency and gain additional insights.
 - [X] **Dataset Integration**: Explore the integration of additional datasets to make the merged model more robust and comprehensive. This would involve aligning different datasets to ensure consistency and leveraging diverse data sources to cover more topics and nuances.
 - [X] **Sentiment Analysis**: Implement sentiment analysis on processed documents to evaluate the prevailing sentiment within each cluster, providing deeper insights into the emotional tone and audience perceptions related to specific topics.
-- [ ] **Multimodal Model**: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
+- [X] **Multimodal Model**: Finally, consider making the model multimodal by incorporating both text and images. This would require more in-depth development.
 
 
 ## Acknowledgements

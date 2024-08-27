@@ -30,6 +30,15 @@
 │   │           ├───all-MiniLM-L6-v2_400
 │   │           └───distiluse_7cluster
 │   └───SingleDatasetsAnalysis
+├───ComputerVision
+│   ├───Datasets
+│   │   └───RawData
+│   │       ├───test
+│   │       ├───train
+│   │       └───valid
+│   ├───Embeddings
+│   └───Models
+│       └───topic_visual_model_safetensors
 ├───Datasets
 │   ├───CleanedData
 │   ├───FeatureEngineeringData
@@ -41,7 +50,8 @@
 ├───Img
 │   ├───Content
 │   ├───Merged
-│   └───Thread
+│   ├───Thread
+│   └───Visual
 ├───MergedModelBERT
 │   ├───Merged_Models_safetensors
 │   ├───Merged_Models_White_Nations_Raid_safetensors
