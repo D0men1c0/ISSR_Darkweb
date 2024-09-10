@@ -36,21 +36,6 @@ def add_copy_suffix(destination: str) -> str:
 # List of files to download with their respective Google Drive file IDs and destination paths
 files_to_download = [
     {
-        "file_id": "1YUJoI6rYL5d8zjTlkAYhYlMbx9WBXRGH",
-        "destination": "ShowModelsBaselineBERT/Content/CSV121Topic/document_topic_proba.parquet",
-        "file_size": "180 MB"
-    },
-    {
-        "file_id": "1mIHndJj5VBNIkmGzKzIzFnniKm4sQ6Bq",
-        "destination": f"{PATH_CONTENT}/DatasetsContentBERTopic/BERTopic_all-MiniLM-L6-v2_190_20n_8dim.parquet",
-        "file_size": "444 MB"
-    },
-    {
-        "file_id": "1odJkRR78sUyb-GWruXbwESNVdcnl1Li-",
-        "destination": f"{PATH_CONTENT}/PreProcessFiles/content_preprocessed_embeddings.npz",
-        "file_size": "360 MB"
-    },
-    {
         "file_id": "1hfvDRtmwJdqISwmxT_pSp1fQS3_HftcS",
         "destination": f"{PATH_CONTENT}/ModelsContent/topic_model_all-MiniLM-L6-v2_190_20n_8dim_safetensors/ctfidf_config.json",
         "file_size": "360 MB"
@@ -84,11 +69,6 @@ files_to_download = [
         "file_id": "1PmuE6dS0yORKBeePAA4SXQ2y3p3xKPDP",
         "destination": f"{PATH_THREAD}/topic_model_all-MiniLM-L6-v2_500_150n_10dim_raid",
         "file_size": "1.1 GB"
-    },
-    {
-        "file_id": "1WfGggs_oHpKRf9hJF6tvLjLdKI8A20WG",
-        "destination": 'Analyze_files/CombiningAnalysisCompleteDataset/ThreadAnalysis/PreProcessFiles/threads_preprocessed_embeddings_raids.npz',
-        "file_size": "130 MB"
     },
     {
         "file_id": "1otWPdqFcoXIcQDfm0_ozGDtyHvMuhsxu",
